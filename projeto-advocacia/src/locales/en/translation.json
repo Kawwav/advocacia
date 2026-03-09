@@ -1,0 +1,20 @@
+{
+  "nav": {
+    "inicio": "HOME",
+    "hma": "HMA",
+    "nucleos": "PRACTICE AREAS",
+    "atuacao": "EXPERTISE",
+    "duvidas": "FAQ",
+    "contato": "CONTACT"
+  },
+  "header": {
+    "oab": "OAB/PR 94.793 · Attorneys at Law",
+    "descricao": "Legal Practice e Consulting"
+  },
+  "hae": {
+    "subtitulo": "Legal Practice and Consulting",
+    "titulo": "Attorneys at Law",
+    "descricao": "Legal certainty with excellence and commitment",
+    "botao": "Our Practice Areas"
+  }
+}

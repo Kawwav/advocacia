@@ -1,0 +1,20 @@
+{
+  "nav": {
+    "inicio": "INÍCIO",
+    "hma": "HMA",
+    "nucleos": "NÚCLEOS",
+    "atuacao": "ATUAÇÃO",
+    "duvidas": "DÚVIDAS",
+    "contato": "CONTATO"
+  },
+  "header": {
+    "oab": "OAB/PR 94.793 · Advogados",
+    "descricao": "Advocacia e Consultoria Jurídica"
+  },
+  "hae": {
+    "subtitulo": "Advocacia e Consultoria Jurídica",
+    "titulo": "Advogados",
+    "descricao": "Segurança jurídica com excelência e comprometimento",
+    "botao": "Nossas Áreas de Atuação"
+  }
+}
