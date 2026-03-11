@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
-import './Hma.css'
+import './Sobre.css'
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 36 },
@@ -22,11 +22,10 @@ function Hma() {
 
         {/* ── Eyebrow ── */}
         <motion.p className="hma-eyebrow" {...fadeUp(0.05)}>
-          {t('hma.eyebrow', 'Seja bem-vindo (a) à nossa oficina técnica.')}
         </motion.p>
 
         <motion.h1 className="hma-titulo" {...fadeUp(0.15)}>
-          {t('hma.titulo', 'Experiência e Visão')} <span>{t('hma.titulo2', 'Estratégica')}</span>
+          {t('hma.titulo', 'Inovação e')} <span>{t('hma.titulo2', 'Compromisso')}</span>
         </motion.h1>
 
         <motion.div
@@ -40,9 +39,10 @@ function Hma() {
         {/* ── Bloco intro ── */}
         <motion.div className="hma-coluna-texto" {...fadeUp(0.35)}>
           <p className="hma-paragrafo--destaque">
+            A <span style={{ color: '#C9A84C', fontWeight: 600 }}>HAEFFNER MARINHO ADVOGADOS</span>{' '}
             {t(
-              'hma.p1',
-              'A Haeffner Marinho Advogados nasce da convergência entre a tradição resiliente e a inovação estratégica. Inspirada em um legado de integridade, nossa essência foi moldada pela experiência prática de quem compreende o Direito não apenas nos códigos, mas no dinamismo do "chão de fábrica" e das complexas relações corporativas.'
+              'hma.p1_resto',
+              'nasce da convergência entre a tradição resiliente e a inovação estratégica. Inspirada em um legado de integridade, nossa essência foi moldada pela experiência prática de quem compreende o Direito não apenas nos códigos, mas no dinamismo do "chão de fábrica" e das complexas relações corporativas.'
             )}
           </p>
           <p className="hma-paragrafo">
@@ -68,7 +68,7 @@ function Hma() {
             <div className="hma-foto-canto hma-foto-canto--br" />
             <div className="hma-foto-overlay" />
             <img
-              src="/WhatsApp Image 2026-03-03 at 13.06.40.jpeg"
+              src="/advocacia/foto1.jpeg"
               alt="Armando Haeffner Marinho Neto"
               className="hma-foto hma-foto--wide"
             />
@@ -84,13 +84,13 @@ function Hma() {
           <p className="hma-paragrafo">
             {t(
               'hma.p3',
-              'Meu compromisso é garantir que cada cliente encontre não apenas representação jurídica, mas uma estratégia de defesa implacável e transparente. Antes de litigar, esgotaremos todas as ferramentas de resolução consensual, priorizando soluções ágeis. Entendemos que o Direito moderno exige mais que técnica: exige visão interdisciplinar e agilidade.'
+              'Meu compromisso é garantir que cada cliente encontre não apenas representação jurídica, mas uma estratégia de defesa implacável e transparente. Antes de litigar, esgotaremos todas as ferramentas de resolução consensual, priorizando soluções ágeis.'
             )}
           </p>
           <p className="hma-paragrafo">
             {t(
               'hma.p4',
-              'Aqui, cada demanda é tratada com o rigor de um especialista e a combatividade de quem entende que o patrocínio da liberdade e do patrimônio é um compromisso intrínseco à nossa existência.'
+              'Entendemos que o Direito Moderno exige mais que técnica: exige visão interdisciplinar e agilidade. Aqui, cada demanda é tratada com o rigor de um especialista e a combatividade de quem entende que o patrocínio da liberdade e do patrimônio é um compromisso intrínseco à nossa essência.'
             )}
           </p>
 
@@ -126,6 +126,12 @@ function Hma() {
           <a href="mailto:armando@haeffnermarinho.adv.br" className="hma-card-email hma-card-email--destaque">
             armando@haeffnermarinho.adv.br
           </a>
+          <p style={{ fontFamily: 'Montserrat, sans-serif', fontSize: '12px', letterSpacing: '2px', color: '#F8F5EF', textTransform: 'uppercase', marginTop: '20px', fontWeight: 500 }}>
+            Armando Haeffner Marinho Neto
+          </p>
+          <p style={{ fontFamily: 'Montserrat, sans-serif', fontSize: '10px', letterSpacing: '2px', color: '#C9A84C', textTransform: 'uppercase', marginTop: '4px', opacity: 0.7 }}>
+            OAB/PR 94.793
+          </p>
         </motion.div>
 
       </div>

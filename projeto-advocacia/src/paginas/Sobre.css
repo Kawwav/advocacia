@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
 
+/* ── RESET ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* ── BASE ── */
 .hma-pagina {
   padding-top: 60px;
   padding-bottom: 100px;
@@ -38,17 +44,7 @@
   padding: 0 48px;
 }
 
-
-.hma-eyebrow {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  letter-spacing: 5px;
-  color: #C9A84C;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  opacity: 0.8;
-}
-
+/* ── TÍTULO ── */
 .hma-titulo {
   font-family: 'Palatino Linotype', serif;
   font-size: 72px;
@@ -60,15 +56,16 @@
 
 .hma-titulo span {
   color: #C9A84C;
-  font-style: italic;
 }
 
+/* ── DIVISOR ── */
 .hma-divisor {
   height: 1px;
   background: linear-gradient(90deg, #C9A84C, transparent);
   margin: 28px 0 52px;
 }
 
+/* ── GRID ── */
 .hma-grid {
   display: grid;
   grid-template-columns: 220px 1px 1fr;
@@ -77,6 +74,7 @@
   margin-top: 8px;
 }
 
+/* ── COLUNA TEXTO ── */
 .hma-coluna-texto {
   display: flex;
   flex-direction: column;
@@ -85,22 +83,20 @@
 }
 
 .hma-paragrafo {
-  font-family: 'Palatino Linotype';
+  font-family: 'Palatino Linotype', serif;
   font-size: 20px;
   font-weight: 300;
   color: #D4C5A9;
   line-height: 1.9;
   letter-spacing: 0.3px;
 }
-  
+
 .hma-paragrafo--destaque {
-  font-family: 'Palatino Linotype';
+  font-family: 'Palatino Linotype', serif;
   font-size: 24px;
   font-weight: 400;
-  color: #E8C97A;
+  color: #D4C5A9;
   line-height: 1.7;
-  border-left: 2px solid rgba(201,168,76,0.4);
-  padding-left: 24px;
 }
 
 .hma-ornamento-vertical {
@@ -197,11 +193,12 @@
   white-space: nowrap;
 }
 
+/* ── CARD ASSINATURA ── */
 .hma-card-assinatura {
   background: linear-gradient(135deg, rgba(13,27,42,0.95) 0%, rgba(18,34,52,0.98) 100%);
   border: 1px solid rgba(201,168,76,0.22);
   border-left: 3px solid #C9A84C;
-  padding: 28px 28px 28px 28px;
+  padding: 28px;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -261,7 +258,7 @@
 }
 
 .hma-card-nome {
-  font-family: 'Palatino Linotype';
+  font-family: 'Palatino Linotype', serif;
   font-size: 20px;
   font-weight: 600;
   color: #F8F5EF;
@@ -288,7 +285,7 @@
 }
 
 .hma-card-chamada {
-  font-family: 'Palatino Linotype';
+  font-family: 'Palatino Linotype', serif;
   font-size: 10px;
   letter-spacing: 1.8px;
   color: #D4C5A9;
@@ -315,6 +312,7 @@
   font-size: 11px;
   color: rgba(201,168,76,0.5);
   transition: color 0.3s, transform 0.3s;
+  flex-shrink: 0;
 }
 
 .hma-card-email:hover {
@@ -443,59 +441,7 @@
   letter-spacing: 0.2px;
 }
 
-@media (max-width: 1024px) {
-  .hma-grid {
-    grid-template-columns: 180px 1px 1fr;
-    gap: 0 32px;
-  }
-}
-
-@media (max-width: 768px) {
-  .hma-pagina {
-    padding-top: 40px;
-    padding-bottom: 60px;
-  }
-
-  .hma-inner {
-    padding: 0 20px;
-  }
-
-  .hma-titulo {
-    font-size: 38px;
-  }
-
-  .hma-paragrafo--destaque {
-    font-size: 17px;
-  }
-
-  .hma-coluna-texto {
-    margin-bottom: 40px;
-  }
-
-  .hma-grid {
-    grid-template-columns: 1fr;
-    gap: 32px 0;
-  }
-
-  .hma-ornamento-vertical {
-    display: none;
-  }
-
-  .hma-foto-moldura {
-    max-width: 160px;
-    margin: 0;
-  }
-
-  .hma-foto-legenda {
-    max-width: 160px;
-  }
-
-  .hma-card-assinatura {
-    max-width: 100%;
-    padding: 28px 20px;
-  }
-}
-/* ── FOTO WIDE (centralizada) ── */
+/* ── FOTO WIDE ── */
 .hma-foto-destaque-wrapper {
   width: 100%;
   margin: 0 0 56px;
@@ -602,34 +548,249 @@
   letter-spacing: 0.5px;
 }
 
-@media (max-width: 768px) {
-  .hma-foto--wide {
-    height: 260px;
+/* ══════════════════════════════════════════
+   RESPONSIVIDADE
+   ══════════════════════════════════════════ */
+
+/* ── Tablet grande: 1024px ── */
+@media (max-width: 1024px) {
+  .hma-inner {
+    padding: 0 36px;
   }
 
-  .hma-frase-combate {
-    font-size: 20px;
+  .hma-titulo {
+    font-size: 58px;
   }
 
-  .hma-contato-bloco {
-    padding: 24px 20px;
+  .hma-grid {
+    grid-template-columns: 180px 1px 1fr;
+    gap: 0 32px;
   }
 
-  .hma-contato-chamada {
-    font-size: 18px;
+  .hma-pilares {
+    gap: 20px;
   }
 
-  .hma-card-email--destaque {
-    font-size: 13px;
+  .hma-pilar {
+    padding: 28px 22px;
   }
 }
 
-@media (max-width: 420px) {
+/* ── Tablet: 768px ── */
+@media (max-width: 768px) {
+  .hma-pagina {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+
+  .hma-inner {
+    padding: 0 24px;
+  }
+
+  .hma-titulo {
+    font-size: 42px;
+    line-height: 1.12;
+  }
+
+  .hma-divisor {
+    margin: 20px 0 40px;
+  }
+
+  .hma-paragrafo--destaque {
+    font-size: 18px;
+    line-height: 1.65;
+  }
+
+  .hma-paragrafo {
+    font-size: 17px;
+    line-height: 1.85;
+  }
+
+  .hma-coluna-texto {
+    gap: 22px;
+    margin-bottom: 40px;
+  }
+
+  .hma-grid {
+    grid-template-columns: 1fr;
+    gap: 32px 0;
+  }
+
+  .hma-ornamento-vertical {
+    display: none;
+  }
+
+  .hma-foto-moldura {
+    max-width: 160px;
+    margin: 0;
+  }
+
+  .hma-foto-legenda {
+    max-width: 160px;
+  }
+
+  .hma-card-assinatura {
+    max-width: 100%;
+    padding: 24px 20px;
+  }
+
+  /* Foto wide */
+  .hma-foto--wide {
+    height: 300px;
+    object-position: center 20%;
+  }
+
+  .hma-foto-destaque-wrapper {
+    margin: 0 0 40px;
+  }
+
+  /* Frase impacto */
+  .hma-frase-combate {
+    font-size: 21px;
+    padding-left: 16px;
+  }
+
+  /* Divisor */
+  .hma-divisor--centro {
+    margin: 0 0 40px;
+  }
+
+  /* Contato */
+  .hma-contato-bloco {
+    padding: 28px 24px;
+    gap: 6px;
+  }
+
+  .hma-contato-chamada {
+    font-size: 19px;
+  }
+
+  .hma-card-email--destaque {
+    font-size: 14px;
+    letter-spacing: 0.2px;
+  }
+
+  /* Citação */
+  .hma-citacao {
+    font-size: 24px;
+    padding: 0 8px;
+  }
+
+  .hma-citacao-aspas {
+    font-size: 52px;
+  }
+
+  .hma-citacao-wrapper {
+    margin: 52px 0 48px;
+  }
+
+  /* Pilares: 1 coluna */
+  .hma-pilares {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .hma-pilar {
+    padding: 28px 22px;
+  }
+
+  .hma-pilar-titulo {
+    font-size: 22px;
+  }
+
+  /* Orbs menores no mobile */
+  .hma-bg-orb--1 {
+    width: 300px;
+    height: 300px;
+    right: -60px;
+  }
+
+  .hma-bg-orb--2 {
+    width: 200px;
+    height: 200px;
+    left: -40px;
+  }
+}
+
+/* ── Mobile: 480px ── */
+@media (max-width: 480px) {
+  .hma-pagina {
+    padding-top: 32px;
+    padding-bottom: 48px;
+  }
+
+  .hma-inner {
+    padding: 0 16px;
+  }
+
+  .hma-titulo {
+    font-size: 34px;
+    line-height: 1.15;
+  }
+
+  .hma-paragrafo--destaque {
+    font-size: 16px;
+    padding-left: 16px;
+  }
+
+  .hma-paragrafo {
+    font-size: 15.5px;
+  }
+
+  .hma-foto--wide {
+    height: 240px;
+  }
+
+  .hma-frase-combate {
+    font-size: 18px;
+  }
+
+  .hma-contato-bloco {
+    padding: 22px 18px;
+  }
+
+  .hma-contato-chamada {
+    font-size: 17px;
+  }
+
+  .hma-card-email--destaque {
+    font-size: 12.5px;
+    word-break: break-all;
+  }
+
+  .hma-citacao {
+    font-size: 20px;
+    line-height: 1.65;
+  }
+
+  .hma-citacao-aspas {
+    font-size: 42px;
+  }
+}
+
+/* ── Mobile pequeno: 360px ── */
+@media (max-width: 360px) {
+  .hma-titulo {
+    font-size: 28px;
+  }
+
+  .hma-paragrafo--destaque {
+    font-size: 15px;
+  }
+
+  .hma-paragrafo {
+    font-size: 14.5px;
+  }
+
   .hma-foto--wide {
     height: 200px;
   }
 
   .hma-frase-combate {
-    font-size: 17px;
+    font-size: 16px;
+  }
+
+  .hma-card-email--destaque {
+    font-size: 11.5px;
   }
 }

@@ -20,28 +20,6 @@
   to   { transform: scaleX(1); transform-origin: left; }
 }
 
-@keyframes iconePulse {
-  0%   { opacity: 0; transform: scale(0.6) rotate(-8deg); }
-  60%  { opacity: 1; transform: scale(1.08) rotate(1deg); }
-  100% { opacity: 1; transform: scale(1) rotate(0deg); }
-}
-
-@keyframes ringExpand {
-  0%   { opacity: 0; transform: translate(-50%, -50%) scale(0.3); }
-  60%  { opacity: 0.6; }
-  100% { opacity: 0; transform: translate(-50%, -50%) scale(1.5); }
-}
-
-@keyframes nomeReveal {
-  from { opacity: 0; transform: translateX(-24px); letter-spacing: 8px; }
-  to   { opacity: 1; transform: translateX(0);    letter-spacing: 3px; }
-}
-
-@keyframes underlineGrow {
-  from { width: 0; opacity: 0; }
-  to   { width: 100%; opacity: 1; }
-}
-
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(8px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -52,27 +30,26 @@
   to   { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes glowPulse {
-  0%   { opacity: 0; width: 0; }
-  50%  { opacity: 0.5; }
-  100% { opacity: 0; width: 120%; }
-}
-
 @keyframes iconIn {
   from { opacity: 0; transform: scale(0) rotate(-30deg); }
   to   { opacity: 1; transform: scale(1) rotate(0deg); }
 }
 
+@keyframes shimmer {
+  0%   { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+/* ── Header container ── */
 .header-container {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
   z-index: 1000;
   width: 100vw;
   animation: headerReveal 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
+/* ── Top bar ── */
 .top-bar {
   background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-light), var(--gold), var(--gold-dark));
   background-size: 200% 100%;
@@ -84,7 +61,6 @@
   position: relative;
   overflow: hidden;
   animation: barSlideIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
-  transition: background-position 3s ease;
 }
 
 .top-bar-right {
@@ -92,28 +68,18 @@
   align-items: center;
   gap: 20px;
 }
+
 .top-bar::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(105deg,
-    transparent 30%,
-    rgba(255,255,255,0.18) 50%,
-    transparent 70%
-  );
+  background: linear-gradient(105deg, transparent 30%, rgba(255,255,255,0.18) 50%, transparent 70%);
   background-size: 250% 100%;
   animation: shimmer 4s ease-in-out infinite;
   pointer-events: none;
 }
 
-@keyframes shimmer {
-  0%   { background-position: 200% center; }
-  100% { background-position: -200% center; }
-}
-
-.top-bar-line {
-  display: none;
-}
+.top-bar-line { display: none; }
 
 /* ── Contato ── */
 .contact-info {
@@ -142,16 +108,10 @@
   filter: drop-shadow(0 0 4px rgba(255,255,255,0.4));
 }
 
-.contact-icon {
-  font-size: 14px;
-  flex-shrink: 0;
-}
+.contact-icon { font-size: 14px; flex-shrink: 0; }
+.contact-text { font-size: 13px; }
 
-.contact-text {
-  font-size: 13px;
-}
-
-/* ── Seletor de idioma ── */
+/* ── Idioma ── */
 .language-switcher {
   display: flex;
   align-items: center;
@@ -177,7 +137,7 @@
   color: var(--navy);
   opacity: 0.55;
   transform: scale(0.95);
-  transition: opacity 0.2s, transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s, border-color 0.2s, color 0.2s;
+  transition: opacity 0.2s, transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s, border-color 0.2s;
   box-shadow: 0 1px 4px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05);
 }
 
@@ -185,7 +145,6 @@
   opacity: 0.85;
   transform: scale(1.05);
   border-color: rgba(201,168,76,0.5);
-  color: var(--navy);
 }
 
 .lang-btn.ativo {
@@ -193,12 +152,10 @@
   transform: scale(1.08);
   border-color: var(--gold);
   background: linear-gradient(135deg, rgba(201,168,76,0.22), rgba(201,168,76,0.08));
-  color: var(--navy);
   box-shadow: 0 2px 10px rgba(0,0,0,0.4), 0 0 8px rgba(201,168,76,0.25), inset 0 1px 0 rgba(255,255,255,0.12);
 }
 
-
-
+/* ── Social ── */
 .social-icons {
   display: flex;
   gap: 20px;
@@ -226,6 +183,7 @@
   filter: drop-shadow(0 0 6px rgba(255,255,255,0.5));
 }
 
+/* ── Header main ── */
 .header-main {
   font-family: Montserrat;
   height: 160px;
@@ -239,9 +197,7 @@
   padding: 24px 40px;
   gap: 30px;
   border-bottom: 1px solid rgba(201, 168, 76, 0.35);
-  box-shadow:
-    0 4px 30px rgba(0, 0, 0, 0.5),
-    0 1px 0 rgba(201,168,76,0.15) inset;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.5), 0 1px 0 rgba(201,168,76,0.15) inset;
   position: relative;
   overflow: hidden;
 }
@@ -255,6 +211,7 @@
   opacity: 0.4;
 }
 
+/* ── Logo area ── */
 .logo-area {
   display: flex;
   align-items: center;
@@ -288,7 +245,65 @@
   display: block;
 }
 
+/* ── Logo tipográfico ── */
+.logo-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  animation: fadeUp 0.6s ease 0.5s both;
+}
 
+.logo-nome {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 2px;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.logo-subtexto {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 2px;
+}
+
+.logo-oab {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--text-light);
+  letter-spacing: 1.5px;
+}
+
+.logo-advogados {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--gold-light);
+  letter-spacing: 3px;
+}
+
+.logo-divisor {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold), transparent);
+  margin: 6px 0;
+}
+
+.logo-rodape {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+  color: var(--text-light);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* ── Nav ── */
 .header-nav {
   display: flex;
   gap: 2px;
@@ -335,11 +350,9 @@
   border-color: rgba(201, 168, 76, 0.3);
 }
 
-.header-nav a:hover::after {
-  width: 80%;
-}
+.header-nav a:hover::after { width: 80%; }
 
-/* Botão hambúrguer (oculto por padrão no desktop) */
+/* ── Hambúrguer ── */
 .menu-hamburguer {
   display: none;
   flex-direction: column;
@@ -353,9 +366,7 @@
   transition: border-color 0.3s;
 }
 
-.menu-hamburguer:hover {
-  border-color: var(--gold);
-}
+.menu-hamburguer:hover { border-color: var(--gold); }
 
 .menu-hamburguer span {
   display: block;
@@ -366,19 +377,14 @@
   transform-origin: center;
 }
 
-/* Estado aberto do hambúrguer */
-.menu-hamburguer.aberto span:nth-child(1) {
-  transform: translateY(6.5px) rotate(45deg);
-}
-.menu-hamburguer.aberto span:nth-child(2) {
-  opacity: 0;
-  transform: scaleX(0);
-}
-.menu-hamburguer.aberto span:nth-child(3) {
-  transform: translateY(-6.5px) rotate(-45deg);
-}
+.menu-hamburguer.aberto span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.menu-hamburguer.aberto span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.menu-hamburguer.aberto span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
-/* ── TABLET (até 1024px) ── */
+
+/* ══════════════════════════════════════
+   TABLET  (até 1024px)
+══════════════════════════════════════ */
 @media (max-width: 1024px) {
   .header-main {
     height: auto;
@@ -409,11 +415,7 @@
     transform: none;
   }
 
-  .header-nav.aberto {
-    max-height: 600px;
-    opacity: 1;
-    transform: none;
-  }
+  .header-nav.aberto { max-height: 600px; opacity: 1; transform: none; }
 
   .header-nav a {
     font-size: 13px;
@@ -428,107 +430,48 @@
     white-space: normal;
   }
 
-  .header-nav a:last-child {
-    border-bottom: none;
-  }
+  .header-nav a:last-child { border-bottom: none; }
+  .header-nav a::after { display: none; }
+  .header-nav a:hover { background: rgba(201,168,76,0.05); color: var(--gold); }
 
-  .header-nav a::after {
-    display: none;
-  }
+  .menu-hamburguer { display: flex; }
 
-  .header-nav a:hover {
-    background: rgba(201,168,76,0.05);
-    color: var(--gold);
-  }
+  .logo-nome { font-size: 28px; }
+  .logo-oab, .logo-advogados { font-size: 9px; }
+  .logo-rodape { font-size: 8px; letter-spacing: 1.5px; }
+  .logo-imagem { height: 80px; }
+  .logo-imagem-centro { height: 65px; }
 
-  .menu-hamburguer {
-    display: flex;
-  }
-
-  .logo-imagem {
-    height: 80px;
-  }
-
-  .logo-imagem-centro {
-    height: 65px;
-  }
-
-  .top-bar {
-    padding: 8px 24px;
-  }
-
-  .top-bar a {
-    font-size: 18px;
-  }
-
-  .lang-btn {
-    font-size: 10px;
-    width: 28px;
-    height: 21px;
-    padding: 0;
-  }
-
-  .contact-link {
-    font-size: 10px;
-    gap: 5px;
-  }
-
-  .contact-text {
-    font-size: 10px;
-    letter-spacing: 0;
-  }
-
-  .contact-info {
-    gap: 12px;
-  }
-
+  .top-bar { padding: 8px 24px; }
+  .top-bar a { font-size: 18px; }
+  .lang-btn { font-size: 10px; width: 28px; height: 21px; padding: 0; }
+  .contact-link { font-size: 10px; gap: 5px; }
+  .contact-text { font-size: 10px; letter-spacing: 0; }
+  .contact-info { gap: 12px; }
 }
 
-/* ── MOBILE (até 768px) ── */
+
+/* ══════════════════════════════════════
+   MOBILE  (até 768px)
+══════════════════════════════════════ */
 @media (max-width: 768px) {
-  .top-bar {
-    padding: 8px 16px;
-    gap: 8px;
-  }
-
-  .top-bar a {
-    font-size: 18px;
-  }
-
-  .lang-btn {
-    font-size: 10px;
-    width: 28px;
-    height: 21px;
-    padding: 0;
-  }
-
-  .contact-info {
-    gap: 8px;
-  }
-
-  .contact-text {
-    font-size: 9px;
-  }
-
-  .top-bar-right {
-    gap: 8px;
-  }
+  .top-bar { padding: 8px 16px; gap: 8px; }
+  .top-bar a { font-size: 18px; }
+  .lang-btn { font-size: 10px; width: 28px; height: 21px; padding: 0; }
+  .contact-info { gap: 8px; }
+  .contact-text { font-size: 9px; }
+  .top-bar-right { gap: 8px; }
 
   .header-main {
     height: auto;
-    min-height: 70px;
+    min-height: 80px;
     padding: 14px 16px;
     justify-content: space-between;
     overflow: visible;
   }
 
-  .logo-imagem {
-    height: 55px;
-  }
-
-  .logo-imagem-centro {
-    height: 45px;
-  }
+  .logo-imagem { height: 55px; }
+  .logo-imagem-centro { height: 45px; }
 
   .header-nav a {
     font-size: 14px;
@@ -536,52 +479,62 @@
     padding: 16px 24px;
   }
 
-  .icone {
-    font-size: 36px;
+  .logo-area { gap: 0; align-items: center; }
+
+  .logo-texto { gap: 0; }
+
+  .logo-nome {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    line-height: 1;
   }
 
-  .nome {
-    font-size: 17px;
+  .logo-subtexto {
+    margin-top: 4px;
+    justify-content: flex-start;
+    gap: 0;
+  }
+
+  /* ponto separador entre OAB e ADVOGADOS */
+  .logo-oab {
+    font-size: 8px;
+    letter-spacing: 0.8px;
+    color: rgba(212, 197, 169, 0.75);
+  }
+
+  .logo-oab::after {
+    content: ' ·';
+    color: var(--gold-dark);
+    margin: 0 5px;
+  }
+
+  .logo-advogados {
+    font-size: 8px;
     letter-spacing: 2px;
   }
 
-  .descrição {
-    font-size: 9px;
-    letter-spacing: 1px;
+  .logo-divisor {
+    margin: 5px 0 4px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-dark), transparent);
   }
 
-  .nome-underline {
-    margin: 3px 0 4px;
+  .logo-rodape {
+    font-size: 6.5px;
+    letter-spacing: 1.6px;
+    color: rgba(212, 197, 169, 0.6);
+    white-space: nowrap;
   }
 }
 
+
+/*MOBILE PEQUENO até 420px)*/
 @media (max-width: 420px) {
-  .nome {
-    font-size: 14px;
-  }
-
-  .icone {
-    font-size: 28px;
-  }
-
-  .logo-area {
-    gap: 10px;
-  }
-
-  .logo-imagem {
-    height: 40px;
-  }
-
-  .logo-imagem-centro {
-    height: 32px;
-  }
-
-
-  .contact-info a:nth-child(2) {
-    display: none;
-  }
-
-  .contact-text {
-    font-size: 9px;
-  }
- }
+  .logo-nome { font-size: 17px; letter-spacing: 1px; }
+  .logo-oab, .logo-advogados { font-size: 7px; letter-spacing: 0.6px; }
+  .logo-rodape { font-size: 6px; letter-spacing: 1px; }
+  .logo-area { gap: 8px; }
+  .logo-imagem { height: 40px; }
+  .logo-imagem-centro { height: 32px; }
+  .contact-info a:nth-child(2) { display: none; }
+  .contact-text { font-size: 9px; }
+}

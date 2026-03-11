@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 import { FaFacebook, FaInstagram, FaWhatsapp, FaYoutube, FaPhone, FaEnvelope } from 'react-icons/fa'
 import './Header.css'
 
-const NAV_ROTAS  = { inicio: '/', hma: '/hma', duvidas: '/duvidas', contato : '/contato' }
-const NAV_KEYS   = ['inicio', 'hma', 'nucleos', 'atuacao', 'duvidas', 'contato']
-const NAV_ANCHORS= ['inicio', 'hma', 'nucleos', 'atuacao', 'duvidas', 'contato']
+const NAV_ROTAS  = { inicio: '/', sobre: '/sobre', duvidas: '/duvidas', contato : '/contato' }
+const NAV_KEYS   = ['inicio', 'sobre', 'nucleos', 'atuacao', 'duvidas', 'contato']
+const NAV_ANCHORS= ['inicio', 'sobre', 'nucleos', 'atuacao', 'duvidas', 'contato']
 
 function Header() {
   const [menuAberto, setMenuAberto] = useState(false)
@@ -49,16 +49,20 @@ function Header() {
       <div className="header-main">
 
         <div className="logo-area">
-          <img
-            src="/WhatsApp Image 2026-03-07 at 19.50.19.jpeg"
-            alt="Haeffner Marinho Advocacia"
-            className="logo-imagem"
-          />
+          <div className="logo-texto">
+            <div className="logo-nome">Haeffner Marinho</div>
+            <div className="logo-subtexto">
+              <span className="logo-oab">OAB/PR 94.793</span>
+              <span className="logo-advogados">ADVOGADOS</span>
+            </div>
+            <div className="logo-divisor" />
+            <div className="logo-rodape">ADVOCACIA E CONSULTORIA JURÍDICA</div>
+          </div>
         </div>
 
         <div className="logo-centro">
           <img
-            src="/WhatsApp Image 2026-03-07 at 19.51.23.jpeg"
+            src="/advocacia/logodourado1.png"
             alt="Logo Haeffner Marinho"
             className="logo-imagem-centro"
           />

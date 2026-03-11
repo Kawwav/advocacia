@@ -119,9 +119,17 @@ function Footer() {
             viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.4 }}
           />
           <div className="footer-contatos">
-            <a href="tel:4198387397" className="footer-contato-item">
+            <a href="tel:4130180887" className="footer-contato-item">
               <FaPhone className="footer-contato-icone" />
-              <span>(41) 9838-7397</span>
+              <span>(41) 3018.0887</span>
+            </a>
+            <a href="tel:41998387397" className="footer-contato-item">
+              <FaPhone className="footer-contato-icone" />
+              <span>(41) 99838.7397</span>
+            </a>
+            <a href="mailto:contato@haeffnermarinho.adv.br" className="footer-contato-item">
+              <FaEnvelope className="footer-contato-icone" />
+              <span>contato@haeffnermarinho.adv.br</span>
             </a>
             <a href="mailto:armando@haeffnermarinho.adv.br" className="footer-contato-item">
               <FaEnvelope className="footer-contato-icone" />
@@ -129,7 +137,7 @@ function Footer() {
             </a>
             <div className="footer-contato-item footer-contato-item--no-link">
               <FaMapMarkerAlt className="footer-contato-icone" />
-              <span>{t('footer.cidade', 'Curitiba — PR')}</span>
+              <span>Av. Cândido Hartmann, 1326<br />Mercês · Curitiba — PR · Brasil</span>
             </div>
           </div>
         </motion.div>
@@ -147,6 +155,10 @@ function Footer() {
 
       <motion.div className="footer-copyright" {...fadeUp(0.4)}>
         <p>© {ano} Haeffner Marinho Advogados. {t('footer.direitos', 'Todos os direitos reservados.')}</p>
+        <p>Haeffner Marinho – Sociedade Individual de Advocacia – CNPJ Nº 65.144.536/0001-26</p>
+        <a href="/politica-de-privacidade" className="footer-privacidade-link">
+          {t('footer.privacidade', 'Política de Privacidade')}
+        </a>
         <div className="footer-ornamento">
           <span className="footer-ornamento-linha" />
           <span className="footer-ornamento-diamond" />

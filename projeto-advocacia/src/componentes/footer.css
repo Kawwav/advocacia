@@ -301,3 +301,21 @@
     font-size: 16px;
   }
 }
+/* ── Política de Privacidade ── */
+.footer-privacidade-link {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  color: #D4C5A9;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  opacity: 0.5;
+  border-bottom: 1px solid transparent;
+  transition: opacity 0.25s, border-color 0.25s, color 0.25s;
+}
+
+.footer-privacidade-link:hover {
+  opacity: 1;
+  color: #C9A84C;
+  border-bottom-color: rgba(201,168,76,0.4);
+}
