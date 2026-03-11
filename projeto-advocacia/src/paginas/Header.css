@@ -453,13 +453,25 @@
 
 /* ══════════════════════════════════════
    MOBILE  (até 768px)
+   — mantém os mesmos tamanhos do base
 ══════════════════════════════════════ */
 @media (max-width: 768px) {
   .top-bar { padding: 8px 16px; gap: 8px; }
-  .top-bar a { font-size: 18px; }
-  .lang-btn { font-size: 10px; width: 28px; height: 21px; padding: 0; }
+
+  /* ícones sociais — igual ao base (32px) */
+  .top-bar a { font-size: 32px !important; }
+
+  /* PT / EN — igual ao base */
+  .lang-btn { font-size: 11px !important; width: 32px !important; height: 24px !important; padding: 0; }
+
+  /* ícone telefone/email — igual ao base */
+  .contact-icon { font-size: 14px !important; }
+
+  /* texto telefone/email — igual ao base */
+  .contact-link { font-size: 13px !important; gap: 7px; }
+  .contact-text { font-size: 13px !important; }
+
   .contact-info { gap: 8px; }
-  .contact-text { font-size: 9px; }
   .top-bar-right { gap: 8px; }
 
   .header-main {
@@ -527,7 +539,9 @@
 }
 
 
-/*MOBILE PEQUENO até 420px)*/
+/* ══════════════════════════════════════
+   MOBILE PEQUENO  (até 420px)
+══════════════════════════════════════ */
 @media (max-width: 420px) {
   .logo-nome { font-size: 17px; letter-spacing: 1px; }
   .logo-oab, .logo-advogados { font-size: 7px; letter-spacing: 0.6px; }
@@ -536,5 +550,5 @@
   .logo-imagem { height: 40px; }
   .logo-imagem-centro { height: 32px; }
   .contact-info a:nth-child(2) { display: none; }
-  .contact-text { font-size: 9px; }
+  .contact-text { font-size: 13px !important; }
 }
