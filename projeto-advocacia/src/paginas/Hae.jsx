@@ -92,7 +92,8 @@ function Hae() {
           </p>
         </motion.div>
 
-        <HaeImage src="public/predio.jpeg" alt="Haeffner Marinho Advogados" index={1} />
+
+        <HaeImage src="/public/predio.jpeg" alt="Haeffner Marinho Advogados" index={1} />
 
         <motion.p className="heroi-texto" {...fadeUp(0)}>
           {t('hae.complemento',
@@ -100,7 +101,7 @@ function Hae() {
           )}
         </motion.p>
 
-        <HaeImage src="public/predio2 (1).jpeg" alt="Escritório Haeffner Marinho" index={2} />
+        <HaeImage src="/public/predio2 (1).jpeg" alt="Escritório Haeffner Marinho" index={2} />
 
         <motion.div className="heroi-citacao" {...fadeUp(0)}>
           <div className="heroi-citacao-barra" />
