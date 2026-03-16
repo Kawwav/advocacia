@@ -59,18 +59,25 @@ function Hae() {
 
       <div className="heroi-conteudo">
 
+        <motion.p className="heroi-topo-label"
+          initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.0 }}
+        >
+          ADVOCACIA E CONSULTORIA JURÍDICA
+        </motion.p>
+
         <motion.p className="heroi-eyebrow"
           initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
         >
-          {t('hae.eyebrow', 'Seja bem-vindo (a) ao nosso escritório.')}
+         
         </motion.p>
 
         <motion.h1 className="heroi-titulo"
           initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
         >
-          {t('hae.titulo_novo', 'Descomplique o Direito')}{' '}
+          {t('hae.titulo_novo', 'Descomplique o Direito:')}{' '}
           <span>{t('hae.titulo_sub', 'Soluções jurídicas para você')}</span>
         </motion.h1>
 
@@ -100,7 +107,7 @@ function Hae() {
           )}
         </motion.p>
 
-        <HaeImage src="/advocacia/predio2 (1).jpeg" alt="Escritório Haeffner Marinho" index={2} />
+        <HaeImage src="/advocacia/predio2.jpeg" alt="Escritório Haeffner Marinho" index={2} />
 
         <motion.div className="heroi-citacao" {...fadeUp(0)}>
           <div className="heroi-citacao-barra" />

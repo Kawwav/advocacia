@@ -1,0 +1,51 @@
+:root {
+
+  /* ── Famílias ── */
+  --font-serif:   'Palatino Linotype', 'Palatino', 'Book Antiqua', serif;
+  --font-display: 'Cormorant Garamond', serif;
+  --font-sans:    'Montserrat', sans-serif;
+
+  /* ── Tamanhos base (desktop) ── */
+  --fs-titulo:        72px;   /* h1 principal das páginas          */
+  --fs-subtitulo:     32px;   /* citações, frases de impacto       */
+  --fs-destaque:      20px;   /* parágrafo destaque / intro        */
+  --fs-corpo:         20px;   /* parágrafo corpo normal            */
+  --fs-label:         13px;   /* eyebrow, labels, topo             */
+  --fs-label-sm:      11px;   /* labels menores, autores           */
+  --fs-micro:         10px;   /* OAB, meta, detalhes               */
+  --fs-card-nome:     20px;   /* nome no card de assinatura        */
+  --fs-card-email:    13px;   /* email nos cards                   */
+  --fs-card-email-lg: 16px;   /* email destaque (bloco contato)    */
+  --fs-chamada:       22px;   /* chamada do bloco de contato       */
+  --fs-frase-impacto: 26px;   /* "Estamos prontos para o combate"  */
+  --fs-botao:         10px;   /* botão CTA                         */
+  --fs-topo-label:    18px;   /* "ADVOCACIA E CONSULTORIA…"        */
+
+  /* ── Tamanhos tablet (≤ 1024px) ── */
+  --fs-titulo-lg:     52px;
+  --fs-corpo-lg:      18px;
+
+  /* ── Tamanhos mobile (≤ 768px) ── */
+  --fs-titulo-md:     38px;   /* Hae */
+  --fs-titulo-md-sob: 42px;   /* Sobre */
+  --fs-corpo-md:      20px;   /* mantém 20px no mobile             */
+  --fs-frase-md:      21px;
+  --fs-chamada-md:    19px;
+  --fs-card-email-md: 14px;
+  --fs-subtitulo-md:  24px;
+  --fs-topo-label-md: 9px;
+
+  /* ── Tamanhos mobile pequeno (≤ 480px) ── */
+  --fs-titulo-sm:     34px;   /* Sobre 480 */
+  --fs-corpo-sm:      15px;
+  --fs-frase-sm:      18px;
+  --fs-chamada-sm:    17px;
+  --fs-card-email-sm: 12.5px;
+  --fs-subtitulo-sm:  20px;
+
+  /* ── Tamanhos mobile mínimo (≤ 420px / 360px) ── */
+  --fs-titulo-xs:     28px;
+  --fs-corpo-xs:      20px;   /* mantém 20px mesmo no xs          */
+  --fs-topo-label-xs: 8px;
+
+}

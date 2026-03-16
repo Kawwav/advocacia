@@ -6,7 +6,7 @@
 
 body {
   margin: 0;
-  padding-top: 210px;
+  padding-top: 200px;
   overflow-x: hidden;
 }
 
@@ -15,20 +15,10 @@ body {
   padding: 0;
 }
 
-@media (max-width: 1024px) {
-  body {
-    padding-top: 110px;
-  }
-}
-
-@media (max-width: 768px) {
-  body {
-    padding-top: 100px;
-  }
-}
-
-@media (max-width: 420px) {
-  body {
-    padding-top: 85px;
-  }
-}
+@media (max-width: 1460px) { body { padding-top: 180px; } }
+@media (max-width: 1366px) { body { padding-top: 160px; } }
+@media (max-width: 1280px) { body { padding-top: 155px; } }
+@media (max-width: 1024px) { body { padding-top: 135px; } }
+@media (max-width: 768px)  { body { padding-top: 110px; } }
+@media (max-width: 515px)  { body { padding-top: 101px; } }
+@media (max-width: 420px)  { body { padding-top: 90px; } }

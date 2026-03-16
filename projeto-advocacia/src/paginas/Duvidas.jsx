@@ -14,7 +14,7 @@ const EMAILJS_SERVICE_ID  = 'service_o4yt8u9'
 const EMAILJS_TEMPLATE_ID = 'template_7b2te2d'  
 const EMAILJS_PUBLIC_KEY  = 'aqFtbI9SNlieQ49Li'   
 
-/* Número do WhatsApp do escritório */
+/* numero do whatsApp do escritório */
 const WHATSAPP_NUMBER = '5541988184388'
 
 
@@ -141,7 +141,7 @@ const fadeUp = (delay = 0) => ({
   viewport: { once: true }, transition: { duration: 0.9, delay, ease: [0.22, 1, 0.36, 1] },
 })
 
-/* ── Painel de detalhes inline ───────────────────────────────── */
+/* painel de detalhes inline  */
 function DetalhePanel({ opt, onContact }) {
   const info = DETALHES[opt]
   if (!info) return null
@@ -185,7 +185,7 @@ function DetalhePanel({ opt, onContact }) {
   )
 }
 
-/* ── Componente principal ────────────────────────────────────── */
+/*componente principal */
 export default function Duvidas() {
   const { t } = useTranslation()
   const [selectedCategory, setSelectedCategory] = useState(null)
@@ -259,7 +259,7 @@ export default function Duvidas() {
     setSendError('')
   }
 
-  /* ── Tela de sucesso ── */
+  /* tela de sucesso */
   if (submitted) {
     return (
       <main className="dv-pagina">
@@ -311,17 +311,25 @@ export default function Duvidas() {
       <div className="hma-bg-orb hma-bg-orb--1" /><div className="hma-bg-orb hma-bg-orb--2" />
       <div className="dv-inner">
 
-        <motion.p className="dv-eyebrow" {...fadeUp(0.05)}>{t('duvidas.eyebrow', 'Dúvidas — Vamos Conversar?')}</motion.p>
+        <motion.p
+          initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.0 }}
+          style={{ fontFamily: "'Palatino Linotype', sans-serif", fontSize: '18px', fontWeight: 600, letterSpacing: '5px', color: '#9A7A2E', textTransform: 'uppercase', textAlign: 'left', marginBottom: '24px', opacity: 0.85 }}
+        >
+          ADVOCACIA E CONSULTORIA JURÍDICA
+        </motion.p>
+
+        
         <motion.h1 className="dv-titulo" {...fadeUp(0.15)}>
-          {t('duvidas.titulo1', 'Tem uma dúvida ou precisa de')}{' '}
-          <span>{t('duvidas.titulo2', 'análise estratégica?')}</span>
+          {t('duvidas.titulo1', 'Dúvidas? Analisamos junto.  Como proceder?')}{' '}
+          <span>{t('duvidas.titulo2', 'Saiba seus direitos!')}</span>
         </motion.h1>
         <motion.div className="dv-divisor" initial={{ width: 0, opacity: 0 }} whileInView={{ width: 60, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.3 }} />
         <motion.p className="dv-subtitulo" {...fadeUp(0.35)}>
           {t('duvidas.sub', 'Selecione uma situação abaixo para entender seus direitos e os próximos passos.')}
         </motion.p>
 
-        {/* ── Categorias ── */}
+        {/* categorias*/}
         <div className="dv-categorias">
           {subjects.map((cat, i) => {
             const isOpen = selectedCategory?.id === cat.id
@@ -367,7 +375,7 @@ export default function Duvidas() {
           })}
         </div>
 
-        {/* ── Formulário ── */}
+        {/* formulário*/}
         <AnimatePresence>
           {formOption && (
             <motion.div className="dv-form" key="form"
@@ -399,7 +407,7 @@ export default function Duvidas() {
                 </div>
               </div>
 
-              {/* Erro de envio + botão WhatsApp de fallback */}
+              {/* erro de envio + botão whats de fallback */}
               <AnimatePresence>
                 {sendError && (
                   <motion.div className="dv-form__erro" initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}>
@@ -425,7 +433,7 @@ export default function Duvidas() {
                 }
               </motion.button>
 
-              {/* Botão WhatsApp alternativo */}
+              {/* botão whats alternativo */}
               {name && phone && (
                 <motion.a
                   className="dv-btn-whatsapp"

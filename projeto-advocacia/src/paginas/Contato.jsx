@@ -7,20 +7,22 @@ import {
 import './Contato.css'
 
 /* ══════════════════════════════════════════════════════════════
-   ⚙️  CONFIGURAÇÃO — Backend próprio (Vercel)
+CONFIGURAÇÃO — Backend próprio (Vercel)
    E-mails chegam em: kawav6390@gmail.com
 ══════════════════════════════════════════════════════════════ */
 const API_URL         = 'https://api-contato-rouge.vercel.app/api/contato'
 const WHATSAPP_NUMBER = '5541988184388'
 
 const AREAS = [
-  'Urgências Criminais',
-  'Conflitos Cíveis e Cotidianos',
-  'Mercado Imobiliário',
-  'Consultoria Preventiva / Empresas',
-  'Proteção Patrimonial',
   'Análise de Contratos',
+  'Conflitos Cíveis e Cotidianos',
+  'Consultoria Preventiva / Empresas',
+  'Enviar Currículo',
+  'Mercado Imobiliário',
   'Outros assuntos',
+  'Proteção Patrimonial',
+  'Trabalhe Conosco',
+  'Urgências Criminais',
 ]
 
 const INFO_CARDS = [
@@ -93,7 +95,7 @@ export default function Contato() {
 
   const canSubmit = nome && email && telefone && !sending
 
-  /* ── Tela de sucesso ── */
+  /*👏 */
   if (submitted) return (
     <main className="ct-pagina">
       <div className="ct-orb ct-orb--1" /><div className="ct-orb ct-orb--2" />
@@ -121,20 +123,20 @@ export default function Contato() {
   return (
     <main className="ct-pagina">
       <div className="ct-orb ct-orb--1" /><div className="ct-orb ct-orb--2" />
-
       <div className="ct-inner">
-
-        {/* ── Cabeçalho ── */}
         <motion.div className="ct-header" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-          <p className="ct-eyebrow">FALE CONOSCO</p>
+          <p style={{ fontFamily: "'Palatino Linotype', sans-serif", fontSize: '18px', fontWeight: 600, letterSpacing: '5px', color: '#9A7A2E', textTransform: 'uppercase', textAlign: 'left', marginBottom: '24px', opacity: 0.85 }}>
+            ADVOCACIA E CONSULTORIA JURÍDICA
+          </p>
+
           <h1 className="ct-titulo">Entre em <span>Contato</span></h1>
           <div className="ct-divisor" />
         </motion.div>
 
-        {/* ── Layout dois lados ── */}
+        {/* lados*/}
         <div className="ct-layout">
 
-          {/* ── Coluna esquerda: formulário ── */}
+          {/*coluna esquerda formualrios */}
           <motion.div className="ct-form" initial={{ opacity: 0, x: -24 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.1 }}>
 
             <div className="ct-campo">
@@ -165,7 +167,7 @@ export default function Contato() {
               <textarea className="ct-campo__input ct-campo__textarea" rows={4} placeholder="Descreva brevemente sua situação..." value={mensagem} onChange={e => setMensagem(e.target.value)} disabled={sending} />
             </div>
 
-            {/* Anexar arquivo */}
+            {/* anexar arquivo */}
             <div className="ct-campo">
               <label className="ct-campo__label">ANEXAR DOCUMENTO <span className="ct-opcional">(opcional)</span></label>
               <div className="ct-anexo" onClick={() => fileRef.current?.click()}>
@@ -211,7 +213,7 @@ export default function Contato() {
             </p>
           </motion.div>
 
-          {/* ── Coluna direita: informações ── */}
+          {/*coluna direita  info*/}
           <motion.div className="ct-info" initial={{ opacity: 0, x: 24 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
             <h2 className="ct-info__titulo">Atendimento personalizado<br />para cada cliente</h2>
             <p className="ct-info__texto">
@@ -235,7 +237,7 @@ export default function Contato() {
               ))}
             </div>
 
-            {/* WhatsApp CTA */}
+            {/* whatsApp*/}
             <motion.a
               className="ct-wa-cta"
               href={whatsappLink()}

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
-import { FaFacebook, FaInstagram, FaWhatsapp, FaYoutube, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaWhatsapp, FaYoutube, FaLinkedin, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
 import './footer.css'
 
 const fadeUp = (delay = 0) => ({
@@ -56,16 +56,19 @@ function Footer() {
           </p>
           <div className="footer-social">
             {[
-              { href: '#', icon: <FaFacebook />, label: 'Facebook' },
-              { href: '#', icon: <FaInstagram />, label: 'Instagram' },
-              { href: 'https://wa.me/5541983873977', icon: <FaWhatsapp />, label: 'WhatsApp' },
-              { href: '#', icon: <FaYoutube />, label: 'YouTube' },
+              { href: 'https://www.facebook.com/haeffnermarinhoadvogados', icon: <FaFacebook />, label: 'Facebook' },
+              { href: 'https://www.instagram.com/haeffnermarinho.adv/', icon: <FaInstagram />, label: 'Instagram' },
+              { href: 'https://wa.me/5541998387397', icon: <FaWhatsapp />, label: 'WhatsApp' },
+              { href: 'https://www.youtube.com/@haeffnermarinhoadvogados', icon: <FaYoutube />, label: 'YouTube' },
+              { href: 'https://www.linkedin.com/in/haeffnermarinho/', icon: <FaLinkedin />, label: 'LinkedIn' },
             ].map(({ href, icon, label }, i) => (
               <motion.a
                 key={label}
                 href={href}
                 aria-label={label}
                 className="footer-social-link"
+                target="_blank"
+                rel="noopener noreferrer"
                 initial={{ opacity: 0, scale: 0.5 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}

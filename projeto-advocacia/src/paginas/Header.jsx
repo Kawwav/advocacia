@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
-import { FaFacebook, FaInstagram, FaWhatsapp, FaYoutube, FaPhone, FaEnvelope } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaWhatsapp, FaYoutube, FaLinkedin, FaPhone, FaEnvelope } from 'react-icons/fa'
 import './Header.css'
 
-const NAV_ROTAS  = { inicio: '/', sobre: '/sobre', duvidas: '/duvidas', contato : '/contato' }
+const NAV_ROTAS  = { inicio: '/', sobre: '/sobre', nucleos: '/nucleos', atuacao: '/atuacao', duvidas: '/duvidas', contato: '/contato' }
 const NAV_KEYS   = ['inicio', 'sobre', 'nucleos', 'atuacao', 'duvidas', 'contato']
 const NAV_ANCHORS= ['inicio', 'sobre', 'nucleos', 'atuacao', 'duvidas', 'contato']
 
@@ -38,10 +38,11 @@ function Header() {
             <button className={`lang-btn ${idiomaAtual === 'en' ? 'ativo' : ''}`} onClick={() => trocarIdioma('en')} aria-label="English"    title="English"   >EN</button>
           </div>
           <div className="social-icons">
-            <a href="#" aria-label="Facebook"><FaFacebook /></a>
-            <a href="#" aria-label="Instagram"><FaInstagram /></a>
-            <a href="#" aria-label="WhatsApp"><FaWhatsapp /></a>
-            <a href="#" aria-label="YouTube"><FaYoutube /></a>
+            <a href="https://www.facebook.com/haeffnermarinhoadvogados" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
+            <a href="https://www.instagram.com/haeffnermarinho.adv/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+            <a href="https://wa.me/5541998387397" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><FaWhatsapp /></a>
+            <a href="https://www.youtube.com/@haeffnermarinhoadvogados" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
+            <a href="https://www.linkedin.com/in/haeffnermarinho/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
           </div>
         </div>
       </div>
@@ -50,19 +51,17 @@ function Header() {
 
         <div className="logo-area">
           <div className="logo-texto">
-            <div className="logo-nome">Haeffner Marinho</div>
+            <div className="logo-nome">HAEFFNER MARINHO</div>
             <div className="logo-subtexto">
               <span className="logo-oab">OAB/PR 94.793</span>
               <span className="logo-advogados">ADVOGADOS</span>
             </div>
-            <div className="logo-divisor" />
-            <div className="logo-rodape">ADVOCACIA E CONSULTORIA JURÍDICA</div>
           </div>
         </div>
 
         <div className="logo-centro">
           <img
-            src="/advocacia/logodourado1.png"
+            src="/advocacia/logocentro.png"
             alt="Logo Haeffner Marinho"
             className="logo-imagem-centro"
           />

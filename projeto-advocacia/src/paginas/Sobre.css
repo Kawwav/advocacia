@@ -1,11 +1,9 @@
+@import '../componentes/typography.css';
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
-
-/* ── RESET ── */
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
-/* ── BASE ── */
 .hma-pagina {
   padding-top: 60px;
   padding-bottom: 100px;
@@ -44,10 +42,10 @@
   padding: 0 48px;
 }
 
-/* ── TÍTULO ── */
+/* titulo */
 .hma-titulo {
-  font-family: 'Palatino Linotype', serif;
-  font-size: 72px;
+  font-family: var(--font-serif);
+  font-size: var(--fs-titulo);
   font-weight: 300;
   color: #F8F5EF;
   line-height: 1.08;
@@ -58,14 +56,12 @@
   color: #C9A84C;
 }
 
-/* ── DIVISOR ── */
 .hma-divisor {
   height: 1px;
   background: linear-gradient(90deg, #C9A84C, transparent);
   margin: 28px 0 52px;
 }
 
-/* ── GRID ── */
 .hma-grid {
   display: grid;
   grid-template-columns: 220px 1px 1fr;
@@ -74,7 +70,6 @@
   margin-top: 8px;
 }
 
-/* ── COLUNA TEXTO ── */
 .hma-coluna-texto {
   display: flex;
   flex-direction: column;
@@ -83,8 +78,8 @@
 }
 
 .hma-paragrafo {
-  font-family: 'Palatino Linotype', serif;
-  font-size: 20px;
+  font-family: var(--font-serif);
+  font-size: var(--fs-corpo);
   font-weight: 300;
   color: #D4C5A9;
   line-height: 1.9;
@@ -92,8 +87,8 @@
 }
 
 .hma-paragrafo--destaque {
-  font-family: 'Palatino Linotype', serif;
-  font-size: 20px;
+  font-family: var(--font-serif);
+  font-size: var(--fs-corpo);
   font-weight: 400;
   color: #D4C5A9;
   line-height: 1.7;
@@ -108,7 +103,6 @@
   align-self: stretch;
 }
 
-/* ── FOTO ── */
 .hma-foto-wrapper {
   width: 100%;
   display: flex;
@@ -184,8 +178,8 @@
 }
 
 .hma-foto-legenda-texto {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 10px;
+  font-family: var(--font-sans);
+  font-size: var(--fs-micro);
   letter-spacing: 2.5px;
   text-transform: uppercase;
   color: #C9A84C;
@@ -193,7 +187,6 @@
   white-space: nowrap;
 }
 
-/* ── CARD ASSINATURA ── */
 .hma-card-assinatura {
   background: linear-gradient(135deg, rgba(13,27,42,0.95) 0%, rgba(18,34,52,0.98) 100%);
   border: 1px solid rgba(201,168,76,0.22);
@@ -236,8 +229,8 @@
 }
 
 .hma-card-icone {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 28px;
+  font-family: var(--font-display);
+  font-size: var(--fs-titulo-xs);
   font-weight: 700;
   color: #C9A84C;
   letter-spacing: -1px;
@@ -258,8 +251,8 @@
 }
 
 .hma-card-nome {
-  font-family: 'Palatino Linotype', serif;
-  font-size: 20px;
+  font-family: var(--font-serif);
+  font-size: var(--fs-corpo);
   font-weight: 600;
   color: #F8F5EF;
   letter-spacing: 0.5px;
@@ -268,8 +261,8 @@
 }
 
 .hma-card-oab {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 10px;
+  font-family: var(--font-sans);
+  font-size: var(--fs-micro);
   letter-spacing: 2px;
   color: #C9A84C;
   text-transform: uppercase;
@@ -285,8 +278,8 @@
 }
 
 .hma-card-chamada {
-  font-family: 'Palatino Linotype', serif;
-  font-size: 10px;
+  font-family: var(--font-serif);
+  font-size: var(--fs-micro);
   letter-spacing: 1.8px;
   color: #D4C5A9;
   text-transform: uppercase;
@@ -295,8 +288,8 @@
 }
 
 .hma-card-email {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 13px;
+  font-family: var(--font-sans);
+  font-size: var(--fs-label);
   color: #C9A84C;
   text-decoration: none;
   letter-spacing: 0.3px;
@@ -309,7 +302,7 @@
 
 .hma-card-email::before {
   content: '→';
-  font-size: 11px;
+  font-size: var(--fs-label-sm);
   color: rgba(201,168,76,0.5);
   transition: color 0.3s, transform 0.3s;
   flex-shrink: 0;
@@ -324,7 +317,6 @@
   transform: translateX(3px);
 }
 
-/* ── CITAÇÃO ── */
 .hma-citacao-wrapper {
   margin: 80px 0 72px;
   display: flex;
@@ -342,8 +334,8 @@
 }
 
 .hma-citacao {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 32px;
+  font-family: var(--font-display);
+  font-size: var(--fs-subtitulo);
   font-weight: 300;
   font-style: italic;
   color: #F8F5EF;
@@ -354,7 +346,7 @@
 }
 
 .hma-citacao-aspas {
-  font-size: 72px;
+  font-size: var(--fs-titulo);
   color: #C9A84C;
   opacity: 0.35;
   line-height: 0;
@@ -369,15 +361,14 @@
 }
 
 .hma-citacao-autor {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 11px;
+  font-family: var(--font-sans);
+  font-size: var(--fs-label-sm);
   letter-spacing: 3px;
   text-transform: uppercase;
   color: #C9A84C;
   opacity: 0.7;
 }
 
-/* ── PILARES ── */
 .hma-pilares-eyebrow {
   margin-top: 0;
   margin-bottom: 32px;
@@ -412,7 +403,7 @@
 }
 
 .hma-pilar-icone {
-  font-size: 28px;
+  font-size: var(--fs-titulo-xs);
   color: #C9A84C;
   flex-shrink: 0;
   line-height: 1;
@@ -424,8 +415,8 @@
 }
 
 .hma-pilar-titulo {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 26px;
+  font-family: var(--font-display);
+  font-size: var(--fs-frase-impacto);
   font-weight: 600;
   color: #F8F5EF;
   letter-spacing: 1px;
@@ -433,15 +424,14 @@
 }
 
 .hma-pilar-desc {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 13px;
+  font-family: var(--font-sans);
+  font-size: var(--fs-label);
   font-weight: 300;
   color: #D4C5A9;
   line-height: 1.8;
   letter-spacing: 0.2px;
 }
 
-/* ── FOTO WIDE ── */
 .hma-foto-destaque-wrapper {
   width: 100%;
   margin: 0 0 56px;
@@ -476,16 +466,14 @@
   box-sizing: border-box;
 }
 
-/* ── TEXTOS PÓS-FOTO ── */
 .hma-coluna-texto--pos-foto {
   margin-top: 0;
   margin-bottom: 52px;
 }
 
-/* ── FRASE DE IMPACTO ── */
 .hma-frase-combate {
-  font-family: 'Palatino Linotype', serif;
-  font-size: 26px;
+  font-family: var(--font-serif);
+  font-size: var(--fs-frase-impacto);
   font-weight: 400;
   font-style: italic;
   color: #C9A84C;
@@ -495,13 +483,11 @@
   padding-left: 20px;
 }
 
-/* ── DIVISOR CENTRO ── */
 .hma-divisor--centro {
   margin: 0 0 52px;
   background: linear-gradient(90deg, transparent, rgba(201,168,76,0.25), transparent);
 }
 
-/* ── BLOCO CONTATO ── */
 .hma-contato-bloco {
   display: flex;
   flex-direction: column;
@@ -525,8 +511,8 @@
 }
 
 .hma-contato-chamada {
-  font-family: 'Palatino Linotype', serif;
-  font-size: 22px;
+  font-family: var(--font-serif);
+  font-size: var(--fs-chamada);
   font-weight: 300;
   color: #F8F5EF;
   letter-spacing: 0.5px;
@@ -534,8 +520,8 @@
 }
 
 .hma-contato-label {
-  font-family: 'Palatino Linotype', serif;
-  font-size: 11px;
+  font-family: var(--font-serif);
+  font-size: var(--fs-label-sm);
   letter-spacing: 3px;
   text-transform: uppercase;
   color: #D4C5A9;
@@ -544,22 +530,17 @@
 }
 
 .hma-card-email--destaque {
-  font-size: 16px;
+  font-size: var(--fs-card-email-lg);
   letter-spacing: 0.5px;
 }
 
-/* ══════════════════════════════════════════
-   RESPONSIVIDADE
-   ══════════════════════════════════════════ */
-
-/* ── Tablet grande: 1024px ── */
 @media (max-width: 1024px) {
   .hma-inner {
     padding: 0 36px;
   }
 
   .hma-titulo {
-    font-size: 58px;
+    font-size: var(--fs-titulo-lg);
   }
 
   .hma-grid {
@@ -576,7 +557,6 @@
   }
 }
 
-/* ── Tablet: 768px ── */
 @media (max-width: 768px) {
   .hma-pagina {
     padding-top: 40px;
@@ -588,7 +568,7 @@
   }
 
   .hma-titulo {
-    font-size: 42px;
+    font-size: var(--fs-titulo-md-sob);
     line-height: 1.12;
   }
 
@@ -597,11 +577,11 @@
   }
 
   .hma-paragrafo--destaque {
-    font-size: 16px;
+    font-size: var(--fs-card-email-lg);
   }
 
   .hma-paragrafo {
-    font-size: 16px;
+    font-size: var(--fs-card-email-lg);
   }
 
   .hma-coluna-texto {
@@ -632,7 +612,6 @@
     padding: 24px 20px;
   }
 
-  /* Foto wide */
   .hma-foto--wide {
     height: 300px;
     object-position: center 20%;
@@ -642,47 +621,42 @@
     margin: 0 0 40px;
   }
 
-  /* Frase impacto */
   .hma-frase-combate {
-    font-size: 21px;
+    font-size: var(--fs-frase-md);
     padding-left: 16px;
   }
 
-  /* Divisor */
   .hma-divisor--centro {
     margin: 0 0 40px;
   }
 
-  /* Contato */
   .hma-contato-bloco {
     padding: 28px 24px;
     gap: 6px;
   }
 
   .hma-contato-chamada {
-    font-size: 19px;
+    font-size: var(--fs-chamada-md);
   }
 
   .hma-card-email--destaque {
-    font-size: 14px;
+    font-size: var(--fs-card-email-md);
     letter-spacing: 0.2px;
   }
 
-  /* Citação */
   .hma-citacao {
-    font-size: 24px;
+    font-size: var(--fs-subtitulo-md);
     padding: 0 8px;
   }
 
   .hma-citacao-aspas {
-    font-size: 52px;
+    font-size: var(--fs-titulo-lg);
   }
 
   .hma-citacao-wrapper {
     margin: 52px 0 48px;
   }
 
-  /* Pilares: 1 coluna */
   .hma-pilares {
     grid-template-columns: 1fr;
     gap: 16px;
@@ -693,10 +667,9 @@
   }
 
   .hma-pilar-titulo {
-    font-size: 22px;
+    font-size: var(--fs-chamada);
   }
 
-  /* Orbs menores no mobile */
   .hma-bg-orb--1 {
     width: 300px;
     height: 300px;
@@ -710,7 +683,6 @@
   }
 }
 
-/* ── Mobile: 480px ── */
 @media (max-width: 480px) {
   .hma-pagina {
     padding-top: 32px;
@@ -722,16 +694,16 @@
   }
 
   .hma-titulo {
-    font-size: 34px;
+    font-size: var(--fs-titulo-sm);
     line-height: 1.15;
   }
 
   .hma-paragrafo--destaque {
-    font-size: 15px;
+    font-size: var(--fs-corpo-sm);
   }
 
   .hma-paragrafo {
-    font-size: 15px;
+    font-size: var(--fs-corpo-sm);
   }
 
   .hma-foto--wide {
@@ -739,7 +711,7 @@
   }
 
   .hma-frase-combate {
-    font-size: 18px;
+    font-size: var(--fs-frase-sm);
   }
 
   .hma-contato-bloco {
@@ -747,36 +719,35 @@
   }
 
   .hma-contato-chamada {
-    font-size: 17px;
+    font-size: var(--fs-chamada-sm);
   }
 
   .hma-card-email--destaque {
-    font-size: 12.5px;
+    font-size: var(--fs-card-email-sm);
     word-break: break-all;
   }
 
   .hma-citacao {
-    font-size: 20px;
+    font-size: var(--fs-corpo);
     line-height: 1.65;
   }
 
   .hma-citacao-aspas {
-    font-size: 42px;
+    font-size: var(--fs-titulo-md-sob);
   }
 }
 
-/* ── Mobile pequeno: 360px ── */
 @media (max-width: 360px) {
   .hma-titulo {
-    font-size: 28px;
+    font-size: var(--fs-titulo-xs);
   }
 
   .hma-paragrafo--destaque {
-    font-size: 15px;
+    font-size: var(--fs-corpo-sm);
   }
 
   .hma-paragrafo {
-    font-size: 14.5px;
+    font-size: var(--fs-corpo-sm);
   }
 
   .hma-foto--wide {
@@ -784,10 +755,10 @@
   }
 
   .hma-frase-combate {
-    font-size: 16px;
+    font-size: var(--fs-card-email-lg);
   }
 
   .hma-card-email--destaque {
-    font-size: 11.5px;
+    font-size: var(--fs-card-email-sm);
   }
 }

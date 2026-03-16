@@ -1,10 +1,12 @@
 import { Routes, Route } from 'react-router-dom'
 import Header from './paginas/Header'
-import Footer from './componentes/footer'
+import Footer from './componentes/Footer'
 import Hae from './paginas/Hae'
 import Sobre from './paginas/Sobre'
 import Duvidas from './paginas/Duvidas'
 import Contato from './paginas/Contato'
+import Nucleos from './paginas/Nucleos'
+import Atuacao from './paginas/Atuacao'
 import './App.css'
 
 /*npm run build
@@ -20,6 +22,8 @@ function App() {
         <Route path="/sobre" element={<Sobre />} />
         <Route path="/duvidas" element={<Duvidas />} />
         <Route path="/contato" element={<Contato />} />
+        <Route path="/nucleos" element={<Nucleos />} />
+        <Route path="/atuacao" element={<Atuacao />} />
       </Routes>
       <Footer />
     </>

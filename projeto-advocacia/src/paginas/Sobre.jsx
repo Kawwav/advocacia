@@ -17,10 +17,18 @@ function Hma() {
 
       <div className="hma-bg-orb hma-bg-orb--1" />
       <div className="hma-bg-orb hma-bg-orb--2" />
-
       <div className="hma-inner">
 
-        {/* ── Eyebrow ── */}
+        <motion.p
+          initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.0 }}
+          style={{ fontFamily: "'Palatino Linotype', sans-serif", fontSize: '18px', 
+            fontWeight: 600, letterSpacing: '5px', color: '#9A7A2E', textTransform: 'uppercase', textAlign: 'center', marginBottom: '24px', 
+            opacity: 0.85 }}
+        >
+          ADVOCACIA E CONSULTORIA JURÍDICA
+        </motion.p>
+
         <motion.p className="hma-eyebrow" {...fadeUp(0.05)}>
         </motion.p>
 
@@ -36,7 +44,7 @@ function Hma() {
           transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
         />
 
-        {/* ── Bloco intro ── */}
+        {/*bloco intro  */}
         <motion.div className="hma-coluna-texto" {...fadeUp(0.35)}>
           <p className="hma-paragrafo--destaque">
             A <span style={{ color: '#C9A84C', fontWeight: 600 }}>HAEFFNER MARINHO ADVOGADOS</span>{' '}
@@ -53,7 +61,7 @@ function Hma() {
           </p>
         </motion.div>
 
-        {/* ── Foto centralizada ── */}
+        {/*foto centralizada*/}
         <motion.div
           className="hma-foto-destaque-wrapper"
           initial={{ opacity: 0, scale: 0.97 }}
@@ -79,7 +87,6 @@ function Hma() {
           </div>
         </motion.div>
 
-        {/* ── Textos após foto ── */}
         <motion.div className="hma-coluna-texto hma-coluna-texto--pos-foto" {...fadeUp(0.2)}>
           <p className="hma-paragrafo">
             {t(
@@ -94,7 +101,6 @@ function Hma() {
             )}
           </p>
 
-          {/* ── Frase de impacto ── */}
           <motion.p
             className="hma-frase-combate"
             initial={{ opacity: 0, x: -20 }}
@@ -106,7 +112,7 @@ function Hma() {
           </motion.p>
         </motion.div>
 
-        {/* ── Divisor ── */}
+        {/* divisor */}
         <motion.div
           className="hma-divisor hma-divisor--centro"
           initial={{ width: 0, opacity: 0 }}
@@ -115,7 +121,7 @@ function Hma() {
           transition={{ duration: 1, delay: 0.1, ease: 'easeOut' }}
         />
 
-        {/* ── Card contato ── */}
+        {/*cCard contato*/}
         <motion.div className="hma-contato-bloco" {...fadeUp(0.2)}>
           <p className="hma-contato-chamada">
             {t('hma.contato.chamada', 'Deseja falar diretamente comigo?')}

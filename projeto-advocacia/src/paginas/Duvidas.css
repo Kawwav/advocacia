@@ -1,7 +1,3 @@
-/* ============================================================
-   Duvidas.css — Design system Haeffner Marinho
-   ============================================================ */
-
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
 
 :root {
@@ -41,7 +37,7 @@
   color: #F8F5EF; line-height: 1.15; margin: 0;
 }
 
-.dv-titulo span { color: #C9A84C; font-style: italic; }
+.dv-titulo span { color: #C9A84C; font-style: 'Palatino Linotype'; }
 
 .dv-divisor {
   height: 1px;
@@ -55,7 +51,7 @@
   line-height: 1.8; letter-spacing: 0.3px; margin-bottom: 52px;
 }
 
-/* ── Categorias ── */
+/* categorias*/
 .dv-categorias { display: flex; flex-direction: column; gap: 10px; margin-bottom: 48px; }
 
 .dv-cat {
@@ -116,7 +112,7 @@
 .dv-opcao__seta { font-size: 10px; color: rgba(201,168,76,0.3); display: flex; align-items: center; flex-shrink: 0; transition: color 0.2s; }
 .dv-opcao:hover .dv-opcao__seta, .dv-opcao--ativa .dv-opcao__seta { color: rgba(201,168,76,0.7); }
 
-/* ── Painel inline ── */
+/* painel inline */
 .dv-detalhe { overflow: hidden; }
 
 .dv-detalhe__inner {
@@ -167,7 +163,7 @@
 }
 .dv-detalhe__cta:hover { filter: brightness(1.1); box-shadow: 0 8px 28px rgba(0,0,0,0.4); }
 
-/* ── Formulário ── */
+/* formulário*/
 .dv-form {
   background: linear-gradient(135deg, rgba(13,27,42,0.97) 0%, rgba(18,34,52,0.99) 100%);
   border: 1px solid rgba(201,168,76,0.22); border-left: 3px solid #C9A84C;
@@ -204,7 +200,7 @@
 .dv-campo__input:focus { border-color: rgba(201,168,76,0.55); box-shadow: 0 0 0 3px rgba(201,168,76,0.07); }
 .dv-campo__textarea { min-height: 100px; }
 
-/* ── Erro de envio ── */
+/*erro de envio*/
 .dv-form__erro {
   display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
   background: rgba(176,58,46,0.1); border: 1px solid rgba(176,58,46,0.35); border-left: 3px solid #b03a2e;
@@ -221,7 +217,7 @@
 }
 .dv-form__erro-wa:hover { background: rgba(37,211,102,0.1); }
 
-/* ── Botão enviar ── */
+/* botaoo enviar */
 .dv-btn-submit {
   width: 100%; background: rgba(13,27,42,0.9); border: 1px solid rgba(201,168,76,0.2);
   color: rgba(212,197,169,0.4); font-family: 'Montserrat', sans-serif;
@@ -238,7 +234,7 @@
 .dv-spinner { animation: dv-spin 0.8s linear infinite; flex-shrink: 0; }
 @keyframes dv-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
-/* ── Botão WhatsApp alternativo ── */
+/*bortao whatsApp alternativo*/
 .dv-btn-whatsapp {
   display: flex; align-items: center; justify-content: center; gap: 10px;
   width: 100%; background: transparent; border: 1px solid rgba(37,211,102,0.3);
@@ -283,7 +279,6 @@
 .dv-btn-reset { display: block; margin: 0 auto; background: transparent; border: 1px solid rgba(201,168,76,0.25); color: rgba(212,197,169,0.5); font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 2.5px; text-transform: uppercase; padding: 11px 28px; cursor: pointer; transition: all 0.25s ease; }
 .dv-btn-reset:hover { border-color: #C9A84C; color: #C9A84C; }
 
-/* ── Responsivo ── */
 @media (max-width: 768px) {
   .dv-pagina { padding-top: 40px; padding-bottom: 60px; }
   .dv-inner { padding: 0 20px; }

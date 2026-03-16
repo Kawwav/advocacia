@@ -1,0 +1,505 @@
+@import '../componentes/typography.css';
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+*, *::before, *::after { box-sizing: border-box; }
+
+.nuc-pagina {
+  padding-top: 80px;
+  padding-bottom: 120px;
+  min-height: 100vh;
+  background: linear-gradient(160deg, #0D1B2A 0%, #152336 55%, #0e1f30 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.nuc-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(90px);
+}
+.nuc-orb--1 {
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(201,168,76,0.055) 0%, transparent 70%);
+  top: 5%; right: -150px;
+}
+.nuc-orb--2 {
+  width: 450px; height: 450px;
+  background: radial-gradient(circle, rgba(201,168,76,0.04) 0%, transparent 70%);
+  bottom: 20%; left: -100px;
+}
+.nuc-orb--3 {
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(201,168,76,0.03) 0%, transparent 70%);
+  top: 50%; left: 40%;
+}
+
+.nuc-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+.nuc-eyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--fs-micro);
+  font-weight: 500;
+  letter-spacing: 5px;
+  color: #9A7A2E;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  opacity: 0.85;
+}
+
+.nuc-titulo {
+  font-family: var(--font-serif);
+  font-size: var(--fs-titulo);
+  font-weight: 300;
+  color: #F8F5EF;
+  line-height: 1.08;
+  margin-bottom: 0;
+  letter-spacing: 0.2px;
+}
+
+.nuc-titulo span {
+  color: #C9A84C;
+}
+
+.nuc-divisor {
+  height: 1px;
+  background: linear-gradient(90deg, #C9A84C, transparent);
+  margin: 28px 0 48px;
+  width: 72px;
+}
+
+.nuc-divisor--centro {
+  width: 100% !important;
+  background: linear-gradient(90deg, transparent, rgba(201,168,76,0.25), transparent);
+  margin: 0 0 56px;
+}
+
+.nuc-intro {
+  margin-bottom: 72px;
+  max-width: 700px;
+}
+
+.nuc-intro-destaque {
+  font-family: var(--font-serif);
+  font-size: var(--fs-destaque);
+  font-weight: 400;
+  color: #D4C5A9;
+  line-height: 1.8;
+  border-top: 2px solid rgba(201,168,76,0.35);
+  padding-top: 24px;
+}
+
+.nuc-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 72px;
+}
+
+.nuc-linha {
+  display: grid;
+  gap: 24px;
+}
+
+.nuc-linha--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.nuc-linha--2 {
+  grid-template-columns: repeat(2, 1fr);
+  width: calc(66.666% + 8px);
+  margin: 0 auto;
+}
+
+.nuc-card {
+  display: flex;
+  flex-direction: column;
+  padding: 36px 32px;
+  border: 1px solid rgba(201,168,76,0.14);
+  background: rgba(201,168,76,0.02);
+  position: relative;
+  cursor: default;
+  transition: border-color 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;
+}
+
+.nuc-card:hover {
+  border-color: rgba(201,168,76,0.38);
+  background: rgba(201,168,76,0.055);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.3), 0 0 0 1px rgba(201,168,76,0.12);
+}
+
+/* Borda topo dourada no hover */
+.nuc-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #C9A84C, transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.nuc-card:hover::before { opacity: 1; }
+
+.nuc-card-numero {
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: 300;
+  color: rgba(201,168,76,0.15);
+  line-height: 1;
+  letter-spacing: -2px;
+  margin-bottom: 20px;
+  transition: color 0.4s ease;
+  user-select: none;
+}
+.nuc-card:hover .nuc-card-numero { color: rgba(201,168,76,0.35); }
+.nuc-card-linha-lateral { display: none; }
+
+.nuc-card-corpo {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.nuc-card-icone-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border: 1px solid rgba(201,168,76,0.25);
+  background: rgba(201,168,76,0.06);
+  margin-bottom: 20px;
+  transition: border-color 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+}
+
+.nuc-card-icone-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(201,168,76,0.12), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.nuc-card:hover .nuc-card-icone-wrapper {
+  border-color: rgba(201,168,76,0.6);
+  background: rgba(201,168,76,0.1);
+  box-shadow: 0 0 20px rgba(201,168,76,0.15);
+}
+
+.nuc-card:hover .nuc-card-icone-wrapper::before { opacity: 1; }
+
+.nuc-card-icone {
+  font-size: 22px;
+  color: #C9A84C;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.3s ease;
+  stroke-width: 1.5;
+}
+
+.nuc-card:hover .nuc-card-icone {
+  transform: scale(1.15);
+  color: #E8C97A;
+}
+
+/* Tag */
+.nuc-card-tag {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 3.5px;
+  color: #9A7A2E;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  opacity: 0.9;
+}
+
+/* titulo do card */
+.nuc-card-titulo {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  font-weight: 300;
+  color: #F8F5EF;
+  line-height: 1.2;
+  margin-bottom: 0;
+  letter-spacing: 0.3px;
+}
+
+.nuc-card-titulo span {
+  color: #C9A84C;
+  font-style: italic;
+}
+
+/* Divisor interno */
+.nuc-card-divisor {
+  height: 1px;
+  background: linear-gradient(90deg, #C9A84C, transparent);
+  margin: 16px 0 18px;
+  width: 48px;
+}
+
+/* Descrição */
+.nuc-card-descricao {
+  font-family: var(--font-serif);
+  font-size: var(--fs-corpo);
+  font-weight: 300;
+  color: #D4C5A9;
+  line-height: 1.85;
+  letter-spacing: 0.2px;
+  flex: 1;
+}
+
+/* Cantos decorativos */
+.nuc-canto {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.nuc-canto--tl {
+  top: 8px; right: 8px;
+  border-top: 1px solid rgba(201,168,76,0.6);
+  border-right: 1px solid rgba(201,168,76,0.6);
+}
+
+.nuc-canto--br {
+  bottom: 8px; left: 8px;
+  border-bottom: 1px solid rgba(201,168,76,0.6);
+  border-left: 1px solid rgba(201,168,76,0.6);
+}
+.nuc-card:hover .nuc-canto { opacity: 1; }
+
+.nuc-foto-wrapper {
+  width: 100%;
+  margin: 0 0 72px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nuc-foto-moldura {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.nuc-foto-canto {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  z-index: 3;
+  pointer-events: none;
+}
+.nuc-foto-canto--tl { top: 14px; left: 14px; border-top: 1px solid #C9A84C; border-left: 1px solid #C9A84C; }
+.nuc-foto-canto--tr { top: 14px; right: 14px; border-top: 1px solid #C9A84C; border-right: 1px solid #C9A84C; }
+.nuc-foto-canto--bl { bottom: 28px; left: 14px; border-bottom: 1px solid #C9A84C; border-left: 1px solid #C9A84C; }
+.nuc-foto-canto--br { bottom: 28px; right: 14px; border-bottom: 1px solid #C9A84C; border-right: 1px solid #C9A84C; }
+
+.nuc-foto-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(13,27,42,0.3) 0%,
+    transparent 25%,
+    transparent 65%,
+    rgba(13,27,42,0.55) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+.nuc-foto {
+  width: 100%;
+  height: 460px;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+  filter: brightness(0.82) contrast(1.08) saturate(0.88);
+  transition: transform 0.8s ease, filter 0.5s ease;
+}
+
+.nuc-foto-moldura:hover .nuc-foto {
+  transform: scale(1.03);
+  filter: brightness(0.9) contrast(1.04) saturate(0.95);
+}
+
+.nuc-foto-legenda {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 16px;
+  background: rgba(13,27,42,0.6);
+  backdrop-filter: blur(6px);
+}
+
+.nuc-foto-legenda-linha {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201,168,76,0.35));
+}
+
+.nuc-foto-legenda-linha:last-child {
+  background: linear-gradient(90deg, rgba(201,168,76,0.35), transparent);
+}
+
+.nuc-foto-legenda-texto {
+  font-family: var(--font-sans);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: #C9A84C;
+  opacity: 0.7;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.nuc-contato {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 40px 44px;
+  border: 1px solid rgba(201,168,76,0.18);
+  border-left: 3px solid #C9A84C;
+  background: linear-gradient(135deg, rgba(13,27,42,0.95), rgba(18,34,52,0.98));
+  box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.nuc-contato::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, #C9A84C, rgba(201,168,76,0.2), transparent);
+}
+
+.nuc-contato-chamada {
+  font-family: var(--font-serif);
+  font-size: var(--fs-chamada);
+  font-weight: 300;
+  color: #F8F5EF;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.nuc-contato-label {
+  font-family: var(--font-serif);
+  font-size: var(--fs-label-sm);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #D4C5A9;
+  opacity: 0.6;
+  margin-bottom: 6px;
+}
+
+.nuc-contato-email {
+  font-family: var(--font-sans);
+  font-size: var(--fs-card-email-lg);
+  color: #C9A84C;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s, gap 0.3s;
+  word-break: break-all;
+}
+
+.nuc-contato-email::before {
+  content: '→';
+  font-size: var(--fs-label-sm);
+  color: rgba(201,168,76,0.5);
+  transition: color 0.3s, transform 0.3s;
+  flex-shrink: 0;
+}
+
+.nuc-contato-email:hover { color: #E8C97A; }
+.nuc-contato-email:hover::before { color: #E8C97A; transform: translateX(3px); }
+
+.nuc-contato-nome {
+  font-family: var(--font-sans);
+  font-size: var(--fs-label);
+  letter-spacing: 2px;
+  color: #F8F5EF;
+  text-transform: uppercase;
+  margin-top: 16px;
+  font-weight: 500;
+}
+
+.nuc-contato-oab {
+  font-family: var(--font-sans);
+  font-size: var(--fs-micro);
+  letter-spacing: 2px;
+  color: #C9A84C;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+@media (max-width: 1024px) {
+  .nuc-inner { padding: 0 36px; }
+  .nuc-titulo { font-size: var(--fs-titulo-lg); }
+  .nuc-card-titulo { font-size: 22px; }
+  .nuc-card { padding: 28px 24px; }
+  .nuc-card-numero { font-size: 38px; }
+  .nuc-linha--2 { width: calc(66.666% + 8px); }
+}
+
+@media (max-width: 768px) {
+  .nuc-pagina { padding-top: 60px; padding-bottom: 80px; }
+  .nuc-inner { padding: 0 24px; }
+  .nuc-titulo { font-size: var(--fs-titulo-md-sob); line-height: 1.12; }
+  .nuc-intro { margin-bottom: 48px; }
+  .nuc-intro-destaque { font-size: var(--fs-card-email-lg); }
+  .nuc-linha--3,
+  .nuc-linha--2 {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  .nuc-card { padding: 28px 20px; }
+  .nuc-card-numero { font-size: 32px; }
+  .nuc-card-titulo { font-size: 22px; }
+  .nuc-card-descricao { font-size: var(--fs-card-email-lg); }
+  .nuc-foto { height: 300px; object-position: center 20%; }
+  .nuc-foto-wrapper { margin: 0 0 48px; }
+  .nuc-contato { padding: 28px 24px; gap: 6px; }
+  .nuc-contato-chamada { font-size: var(--fs-chamada-md); }
+  .nuc-contato-email { font-size: var(--fs-card-email-md); }
+  .nuc-orb--1 { width: 320px; height: 320px; right: -80px; }
+  .nuc-orb--2 { width: 220px; height: 220px; left: -60px; }
+  .nuc-orb--3 { display: none; }
+}
+
+@media (max-width: 480px) {
+  .nuc-pagina { padding-top: 48px; padding-bottom: 60px; }
+  .nuc-inner { padding: 0 16px; }
+  .nuc-titulo { font-size: var(--fs-titulo-sm); line-height: 1.15; }
+  .nuc-intro-destaque { font-size: var(--fs-corpo-sm); }
+  .nuc-card { padding: 22px 16px; }
+  .nuc-card-numero { font-size: 26px; }
+  .nuc-card-titulo { font-size: 19px; }
+  .nuc-card-tag { font-size: 8px; letter-spacing: 2.5px; }
+  .nuc-card-descricao { font-size: var(--fs-corpo-sm); }
+  .nuc-foto { height: 220px; }
+  .nuc-contato { padding: 22px 18px; }
+  .nuc-contato-chamada { font-size: var(--fs-chamada-sm); }
+  .nuc-contato-email { font-size: var(--fs-card-email-sm); word-break: break-all; }
+}
+
+@media (max-width: 360px) {
+  .nuc-titulo { font-size: var(--fs-titulo-xs); }
+  .nuc-card-titulo { font-size: 17px; }
+  .nuc-card-descricao { font-size: var(--fs-corpo-sm); }
+}
