@@ -10,6 +10,9 @@ const fadeUp = (delay = 0) => ({
   transition: { duration: 0.8, delay, ease: [0.22, 1, 0.36, 1] }
 })
 
+const WA_MSG = encodeURIComponent('Olá, seja bem-vindo(a) a HAEFFNER MARINHO ADVOGADOS, é uma satisfação poder ajudar. Deixe sua mensagem que logo entraremos em contato. Obrigado')
+const WA_URL = `https://wa.me/5541998387397?text=${WA_MSG}`
+
 function Footer() {
   const { t } = useTranslation()
   const ano = new Date().getFullYear()
@@ -58,7 +61,7 @@ function Footer() {
             {[
               { href: 'https://www.facebook.com/haeffnermarinhoadvogados', icon: <FaFacebook />, label: 'Facebook' },
               { href: 'https://www.instagram.com/haeffnermarinho.adv/', icon: <FaInstagram />, label: 'Instagram' },
-              { href: 'https://wa.me/5541998387397', icon: <FaWhatsapp />, label: 'WhatsApp' },
+              { href: WA_URL, icon: <FaWhatsapp />, label: 'WhatsApp' },
               { href: 'https://www.youtube.com/@haeffnermarinhoadvogados', icon: <FaYoutube />, label: 'YouTube' },
               { href: 'https://www.linkedin.com/in/haeffnermarinho/', icon: <FaLinkedin />, label: 'LinkedIn' },
             ].map(({ href, icon, label }, i) => (

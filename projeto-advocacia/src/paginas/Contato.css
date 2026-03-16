@@ -271,3 +271,26 @@ a.ct-card__value:hover { color: #F8F5EF; }
   .ct-success { padding: 48px 24px; }
   .ct-success__titulo { font-size: 32px; }
 }
+
+.pagina-topo-label {
+  font-family: 'Palatino Linotype', serif;
+  font-size: var(--fs-topo-label);
+  font-weight: 600;
+  letter-spacing: 5px;
+  color: #9A7A2E;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  opacity: 0.85;
+}
+
+@media (max-width: 1024px) {
+  .pagina-topo-label { font-size: var(--fs-botao); letter-spacing: 4px; margin-bottom: 20px; }
+}
+
+@media (max-width: 768px) {
+  .pagina-topo-label { font-size: var(--fs-micro); letter-spacing: 3.5px; margin-bottom: 16px; }
+}
+
+@media (max-width: 420px) {
+  .pagina-topo-label { font-size: var(--fs-topo-label-xs); letter-spacing: 2.5px; margin-bottom: 12px; }
+}

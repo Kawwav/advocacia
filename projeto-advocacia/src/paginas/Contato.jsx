@@ -125,7 +125,7 @@ export default function Contato() {
       <div className="ct-orb ct-orb--1" /><div className="ct-orb ct-orb--2" />
       <div className="ct-inner">
         <motion.div className="ct-header" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-          <p style={{ fontFamily: "'Palatino Linotype', sans-serif", fontSize: '18px', fontWeight: 600, letterSpacing: '5px', color: '#9A7A2E', textTransform: 'uppercase', textAlign: 'left', marginBottom: '24px', opacity: 0.85 }}>
+          <p className="pagina-topo-label">
             ADVOCACIA E CONSULTORIA JURÍDICA
           </p>
 

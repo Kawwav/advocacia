@@ -8,6 +8,9 @@ const NAV_ROTAS  = { inicio: '/', sobre: '/sobre', nucleos: '/nucleos', atuacao:
 const NAV_KEYS   = ['inicio', 'sobre', 'nucleos', 'atuacao', 'duvidas', 'contato']
 const NAV_ANCHORS= ['inicio', 'sobre', 'nucleos', 'atuacao', 'duvidas', 'contato']
 
+const WA_MSG = encodeURIComponent('Olá, seja bem-vindo(a) a HAEFFNER MARINHO ADVOGADOS, é uma satisfação poder ajudar. Deixe sua mensagem que logo entraremos em contato. Obrigado')
+const WA_URL = `https://wa.me/5541998387397?text=${WA_MSG}`
+
 function Header() {
   const [menuAberto, setMenuAberto] = useState(false)
   const { t, i18n } = useTranslation()
@@ -40,7 +43,7 @@ function Header() {
           <div className="social-icons">
             <a href="https://www.facebook.com/haeffnermarinhoadvogados" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
             <a href="https://www.instagram.com/haeffnermarinho.adv/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-            <a href="https://wa.me/5541998387397" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><FaWhatsapp /></a>
+            <a href={WA_URL} aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><FaWhatsapp /></a>
             <a href="https://www.youtube.com/@haeffnermarinhoadvogados" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
             <a href="https://www.linkedin.com/in/haeffnermarinho/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
           </div>

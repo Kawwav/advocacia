@@ -393,6 +393,7 @@
 @media (max-width: 1460px) {
   .header-main { height: 140px; padding: 20px 32px; overflow: visible; }
   .logo-nome { font-size: 32px; }
+  .logo-oab, .logo-advogados { margin-top: 6px; }
   .logo-imagem-centro { height: 130px; }
   .menu-hamburguer { display: flex; }
   .header-nav {
@@ -439,6 +440,7 @@
 @media (max-width: 1366px) {
   .header-main { height: 130px; padding: 18px 30px; }
   .logo-nome { font-size: 30px; letter-spacing: 1.8px; }
+  .logo-oab, .logo-advogados { margin-top: 4px; }
   .logo-imagem-centro { height: 120px; }
   .top-bar { padding: 9px 30px; }
 }
@@ -446,7 +448,7 @@
 @media (max-width: 1280px) {
   .header-main { height: 120px; padding: 16px 28px; }
   .logo-nome { font-size: 28px; letter-spacing: 1.5px; }
-  .logo-oab, .logo-advogados { font-size: 9px; }
+  .logo-oab, .logo-advogados { font-size: 9px; margin-top: 3px; }
   .logo-rodape { font-size: 8px; letter-spacing: 2px; }
   .logo-imagem-centro { height: 140px; }
   .top-bar { padding: 8px 28px; }
@@ -499,7 +501,7 @@
   .header-nav a:hover { background: rgba(201,168,76,0.05); color: var(--gold); }
   .menu-hamburguer { display: flex; }
   .logo-nome { font-size: 28px; }
-  .logo-oab, .logo-advogados { font-size: 9px; }
+  .logo-oab, .logo-advogados { font-size: 9px; margin-top: 3px; }
   .logo-rodape { font-size: 8px; letter-spacing: 1.5px; }
   .logo-imagem { height: 80px; }
   .logo-imagem-centro { height: 160px; }
@@ -574,7 +576,7 @@
 
 @media (max-width: 680px) {
   .logo-nome { font-size: 25px; letter-spacing: 1px; }
-  .logo-oab, .logo-advogados { font-size: 8px; letter-spacing: 0.6px; }
+  .logo-oab, .logo-advogados { font-size: 14px; letter-spacing: 0.6px; }
   .logo-rodape { font-size: 6px; letter-spacing: 1px; }
   .logo-area { gap: 8px; }
   .logo-imagem { height: 40px; }
@@ -587,7 +589,7 @@
 
 @media (max-width: 631px) {
   .logo-nome { font-size: 20px; letter-spacing: 1px; }
-  .logo-oab, .logo-advogados { font-size: 8px; letter-spacing: 0.6px; }
+  .logo-oab, .logo-advogados { font-size: 12px; letter-spacing: 0.6px; }
   .logo-rodape { font-size: 6px; letter-spacing: 1px; }
   .logo-area { gap: 8px; }
   .logo-imagem { height: 40px; }
@@ -623,7 +625,7 @@
   .logo-texto { width: auto; }
 
   .logo-nome {
-    font-size: 13px;
+    font-size: 16px;
     letter-spacing: 0.5px;
     white-space: nowrap;
     width: auto;
@@ -635,8 +637,8 @@
     margin-top: 2px;
   }
 
-  .logo-oab { margin-top: 0; font-size: 6px; letter-spacing: 0.4px; }
-  .logo-advogados { font-size: 6px; letter-spacing: 0.8px; }
+  .logo-oab { margin-top: 0; font-size: 9px; letter-spacing: 0.4px; }
+  .logo-advogados { font-size: 9px; letter-spacing: 0.8px; }
   .contact-text { display: none; }
   .contact-info a:nth-child(2) { display: none; }
   .contact-info { gap: 6px; }
@@ -649,8 +651,8 @@
 
 @media (max-width: 420px) {
   .logo-imagem-centro { height: 80px; }
-  .logo-nome { font-size: 11px; letter-spacing: 0.3px; }
-  .logo-oab, .logo-advogados { font-size: 5.5px; letter-spacing: 0.3px; }
+  .logo-nome { font-size: 13px; letter-spacing: 0.3px; }
+  .logo-oab, .logo-advogados { font-size: 8px; letter-spacing: 0.3px; }
   .social-icons { gap: 5px; }
   .top-bar a { font-size: 13px !important; }
 }

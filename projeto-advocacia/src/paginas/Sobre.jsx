@@ -20,11 +20,9 @@ function Hma() {
       <div className="hma-inner">
 
         <motion.p
+          className="pagina-topo-label"
           initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.0 }}
-          style={{ fontFamily: "'Palatino Linotype', sans-serif", fontSize: '18px', 
-            fontWeight: 600, letterSpacing: '5px', color: '#9A7A2E', textTransform: 'uppercase', textAlign: 'center', marginBottom: '24px', 
-            opacity: 0.85 }}
         >
           ADVOCACIA E CONSULTORIA JURÍDICA
         </motion.p>
@@ -121,7 +119,6 @@ function Hma() {
           transition={{ duration: 1, delay: 0.1, ease: 'easeOut' }}
         />
 
-        {/*cCard contato*/}
         <motion.div className="hma-contato-bloco" {...fadeUp(0.2)}>
           <p className="hma-contato-chamada">
             {t('hma.contato.chamada', 'Deseja falar diretamente comigo?')}
