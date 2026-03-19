@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 import { FaFacebook, FaInstagram, FaWhatsapp, FaYoutube, FaLinkedin, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
 import './footer.css'
 
@@ -19,8 +20,6 @@ function Footer() {
 
   return (
     <footer className="footer">
-
-      {/* Partículas decorativas */}
       <motion.div className="footer-particle footer-particle--1"
         animate={{ y: [0, -18, 0], opacity: [0.3, 0.7, 0.3] }}
         transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
@@ -33,8 +32,6 @@ function Footer() {
         animate={{ y: [0, -22, 0], opacity: [0.15, 0.4, 0.15] }}
         transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut', delay: 3 }}
       />
-
-      {/* Linha superior decorativa */}
       <motion.div
         className="footer-top-line"
         initial={{ scaleX: 0 }}
@@ -45,7 +42,6 @@ function Footer() {
 
       <div className="footer-inner">
 
-        {/* ── Coluna Logo ── */}
         <motion.div className="footer-col footer-col--brand" {...fadeUp(0)}>
           <div className="footer-logo">
             <span className="footer-logo-icone">hm</span>
@@ -84,7 +80,7 @@ function Footer() {
           </div>
         </motion.div>
 
-        {/* ── Coluna Navegação ── */}
+        {/*navegação*/}
         <motion.div className="footer-col" {...fadeUp(0.15)}>
           <h4 className="footer-col-titulo">{t('footer.navegacao', 'Navegação')}</h4>
           <motion.div className="footer-col-linha"
@@ -93,31 +89,30 @@ function Footer() {
           />
           <nav className="footer-nav">
             {[
-              { label: t('nav.inicio', 'Início'), href: '/#inicio' },
-              { label: t('nav.hma', 'Sobre'), href: '/hma' },
-              { label: t('nav.nucleos', 'Núcleos'), href: '/#nucleos' },
-              { label: t('nav.atuacao', 'Atuação'), href: '/#atuacao' },
-              { label: t('nav.duvidas', 'Dúvidas'), href: '/#duvidas' },
-              { label: t('nav.contato', 'Contato'), href: '/#contato' },
-            ].map(({ label, href }, i) => (
-              <motion.a
+              { label: t('nav.inicio', 'Início'),   to: '/' },
+              { label: t('nav.hma', 'Sobre'),       to: '/sobre' },
+              { label: t('nav.nucleos', 'Núcleos'), to: '/nucleos' },
+              { label: t('nav.atuacao', 'Atuação'), to: '/atuacao' },
+              { label: t('nav.duvidas', 'Dúvidas'), to: '/duvidas' },
+              { label: t('nav.contato', 'Contato'), to: '/contato' },
+            ].map(({ label, to }, i) => (
+              <motion.div
                 key={label}
-                href={href}
-                className="footer-nav-link"
                 initial={{ opacity: 0, x: -12 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.3 + i * 0.06 }}
-                whileHover={{ x: 6, color: '#C9A84C' }}
               >
-                <span className="footer-nav-diamond">◆</span>
-                {label}
-              </motion.a>
+                <Link to={to} className="footer-nav-link">
+                  <span className="footer-nav-diamond">◆</span>
+                  {label}
+                </Link>
+              </motion.div>
             ))}
           </nav>
         </motion.div>
 
-        {/* ── Coluna Contato ── */}
+        {/*cvontato*/}
         <motion.div className="footer-col" {...fadeUp(0.3)}>
           <h4 className="footer-col-titulo">{t('footer.contato', 'Contato')}</h4>
           <motion.div className="footer-col-linha"
@@ -137,10 +132,7 @@ function Footer() {
               <FaEnvelope className="footer-contato-icone" />
               <span>contato@haeffnermarinho.adv.br</span>
             </a>
-            <a href="mailto:armando@haeffnermarinho.adv.br" className="footer-contato-item">
-              <FaEnvelope className="footer-contato-icone" />
-              <span>armando@haeffnermarinho.adv.br</span>
-            </a>
+            
             <div className="footer-contato-item footer-contato-item--no-link">
               <FaMapMarkerAlt className="footer-contato-icone" />
               <span>Av. Cândido Hartmann, 1326<br />Mercês · Curitiba — PR · Brasil</span>
@@ -150,7 +142,7 @@ function Footer() {
 
       </div>
 
-      {/* ── Linha divisória + Copyright ── */}
+
       <motion.div
         className="footer-bottom-line"
         initial={{ scaleX: 0 }}

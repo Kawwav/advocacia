@@ -246,6 +246,7 @@ export default function Contato() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
+              
               <FaWhatsapp /> Falar pelo WhatsApp agora
             </motion.a>
           </motion.div>

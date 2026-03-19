@@ -281,6 +281,7 @@ a.ct-card__value:hover { color: #F8F5EF; }
   text-transform: uppercase;
   margin-bottom: 24px;
   opacity: 0.85;
+   text-align: center;
 }
 
 @media (max-width: 1024px) {

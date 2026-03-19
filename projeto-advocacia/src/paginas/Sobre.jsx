@@ -9,6 +9,7 @@ const fadeUp = (delay = 0) => ({
   transition: { duration: 0.9, delay, ease: [0.22, 1, 0.36, 1] }
 })
 
+
 function Hma() {
   const { t } = useTranslation()
 
@@ -121,20 +122,13 @@ function Hma() {
 
         <motion.div className="hma-contato-bloco" {...fadeUp(0.2)}>
           <p className="hma-contato-chamada">
-            {t('hma.contato.chamada', 'Deseja falar diretamente comigo?')}
-          </p>
-          <p className="hma-contato-label">
-            {t('hma.contato.label', 'Escreva para:')}
+            {t('hma.contato.chamada', 'Fale diretamente comigo:')}
           </p>
           <a href="mailto:armando@haeffnermarinho.adv.br" className="hma-card-email hma-card-email--destaque">
             armando@haeffnermarinho.adv.br
           </a>
-          <p style={{ fontFamily: 'Montserrat, sans-serif', fontSize: '12px', letterSpacing: '2px', color: '#F8F5EF', textTransform: 'uppercase', marginTop: '20px', fontWeight: 500 }}>
-            Armando Haeffner Marinho Neto
-          </p>
-          <p style={{ fontFamily: 'Montserrat, sans-serif', fontSize: '10px', letterSpacing: '2px', color: '#C9A84C', textTransform: 'uppercase', marginTop: '4px', opacity: 0.7 }}>
-            OAB/PR 94.793
-          </p>
+          <p className="hma-contato-nome">Armando Haeffner Marinho Neto</p>
+          <p className="hma-contato-oab">OAB/PR 94.793</p>
         </motion.div>
 
       </div>

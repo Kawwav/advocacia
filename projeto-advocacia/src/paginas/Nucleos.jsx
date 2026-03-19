@@ -75,30 +75,17 @@ function NucleoCard({ nucleo, index }) {
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.9, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
     >
-      {/* Número */}
       <div className="nuc-card-numero">{nucleo.numero}</div>
-
-      {/* Linha lateral */}
       <div className="nuc-card-linha-lateral" />
-
-      {/* Corpo */}
       <div className="nuc-card-corpo">
-
-        {/* Ícone */}
         <div className="nuc-card-icone-wrapper">
           <Icone className="nuc-card-icone" />
         </div>
-
-        {/* Tag */}
         <span className="nuc-card-tag">{nucleo.tag}</span>
-
-        {/* Título */}
         <h2 className="nuc-card-titulo">
           {nucleo.titulo}{' '}
           <span>{nucleo.subtitulo}</span>
         </h2>
-
-        {/* Divisor interno */}
         <motion.div
           className="nuc-card-divisor"
           initial={{ width: 0, opacity: 0 }}
@@ -106,11 +93,7 @@ function NucleoCard({ nucleo, index }) {
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.3, ease: 'easeOut' }}
         />
-
-        {/* Descrição */}
         <p className="nuc-card-descricao">{nucleo.descricao}</p>
-
-        {/* Cantos decorativos */}
         <div className="nuc-canto nuc-canto--tl" />
         <div className="nuc-canto nuc-canto--br" />
       </div>
@@ -124,7 +107,6 @@ function Nucleos() {
   return (
     <main className="nuc-pagina">
 
-        {/* Orbs de fundo */}
         <div className="nuc-orb nuc-orb--1" />
         <div className="nuc-orb nuc-orb--2" />
         <div className="nuc-orb nuc-orb--3" />
@@ -139,15 +121,12 @@ function Nucleos() {
             ADVOCACIA E CONSULTORIA JURÍDICA
           </motion.p>
 
-          <motion.p className="nuc-eyebrow" {...fadeUp(0.05)}>
-          </motion.p>
+          <motion.p className="nuc-eyebrow" {...fadeUp(0.05)} />
 
-          {/*  titulo principal  */}
           <motion.h1 className="nuc-titulo" {...fadeUp(0.15)}>
             {t('nuc.titulo', 'Núcleos de')} <span>{t('nuc.titulo2', 'Atuação')}</span>
           </motion.h1>
 
-          {/*  Divisor animado  */}
           <motion.div
             className="nuc-divisor"
             initial={{ width: 0, opacity: 0 }}
@@ -160,7 +139,7 @@ function Nucleos() {
             <p className="nuc-intro-destaque">
               {t(
                 'nuc.intro',
-                'Cada núcleo representa uma frente de atuação especializada — desenhada para oferecer proteção jurídica estratégica, precisa e eficaz nas áreas que mais impactam a vida e o patrimônio dos nossos constituintes.'
+                'Operamos através de um ecossistema de núcleos jurídicos integrados. Essa estrutura nos permite oferecer uma resposta interdisciplinar ágil, garantindo segurança máxima em cada vertente do Direito.'
               )}
             </p>
           </motion.div>
@@ -178,15 +157,10 @@ function Nucleos() {
               <div className="nuc-foto-canto nuc-foto-canto--bl" />
               <div className="nuc-foto-canto nuc-foto-canto--br" />
               <div className="nuc-foto-overlay" />
-              <img
-                src="/advocacia/reuniao.jpg"
-                alt="Reunião Haeffner Marinho Advogados"
-                className="nuc-foto"
-              />
+              <img src="/advocacia/reuniao.jpg" alt="Reunião Haeffner Marinho Advogados" className="nuc-foto" />
             </div>
             <div className="nuc-foto-legenda">
               <span className="nuc-foto-legenda-linha" />
-
               <span className="nuc-foto-legenda-linha" />
             </div>
           </motion.div>
@@ -204,7 +178,6 @@ function Nucleos() {
             </div>
           </div>
 
-          {/* ── Divisor final ── */}
           <motion.div
             className="nuc-divisor nuc-divisor--centro"
             initial={{ width: 0, opacity: 0 }}
@@ -213,13 +186,9 @@ function Nucleos() {
             transition={{ duration: 1, delay: 0.1, ease: 'easeOut' }}
           />
 
-          {/* ── Bloco contato ── */}
           <motion.div className="nuc-contato" {...fadeUp(0.2)}>
             <p className="nuc-contato-chamada">
               {t('nuc.contato.chamada', 'Identifique sua necessidade. Fale conosco.')}
-            </p>
-            <p className="nuc-contato-label">
-              {t('nuc.contato.label', 'Escreva para:')}
             </p>
             <a href="mailto:armando@haeffnermarinho.adv.br" className="nuc-contato-email">
               armando@haeffnermarinho.adv.br

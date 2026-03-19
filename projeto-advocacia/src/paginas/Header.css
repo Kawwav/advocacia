@@ -390,6 +390,21 @@
 .menu-hamburguer.aberto span:nth-child(2) { opacity: 0; transform: scaleX(0); }
 .menu-hamburguer.aberto span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
+@media (min-width: 1461px) and (max-width: 1800px) {
+  .header-nav a {
+    font-size: 18px;
+    padding: 10px 5px;      /* ← diminui espaço entre os itens */
+    letter-spacing: 1px;    /* ← diminui espaço entre as letras */
+  }
+  .logo-imagem-centro { height: 150px; }
+  .logo-nome { font-size: 35px; letter-spacing: 0.3px; }
+  .logo-oab, .logo-advogados { font-size: 20px; letter-spacing: 0.3px; }
+}
+
+
+
+
+
 @media (max-width: 1460px) {
   .header-main { height: 140px; padding: 20px 32px; overflow: visible; }
   .logo-nome { font-size: 32px; }
@@ -656,3 +671,4 @@
   .social-icons { gap: 5px; }
   .top-bar a { font-size: 13px !important; }
 }
+

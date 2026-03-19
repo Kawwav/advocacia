@@ -491,11 +491,13 @@
 .hma-contato-bloco {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-  padding: 36px 40px;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  padding: 40px 48px;
   border: 1px solid rgba(201,168,76,0.18);
-  border-left: 3px solid #C9A84C;
+  border-top: 3px solid #C9A84C;
+  border-left: none;
   background: linear-gradient(135deg, rgba(13,27,42,0.95), rgba(18,34,52,0.98));
   box-shadow: 0 8px 40px rgba(0,0,0,0.3);
   position: relative;
@@ -505,9 +507,9 @@
 .hma-contato-bloco::before {
   content: '';
   position: absolute;
-  top: 0; left: 0; right: 0;
+  bottom: 0; left: 0; right: 0;
   height: 1px;
-  background: linear-gradient(90deg, #C9A84C, rgba(201,168,76,0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(201,168,76,0.2), transparent);
 }
 
 .hma-contato-chamada {
@@ -516,7 +518,8 @@
   font-weight: 300;
   color: #F8F5EF;
   letter-spacing: 0.5px;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
+  text-align: center;
 }
 
 .hma-contato-label {
@@ -529,9 +532,32 @@
   margin-bottom: 6px;
 }
 
+.hma-contato-nome {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #F8F5EF;
+  text-transform: uppercase;
+  margin-top: 16px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.hma-contato-oab {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #C9A84C;
+  text-transform: uppercase;
+  opacity: 0.7;
+  text-align: center;
+}
+
 .hma-card-email--destaque {
   font-size: var(--fs-card-email-lg);
   letter-spacing: 0.5px;
+  justify-content: center;
+  text-align: center;
 }
 
 @media (max-width: 1024px) {
@@ -633,6 +659,8 @@
   .hma-contato-bloco {
     padding: 28px 24px;
     gap: 6px;
+    align-items: center;
+    text-align: center;
   }
 
   .hma-contato-chamada {

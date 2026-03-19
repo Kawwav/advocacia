@@ -8,6 +8,7 @@ import Contato from './paginas/Contato'
 import Nucleos from './paginas/Nucleos'
 import Atuacao from './paginas/Atuacao'
 import './App.css'
+import ScrollToTop from './componentes/ScrollToTop'
 
 /*npm run build
 npm run deploy*/
@@ -16,6 +17,7 @@ npm run deploy*/
 function App() {
   return (
     <>
+     <ScrollToTop /> 
       <Header />
       <Routes>
         <Route path="/" element={<Hae />} />

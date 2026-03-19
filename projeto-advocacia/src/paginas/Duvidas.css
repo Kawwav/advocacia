@@ -33,7 +33,7 @@
 
 .dv-titulo {
   font-family: 'Palatino Linotype', serif;
-  font-size: clamp(30px, 5vw, 52px); font-weight: 300;
+  font-size: clamp(30px, 5vw, 48px); font-weight: 300;
   color: #F8F5EF; line-height: 1.15; margin: 0;
 }
 

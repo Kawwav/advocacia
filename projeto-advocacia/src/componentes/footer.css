@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
 
-/* ── FOOTER ── */
 .footer {
   background: linear-gradient(180deg, #0a1520 0%, #060e18 100%);
   position: relative;
@@ -8,7 +7,6 @@
   padding: 0 0 32px;
 }
 
-/* Partículas */
 .footer-particle {
   position: absolute;
   border-radius: 50%;
@@ -19,7 +17,6 @@
 .footer-particle--2 { width: 2px; height: 2px; top: 55%; right: 20%; opacity: 0.2; }
 .footer-particle--3 { width: 4px; height: 4px; top: 35%; left: 65%; opacity: 0.15; }
 
-/* Linha topo */
 .footer-top-line {
   height: 1px;
   background: linear-gradient(90deg, transparent, #C9A84C 30%, #E8C97A 50%, #C9A84C 70%, transparent);
@@ -27,7 +24,6 @@
   margin-bottom: 64px;
 }
 
-/* ── Inner grid ── */
 .footer-inner {
   max-width: 1100px;
   margin: 0 auto;
@@ -37,7 +33,6 @@
   gap: 48px;
 }
 
-/* ── Coluna genérica ── */
 .footer-col {
   display: flex;
   flex-direction: column;
@@ -112,7 +107,6 @@
   opacity: 0.8;
 }
 
-/* ── Social ── */
 .footer-social {
   display: flex;
   gap: 12px;
@@ -137,7 +131,6 @@
   background: rgba(201,168,76,0.06);
 }
 
-/* ── Nav ── */
 .footer-nav {
   display: flex;
   flex-direction: column;
@@ -155,8 +148,14 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  transition: color 0.25s;
   width: fit-content;
+  padding-left: 0;
+  transition: color 0.25s, padding-left 0.25s ease;
+}
+
+.footer-nav-link:hover {
+  color: #C9A84C;
+  padding-left: 6px;
 }
 
 .footer-nav-diamond {
@@ -171,7 +170,6 @@
   opacity: 1;
 }
 
-/* ── Contatos ── */
 .footer-contatos {
   display: flex;
   flex-direction: column;
@@ -203,7 +201,6 @@
   flex-shrink: 0;
 }
 
-/* ── Bottom ── */
 .footer-bottom-line {
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(201,168,76,0.2) 30%, rgba(201,168,76,0.2) 70%, transparent);
@@ -256,7 +253,6 @@
   transform: rotate(45deg);
 }
 
-/* ── TABLET ── */
 @media (max-width: 1024px) {
   .footer-inner {
     grid-template-columns: 1fr 1fr;
@@ -273,7 +269,6 @@
   }
 }
 
-/* ── MOBILE ── */
 @media (max-width: 768px) {
   .footer-inner {
     grid-template-columns: 1fr;
@@ -301,7 +296,7 @@
     font-size: 16px;
   }
 }
-/* ── Política de Privacidade ── */
+
 .footer-privacidade-link {
   font-family: 'Montserrat', sans-serif;
   font-size: 11px;
