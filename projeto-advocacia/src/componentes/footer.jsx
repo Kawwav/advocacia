@@ -142,6 +142,19 @@ function Footer() {
 
       </div>
 
+      <motion.div
+        className="footer-atuacao-banner"
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+      >
+        <span className="footer-atuacao-ornament">◆</span>
+        <p className="footer-atuacao-tag">
+          {t('footer.atuacao_tag', 'Atuação nacional estruturada por meio de parcerias estratégicas — atendimento digital ágil e seguro.')}
+        </p>
+        <span className="footer-atuacao-ornament">◆</span>
+      </motion.div>
 
       <motion.div
         className="footer-bottom-line"

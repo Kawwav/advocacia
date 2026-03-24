@@ -194,6 +194,35 @@
   color: #C9A84C;
 }
 
+.footer-atuacao-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 760px;
+  margin: 52px auto 0;
+  padding: 0 48px;
+}
+
+.footer-atuacao-tag {
+  font-family: 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif;
+  font-size: 13.5px;
+  font-style: italic;
+  font-weight: 400;
+  color: #D4C5A9;
+  line-height: 1.7;
+  opacity: 0.65;
+  text-align: center;
+  letter-spacing: 0.4px;
+}
+
+.footer-atuacao-ornament {
+  font-size: 6px;
+  color: #C9A84C;
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
 .footer-contato-icone {
   color: #C9A84C;
   font-size: 14px;

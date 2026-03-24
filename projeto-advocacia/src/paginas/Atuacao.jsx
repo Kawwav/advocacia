@@ -196,7 +196,7 @@ function Atuacao() {
 
           <motion.div className="atu-contato" {...fadeUp(0.2)}>
             <p className="atu-contato-chamada">
-              {t('atu.contato.chamada', 'Sua situação se enquadra em alguma dessas áreas?')}
+              {t('atu.contato.chamada', 'Fale diretamente comigo:')}
             </p>
             <a href="mailto:armando@haeffnermarinho.adv.br" className="atu-contato-email">
               armando@haeffnermarinho.adv.br

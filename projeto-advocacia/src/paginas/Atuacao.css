@@ -12,7 +12,7 @@
   overflow: hidden;
 }
 
-/* ── bolas ── */
+/* bolas */
 .atu-orb {
   position: absolute;
   border-radius: 50%;
@@ -54,6 +54,7 @@
   text-transform: uppercase;
   margin-bottom: 20px;
   opacity: 0.85;
+  text-align: center;
 }
 
 .atu-titulo {
@@ -64,14 +65,15 @@
   line-height: 1.08;
   margin-bottom: 0;
   letter-spacing: 0.2px;
+  text-align: center;
 }
 
 .atu-titulo span { color: #C9A84C; }
 
 .atu-divisor {
   height: 1px;
-  background: linear-gradient(90deg, #C9A84C, transparent);
-  margin: 28px 0 48px;
+  background: linear-gradient(90deg, transparent, #C9A84C, transparent);
+  margin: 28px auto 48px;
   width: 72px;
 }
 
@@ -85,6 +87,9 @@
 .atu-intro {
   margin-bottom: 64px;
   max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .atu-intro-texto {
@@ -95,6 +100,7 @@
   line-height: 1.8;
   border-top: 2px solid rgba(201,168,76,0.35);
   padding-top: 24px;
+  text-align: center;
 }
 
 /* grade */

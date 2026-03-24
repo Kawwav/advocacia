@@ -119,7 +119,7 @@ function Hae() {
             </p>
             <p className="heroi-citacao-texto">
               {t('hae.final.p2',
-                'O Direito Moderno e mais especificamente o contemporâneo  tornou-se um ecossistema complexo e interdisciplinar, caracterizado pela multiplicidade de normas, pela interação de diferentes ordenamentos jurídicos (nacional, internacional, privado) e pela necessidade de lidar com relações sociais, tecnológicas e econômicas cada vez mais intrincadas.'
+                'O Direito Moderno - e mais especificamente o contemporâneo -  tornou-se um ecossistema complexo e interdisciplinar, caracterizado pela multiplicidade de normas, pela interação de diferentes ordenamentos jurídicos (nacional, internacional, privado) e pela necessidade de lidar com relações sociais, tecnológicas e econômicas cada vez mais intrincadas.'
               )}
             </p>
           </div>

@@ -175,20 +175,81 @@
 
 .ct-info { padding-top: 8px; }
 
-.ct-info__titulo {
-  font-family: 'Palatino Linotype', serif;
-  font-size: clamp(22px, 2.5vw, 32px); font-weight: 300;
-  color: #F8F5EF; line-height: 1.35; margin: 0 0 20px;
+/* bloco destaques — mesmo estilo do hma-contato-bloco */
+.ct-destaques-bloco {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px 48px;
+  border: 1px solid rgba(201,168,76,0.18);
+  border-top: 3px solid #C9A84C;
+  background: linear-gradient(135deg, rgba(13,27,42,0.95), rgba(18,34,52,0.98));
+  box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 40px;
 }
 
-.ct-info__texto {
-  font-family: 'Palatino Linotype', sans-serif;
-  font-size: 13px; font-weight: 300; color: #D4C5A9;
-  line-height: 1.85; margin-bottom: 40px;
+.ct-destaques-bloco::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201,168,76,0.2), transparent);
+}
+
+.ct-destaques-bloco__deco-top {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, #C9A84C 0%, rgba(201,168,76,0.2) 60%, transparent 100%);
+}
+
+.ct-destaques-bloco__deco-corner {
+  position: absolute;
+  bottom: 16px; right: 16px;
+  width: 32px; height: 32px;
+  border-bottom: 1px solid rgba(201,168,76,0.2);
+  border-right: 1px solid rgba(201,168,76,0.2);
+  pointer-events: none;
+}
+
+@media (max-width: 600px) {
+  .ct-destaques-bloco { padding: 28px 24px; }
+}
+
+
+.ct-info__destaques {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ct-info__destaque-item {
+  font-family: 'Palatino Linotype', serif;
+  font-size: 29px; font-weight: 300; color: #D4C5A9;
+  line-height: 1.85; margin: 0;
 }
 
 /* contatos */
 .ct-cards { display: flex; flex-direction: column; gap: 16px; margin-bottom: 36px; }
+
+.ct-card--with-tagline {
+  align-items: center;
+}
+
+.ct-card__tagline {
+  margin: 0 0 0 auto;
+  font-family: 'Palatino Linotype', serif;
+  font-size: 12px;
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(212,197,169,0.45);
+  line-height: 1.5;
+  text-align: right;
+  padding-left: 16px;
+  border-left: 1px solid rgba(201,168,76,0.15);
+}
 
 .ct-card {
   display: flex; align-items: center; gap: 16px;
@@ -215,6 +276,43 @@
   transition: color 0.2s;
 }
 a.ct-card__value:hover { color: #F8F5EF; }
+
+.ct-card__label-row {
+  display: flex; align-items: center; gap: 8px;
+}
+
+.ct-card__badge {
+  font-family: 'Palatino Linotype', sans-serif;
+  font-size: 8px; font-weight: 600; letter-spacing: 1.5px;
+  text-transform: uppercase; color: #25D366;
+  background: rgba(37,211,102,0.1); border: 1px solid rgba(37,211,102,0.3);
+  padding: 2px 6px;
+}
+
+.ct-card__horario {
+  font-family: 'Palatino Linotype', sans-serif;
+  font-size: 11px; font-weight: 300;
+  color: rgba(212,197,169,0.4);
+  margin: 2px 0 0; letter-spacing: 0.3px;
+}
+
+/* whatsApp row */
+.ct-wa-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.ct-wa-tagline {
+  font-family: 'Palatino Linotype', serif;
+  font-size: 13px;
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(212,197,169,0.55);
+  margin: 0;
+  line-height: 1.5;
+  white-space: nowrap;
+}
 
 /* whatsApp */
 .ct-wa-cta {

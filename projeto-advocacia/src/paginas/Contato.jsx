@@ -26,9 +26,9 @@ const AREAS = [
 ]
 
 const INFO_CARDS = [
-  { Icon: FaWhatsapp,      label: 'WHATSAPP',  value: '(41) 98818-4388',              color: '#25D366', href: `https://wa.me/${WHATSAPP_NUMBER}` },
-  { Icon: FaEnvelope,      label: 'E-MAIL',    value: 'kawav6390@gmail.com',  color: '#C9A84C', href: 'mailto:kawav6390@gmail.com' },
-  { Icon: FaMapMarkerAlt,  label: 'ENDEREÇO',  value: 'Curitiba – Paraná, Brasil',    color: '#C9A84C', href: null },
+  { Icon: FaWhatsapp,      label: 'WHATSAPP',  value: '(41) 98818-4388',              color: '#25D366', href: `https://wa.me/${WHATSAPP_NUMBER}`, badge: 'PLANTÃO 24h' },
+  { Icon: FaEnvelope,      label: 'E-MAIL',    value: 'kawav6390@gmail.com',  color: '#C9A84C', href: 'mailto:kawav6390@gmail.com', badge: null },
+  { Icon: FaMapMarkerAlt,  label: 'ENDEREÇO',  value: 'Curitiba – Paraná, Brasil',    color: '#C9A84C', href: null, badge: null },
 ]
 
 export default function Contato() {
@@ -213,42 +213,54 @@ export default function Contato() {
             </p>
           </motion.div>
 
-          {/*coluna direita  info*/}
           <motion.div className="ct-info" initial={{ opacity: 0, x: 24 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
-            <h2 className="ct-info__titulo">Atendimento personalizado<br />para cada cliente</h2>
-            <p className="ct-info__texto">
-              Entre em contato e agende sua consulta inicial. Nossa equipe está pronta para analisar seu caso e apresentar as melhores alternativas jurídicas.
-            </p>
+            <div className="ct-destaques-bloco">
+              <div className="ct-destaques-bloco__deco-top" />
+              <div className="ct-destaques-bloco__deco-corner" />
+              <div className="ct-info__destaques">
+                <p className="ct-info__destaque-item">Atuação nacional estruturada por meio de parcerias estratégicas.</p>
+              </div>
+            </div>
 
             <div className="ct-cards">
-              {INFO_CARDS.map(({ Icon, label, value, color, href }) => (
-                <motion.div key={label} className="ct-card" whileHover={{ x: 4 }} transition={{ duration: 0.2 }}>
+              {INFO_CARDS.map(({ Icon, label, value, color, href, badge }) => (
+                <motion.div key={label} className={`ct-card${label === 'WHATSAPP' ? ' ct-card--with-tagline' : ''}`} whileHover={{ x: 4 }} transition={{ duration: 0.2 }}>
                   <div className="ct-card__icon" style={{ background: `${color}18`, border: `1px solid ${color}40` }}>
                     <Icon style={{ color }} />
                   </div>
                   <div className="ct-card__body">
-                    <p className="ct-card__label" style={{ color }}>{label}</p>
+                    <div className="ct-card__label-row">
+                      <p className="ct-card__label" style={{ color }}>{label}</p>
+                      {badge && <span className="ct-card__badge">{badge}</span>}
+                    </div>
                     {href
                       ? <a className="ct-card__value" href={href} target="_blank" rel="noopener noreferrer">{value}</a>
                       : <p className="ct-card__value">{value}</p>
                     }
+                    {label === 'WHATSAPP' && (
+                      <p className="ct-card__horario">Seg–Sex: 9h–12h · 14h–17h</p>
+                    )}
                   </div>
+                  {label === 'WHATSAPP' && (
+                    <p className="ct-card__tagline">Atendimento digital ágil e seguro.</p>
+                  )}
                 </motion.div>
               ))}
             </div>
 
             {/* whatsApp*/}
-            <motion.a
-              className="ct-wa-cta"
-              href={whatsappLink()}
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              
-              <FaWhatsapp /> Falar pelo WhatsApp agora
-            </motion.a>
+            <div className="ct-wa-row">
+              <motion.a
+                className="ct-wa-cta"
+                href={whatsappLink()}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <FaWhatsapp /> Falar pelo WhatsApp agora
+              </motion.a>
+            </div>
           </motion.div>
 
         </div>

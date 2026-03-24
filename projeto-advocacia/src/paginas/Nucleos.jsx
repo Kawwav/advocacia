@@ -188,7 +188,7 @@ function Nucleos() {
 
           <motion.div className="nuc-contato" {...fadeUp(0.2)}>
             <p className="nuc-contato-chamada">
-              {t('nuc.contato.chamada', 'Identifique sua necessidade. Fale conosco.')}
+              {t('Fale diretamente comigo:')}
             </p>
             <a href="mailto:armando@haeffnermarinho.adv.br" className="nuc-contato-email">
               armando@haeffnermarinho.adv.br
