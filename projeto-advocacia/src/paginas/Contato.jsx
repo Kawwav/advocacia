@@ -26,7 +26,7 @@ const AREAS = [
 ]
 
 const INFO_CARDS = [
-  { Icon: FaWhatsapp,      label: 'WHATSAPP',  value: '(41) 98818-4388',              color: '#25D366', href: `https://wa.me/${WHATSAPP_NUMBER}`, badge: 'PLANTÃO 24h' },
+  { Icon: FaWhatsapp,      label: 'WHATSAPP',  value: '(41) 98818-4388',              color: '#25D366', href: `https://wa.me/${WHATSAPP_NUMBER}`, badge: null },
   { Icon: FaEnvelope,      label: 'E-MAIL',    value: 'kawav6390@gmail.com',  color: '#C9A84C', href: 'mailto:kawav6390@gmail.com', badge: null },
   { Icon: FaMapMarkerAlt,  label: 'ENDEREÇO',  value: 'Curitiba – Paraná, Brasil',    color: '#C9A84C', href: null, badge: null },
 ]
@@ -238,7 +238,10 @@ export default function Contato() {
                       : <p className="ct-card__value">{value}</p>
                     }
                     {label === 'WHATSAPP' && (
-                      <p className="ct-card__horario">Seg–Sex: 9h–12h · 14h–17h</p>
+                      <div className="ct-card__wa-detail">
+                        <span className="ct-card__horario">Seg–Sex: 9h–12h · 14h–17h</span>
+                        <span className="ct-card__plantao">· Plantão 24h urgências criminais</span>
+                      </div>
                     )}
                   </div>
                   {label === 'WHATSAPP' && (
