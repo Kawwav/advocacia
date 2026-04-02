@@ -1,13 +1,5 @@
 const nodemailer = require('nodemailer')
 
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
-  },
-})
-
 module.exports = async (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*')
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS')
@@ -16,11 +8,23 @@ module.exports = async (req, res) => {
   if (req.method === 'OPTIONS') return res.status(200).end()
   if (req.method !== 'POST') return res.status(405).json({ error: 'Método não permitido' })
 
+  console.log('EMAIL_USER:', process.env.EMAIL_USER)
+  console.log('EMAIL_PASS existe:', !!process.env.EMAIL_PASS)
+  console.log('Body recebido:', req.body)
+
   const { nome, telefone, assunto, categoria, mensagem } = req.body
 
   if (!nome || !telefone || !assunto) {
     return res.status(400).json({ error: 'Campos obrigatórios ausentes' })
   }
+
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
+    },
+  })
 
   const mailOptions = {
     from: `"Site Haeffner" <${process.env.EMAIL_USER}>`,
@@ -29,7 +33,6 @@ module.exports = async (req, res) => {
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 24px; background: #f9f9f9; border-radius: 8px;">
         <h2 style="color: #2c3e50; border-bottom: 2px solid #C9A84C; padding-bottom: 12px;">Nova mensagem do site</h2>
-
         <table style="width: 100%; border-collapse: collapse; margin-top: 16px;">
           <tr>
             <td style="padding: 10px; font-weight: bold; color: #555; width: 130px;">Nome:</td>
@@ -52,7 +55,6 @@ module.exports = async (req, res) => {
             <td style="padding: 10px; color: #222;">${mensagem || '(sem descrição)'}</td>
           </tr>
         </table>
-
         <p style="margin-top: 24px; font-size: 12px; color: #999;">Enviado pelo formulário do site.</p>
       </div>
     `,
@@ -60,9 +62,10 @@ module.exports = async (req, res) => {
 
   try {
     await transporter.sendMail(mailOptions)
+    console.log('Email enviado com sucesso!')
     return res.status(200).json({ success: true })
   } catch (err) {
-    console.error('Erro ao enviar email:', err)
-    return res.status(500).json({ error: 'Falha ao enviar email' })
+    console.error('Erro detalhado ao enviar email:', err.message, err.code, err.response)
+    return res.status(500).json({ error: 'Falha ao enviar email', detalhe: err.message })
   }
 }
