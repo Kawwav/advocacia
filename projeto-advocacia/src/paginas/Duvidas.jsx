@@ -9,7 +9,7 @@ import {
 } from 'react-icons/fa'
 import './Duvidas.css'
 
-const BACKEND_URL = 'https://haeffner-backend.vercel.app/api/send-email'
+const BACKEND_URL = '/api/send-email'
 
 const WHATSAPP_NUMBER = '554198387397'
 
