@@ -7,8 +7,8 @@ import {
 } from 'react-icons/fa'
 import './Agende.css'
 
-const API_URL         = 'https://api-contato-rouge.vercel.app/api/contato'
-const WHATSAPP_NUMBER = '5541988184388'
+const API_URL         = '/api/send-email'
+const WHATSAPP_NUMBER = '554198387397'
 
 export default function Contato() {
   const { t } = useTranslation()
@@ -16,8 +16,8 @@ export default function Contato() {
   const AREAS = t('agende.areas', { returnObjects: true })
 
   const INFO_CARDS = [
-    { Icon: FaWhatsapp,     label: 'WHATSAPP', value: '(41) 98818-4388',           color: '#25D366', href: `https://wa.me/${WHATSAPP_NUMBER}` },
-    { Icon: FaEnvelope,     label: 'E-MAIL',   value: 'kawav6390@gmail.com',        color: '#C9A84C', href: 'mailto:kawav6390@gmail.com' },
+    { Icon: FaWhatsapp,     label: 'WHATSAPP', value: ' (41) 9838-7397',                color: '#25D366', href: `https://wa.me/${WHATSAPP_NUMBER}` },
+    { Icon: FaEnvelope,     label: 'E-MAIL',   value: 'haeffnermarinho@gmail.com',       color: '#C9A84C', href: 'mailto:haeffnermarinho@gmail.com' },
     { Icon: FaMapMarkerAlt, label: t('agende.cards.endereco_label'), value: 'Curitiba – Paraná, Brasil', color: '#C9A84C', href: null },
   ]
 
@@ -50,16 +50,19 @@ export default function Contato() {
     setSendError(false)
 
     try {
-      const formData = new FormData()
-      formData.append('nome',     nome)
-      formData.append('email',    email)
-      formData.append('telefone', telefone)
-      formData.append('area',     area || 'Não informada')
-      formData.append('mensagem', mensagem || '(sem descrição)')
-      if (arquivo) formData.append('attachment', arquivo)
+      const response = await fetch(API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          nome,
+          telefone,
+          assunto: area || 'Não informada',
+          categoria: email,
+          mensagem: mensagem || '(sem descrição)',
+        }),
+      })
 
-      const response = await fetch(API_URL, { method: 'POST', body: formData })
-      const result   = await response.json()
+      const result = await response.json()
       if (response.ok && result.success) {
         setSubmitted(true)
       } else {
