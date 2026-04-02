@@ -78,9 +78,9 @@ function HaeLightbox({ src, alt, onClose }) {
 
 function HaeGallery() {
   const images = [
-    { src: '/advocacia/interior1.jpg', alt: 'Interior do escritório' },
-    { src: '/advocacia/interior2.jpg', alt: 'Ambiente interno' },
-    { src: '/advocacia/interior3.jpg', alt: 'Detalhes do escritório' },
+    { src: '/interior1.jpg', alt: 'Interior do escritório' },
+    { src: '/interior2.jpg', alt: 'Ambiente interno' },
+    { src: '/interior3.jpg', alt: 'Detalhes do escritório' },
   ]
 
   const [ativo, setAtivo] = useState(0)
@@ -255,7 +255,7 @@ function Hae() {
           </p>
         </motion.div>
 
-        <HaeImage src="/advocacia/predio.jpg" alt="predio" index={1} />
+        <HaeImage src="/predio.jpg" alt="predio" index={1} />
 
         <motion.p className="heroi-texto" {...fadeUp(0)}>
           {t('hae.complemento',

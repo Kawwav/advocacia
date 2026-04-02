@@ -64,7 +64,7 @@ function Header() {
 
         <div className="logo-centro">
           <img
-            src="/advocacia/logocentro.png"
+            src="/logocentro.png"
             alt="Logo Haeffner Marinho"
             className="logo-imagem-centro"
           />

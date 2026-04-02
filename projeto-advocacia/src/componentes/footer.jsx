@@ -128,7 +128,7 @@ function Footer() {
         <motion.div className="footer-col footer-col--brand" {...fadeUp(0)}>
           <div className="footer-logo">
             <img
-              src="/advocacia/logocentro.png"
+              src="/logocentro.png"
               alt="Logo Haeffner Marinho"
               className="footer-logo-imagem"
             />

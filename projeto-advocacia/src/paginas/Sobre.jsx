@@ -73,7 +73,7 @@ function Hma() {
             <div className="hma-foto-canto hma-foto-canto--br" />
             <div className="hma-foto-overlay" />
             <img
-              src="/advocacia/armando.jpg"
+              src="/armando.jpg"
               alt="Armando Haeffner Marinho Neto"
               className="hma-foto hma-foto--wide"
             />

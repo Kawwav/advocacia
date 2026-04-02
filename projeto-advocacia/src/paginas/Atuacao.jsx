@@ -116,7 +116,7 @@ function Atuacao() {
               <div className="atu-foto-canto atu-foto-canto--bl" />
               <div className="atu-foto-canto atu-foto-canto--br" />
               <div className="atu-foto-overlay" />
-              <img src="/advocacia/acao.jpg" alt="Haeffner Marinho Advogados em ação" className="atu-foto" />
+              <img src="/acao.jpg" alt="Haeffner Marinho Advogados em ação" className="atu-foto" />
             </div>
             <div className="atu-foto-legenda">
               <span className="atu-foto-legenda-linha" />

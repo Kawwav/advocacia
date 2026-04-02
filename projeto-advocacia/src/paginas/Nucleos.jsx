@@ -110,7 +110,7 @@ function Nucleos() {
               <div className="nuc-foto-canto nuc-foto-canto--bl" />
               <div className="nuc-foto-canto nuc-foto-canto--br" />
               <div className="nuc-foto-overlay" />
-              <img src="/advocacia/reuniao.jpg" alt="Reunião Haeffner Marinho Advogados" className="nuc-foto" />
+              <img src="/reuniao.jpg" alt="Reunião Haeffner Marinho Advogados" className="nuc-foto" />
             </div>
             <div className="nuc-foto-legenda">
               <span className="nuc-foto-legenda-linha" />
