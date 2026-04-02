@@ -14,6 +14,10 @@ import ScrollToTop from './componentes/ScrollToTop'
 /*npm run build
 npm run deploy*/
 
+/*git add api/send-email.js
+git commit -m "assunto"
+git push*/
+
 function App() {
   return (
     <>
