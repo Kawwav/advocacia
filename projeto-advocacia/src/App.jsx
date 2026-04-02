@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import Header from './paginas/Header'
-import Footer from './componentes/Footer'
+import Footer from './componentes/footer'
 import Hae from './paginas/Hae'
 import Sobre from './paginas/Sobre'
 import Duvidas from './paginas/Duvidas'
