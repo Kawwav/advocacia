@@ -4,30 +4,31 @@ import Footer from './componentes/Footer'
 import Hae from './paginas/Hae'
 import Sobre from './paginas/Sobre'
 import Duvidas from './paginas/Duvidas'
-import Contato from './paginas/Contato'
+import Agende from './paginas/Agende'
 import Nucleos from './paginas/Nucleos'
 import Atuacao from './paginas/Atuacao'
+import CookieConsent from './paginas/CookieConsent'; 
 import './App.css'
 import ScrollToTop from './componentes/ScrollToTop'
 
 /*npm run build
 npm run deploy*/
 
-
 function App() {
   return (
     <>
-     <ScrollToTop /> 
+      <ScrollToTop /> 
       <Header />
       <Routes>
         <Route path="/" element={<Hae />} />
         <Route path="/sobre" element={<Sobre />} />
         <Route path="/duvidas" element={<Duvidas />} />
-        <Route path="/contato" element={<Contato />} />
+        <Route path="/agende" element={<Agende />} />
         <Route path="/nucleos" element={<Nucleos />} />
         <Route path="/atuacao" element={<Atuacao />} />
       </Routes>
       <Footer />
+      <CookieConsent /> 
     </>
   )
 }

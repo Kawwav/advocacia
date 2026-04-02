@@ -5,16 +5,346 @@
     "nucleos": "NÚCLEOS",
     "atuacao": "ATUAÇÃO",
     "duvidas": "DÚVIDAS",
-    "contato": "CONTATO"
+    "agende": "AGENDE"
   },
   "header": {
-    "oab": "OAB/PR 94.793 · Advogados",
+    "oab": "OAB/PR 94.793\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \u00A0  Advogados",
     "descricao": "Advocacia e Consultoria Jurídica"
   },
   "hae": {
     "subtitulo": "Advocacia e Consultoria Jurídica",
     "titulo": "Advogados",
     "descricao": "Segurança jurídica com excelência e comprometimento",
-    "botao": "Nossas Áreas de Atuação"
+    "botao": "Nossas Áreas de Atuação",
+    "subtitulo_topo": "ADVOCACIA E CONSULTORIA JURÍDICA",
+    "titulo_novo": "Descomplique o Direito:",
+    "titulo_sub": "Soluções jurídicas para você",
+    "intro_destaque": "Fundado sob os pilares da ética e do rigor técnico, o escritório de advocacia HAEFFNER MARINHO ADVOGADOS oferece assessoria jurídica estratégica e personalizada.",
+    "intro": "Nossa atuação é pautada pela busca incessante por soluções resolutivas, mitigando riscos e conferindo robustez jurídica às operações de nossos constituintes.",
+    "complemento": "Acreditamos que a segurança jurídica deve ser fundamentada na estratégia e na precisão. Por isso, convidamos você a conhecer nossa estrutura e a metodologia de ecossistema: uma abordagem moderna desenhada para proteger o que é essencial — sua liberdade e seu patrimônio.",
+    "final": {
+      "p1": "O Direito, enquanto ciência voltada à harmonia social, converge com as transformações da coletividade, provendo soluções jurídicas contemporâneas às novas complexidades do mundo moderno.",
+      "p2": "O Direito Moderno - e mais especificamente o contemporâneo - tornou-se um ecossistema complexo e interdisciplinar, caracterizado pela multiplicidade de normas, pela interação de diferentes ordenamentos jurídicos (nacional, internacional, privado) e pela necessidade de lidar com relações sociais, tecnológicas e econômicas cada vez mais intrincadas."
+    }
+  },
+  "hma": {
+    "p1_inicio": "O escritório de advocacia",
+    "subtitulo_topo": "ADVOCACIA E CONSULTORIA JURÍDICA",
+    "titulo": "Inovação e",
+    "titulo2": "Compromisso",
+    "p1_resto": "nasce da convergência entre a tradição resiliente e a inovação estratégica. Inspirada em um legado de integridade, nossa essência foi moldada pela experiência prática de quem compreende o Direito não apenas nos códigos, mas no dinamismo do \"chão de fábrica\" e das complexas relações corporativas.",
+    "p2": "À frente do escritório, busco traduzir a complexidade jurídica em segurança real. Com uma trajetória pautada pela resiliência e vivência no mundo dos negócios — da gestão industrial ao mercado imobiliário —, trago para a advocacia a visão estratégica de quem entende, na prática, o valor de um resultado seguro.",
+    "p3": "Meu compromisso é garantir que cada cliente encontre não apenas representação jurídica, mas uma estratégia de defesa implacável e transparente. Antes de litigar, esgotaremos todas as ferramentas de resolução consensual, priorizando soluções ágeis.",
+    "p4": "Entendemos que o Direito Moderno exige mais que técnica: exige visão interdisciplinar e agilidade. Aqui, cada demanda é tratada com o rigor de um especialista e a combatividade de quem entende que o patrocínio da liberdade e do patrimônio é um compromisso intrínseco à nossa essência.",
+    "combate": "Estamos prontos para o combate.",
+    "contato": {
+      "chamada": "Fale diretamente comigo:"
+    }
+  },
+"nuc": {
+  "subtitulo_topo": "ADVOCACIA E CONSULTORIA JURÍDICA",
+  "titulo": "Núcleos de",
+  "titulo2": "Atuação",
+  "intro": "Operamos através de um ecossistema de núcleos jurídicos integrados. Essa estrutura nos permite oferecer uma resposta interdisciplinar ágil, garantindo segurança máxima em cada vertente do Direito.",
+  "contato": {
+    "chamada": "Fale diretamente comigo:"
+  },
+  "corporativo": {
+    "titulo": "Direito Corporativo",
+    "subtitulo": "Business Strategy",
+    "tag": "Estruturação & Governança",
+    "descricao": "A inteligência jurídica a serviço do crescimento. Unimos a visão do \"chão de fábrica\" à estratégia de alta gestão. Atuamos na estruturação de negócios, governança e contratos complexos, garantindo que o arcabouço legal da sua empresa seja um motor de expansão, não um obstáculo."
+  },
+  "imobiliario": {
+    "titulo": "Direito Imobiliário",
+    "subtitulo": "e Patrimonial",
+    "tag": "Ativos & Transações",
+    "descricao": "Segurança máxima para ativos de alto valor. Especialidade na estruturação de transações imobiliárias, incorporações e regularização de ativos. Protegemos a propriedade e garantimos que cada investimento imobiliário esteja blindado contra inseguranças jurídicas e riscos de mercado."
+  },
+  "conflitos": {
+    "titulo": "Gestão Estratégica",
+    "subtitulo": "de Conflitos",
+    "tag": "Contencioso & Mediação",
+    "descricao": "A saída mais inteligente para crises complexas. Atuamos no contencioso cível com foco resolutivo. Gerenciamos conflitos de forma tática, priorizando métodos consensuais e agilidade processual para minimizar desgastes e maximizar resultados favoráveis aos nossos constituintes."
+  },
+  "penal": {
+    "titulo": "Direito Penal Econômico",
+    "subtitulo": "e Liberdade",
+    "tag": "Defesa & Proteção",
+    "descricao": "Defesa implacável em cenários de alta sensibilidade. Proteção rigorosa da liberdade e da imagem em questões que envolvem crimes econômicos e complexidades do Direito Penal moderno. Atuamos com discrição, combatividade e técnica superior na preservação dos direitos fundamentais."
+  },
+  "sucessorio": {
+    "titulo": "Planejamento Sucessório",
+    "subtitulo": "e Holding",
+    "tag": "Patrimônio & Legado",
+    "descricao": "A confiança que atravessa gerações. Estruturamos a preservação e a transição do patrimônio familiar com inteligência tributária e jurídica. Criamos soluções que evitam inventários morosos, protegem o legado e garantem a harmonia e a liquidez para os sucessores."
   }
+},
+"atu": {
+  "titulo": "Áreas de",
+  "titulo2": "Atuação",
+  "intro_pre": "Atuação jurídica multidisciplinar com foco em resultados. No escritório de advocacia ",
+  "intro_pos": ", unimos expertise técnica e visão estratégica para oferecer soluções completas, protegendo seus interesses desde as relações familiares e patrimoniais até os desafios do ambiente corporativo e digital.",
+  "contato": { "chamada": "Fale diretamente comigo:" },
+  "imobiliario":    { "titulo": "Direito Imobiliário",               "descricao": "Compra e venda de imóveis, locação, usucapião e regularização de escrituras. Auxílio em contratos de compra, venda e locação, além de regularização de imóveis.",                                                                                                           "tags": ["Compra & Venda", "Locação", "Usucapião"] },
+  "familia":        { "titulo": "Direito de Família e Sucessões",     "descricao": "Divórcios, pensão alimentícia, guarda de filhos e inventários. Atuação humanizada em momentos delicados, com foco em soluções consensuais e proteção dos interesses familiares.",                                                                                              "tags": ["Divórcio", "Guarda", "Inventário"] },
+  "contratual":     { "titulo": "Direito Contratual",                 "descricao": "Elaboração e análise técnica de contratos comerciais, termos de uso e parcerias. Segurança jurídica em cada cláusula para proteger seus interesses nos negócios.",                                                                                                             "tags": ["Contratos", "Termos de Uso", "Parcerias"] },
+  "empresarial":    { "titulo": "Direito Empresarial e Societário",   "descricao": "Constituição de empresas, acordos entre sócios e recuperação judicial. Estrutura jurídica sólida para o crescimento seguro e sustentável do seu negócio.",                                                                                                                     "tags": ["Constituição", "Acordos", "Recuperação Judicial"] },
+  "tributario":     { "titulo": "Direito Tributário",                 "descricao": "Planejamento fiscal para redução legal de impostos e defesas contra autuações. Inteligência tributária para preservar o patrimônio e otimizar a carga fiscal.",                                                                                                                "tags": ["Planejamento Fiscal", "Defesa Tributária", "Impostos"] },
+  "compliance":     { "titulo": "Compliance e LGPD",                  "descricao": "Adequação à Lei Geral de Proteção de Dados, fundamental para empresas que lidam com dados de clientes. Gestão de riscos e implementação de políticas de conformidade.",                                                                                                        "tags": ["LGPD", "Compliance", "Proteção de Dados"] },
+  "digital":        { "titulo": "Direito Digital",                    "descricao": "Adequação à Lei Geral de Proteção de Dados — muito procurado hoje por empresas de todos os tamanhos. Assessoria jurídica no ambiente digital e proteção de ativos digitais.",                                                                                                  "tags": ["Direito Digital", "LGPD", "Tecnologia"] },
+  "consumidor":     { "titulo": "Direito do Consumidor",              "descricao": "Ações contra bancos, empresas de telefonia, aéreas e problemas com compras online. Defesa eficaz dos seus direitos como consumidor perante grandes corporações.",                                                                                                              "tags": ["Bancos", "Telefonia", "Compras Online"] },
+  "trabalho":       { "titulo": "Direito do Trabalho",                "descricao": "Reclamações trabalhistas, reversão de justa causa e verbas rescisórias. Defesa de direitos trabalhistas, rescisões e indenizações com estratégia e combatividade.",                                                                                                            "tags": ["Reclamações", "Rescisão", "Indenizações"] },
+  "previdenciario": { "titulo": "Direito Previdenciário",             "descricao": "Aposentadorias, auxílio-doença e revisões de benefício. Assessoria especializada para garantir que você receba todos os benefícios previdenciários a que tem direito.",                                                                                                        "tags": ["Aposentadoria", "Auxílio-Doença", "Revisão de Benefício"] }
+},
+"duvidas": {
+  "subtitulo_topo": "ADVOCACIA E CONSULTORIA JURÍDICA",
+  "titulo1": "Dúvidas? Analisamos junto. Como proceder?",
+  "titulo2": "Saiba seus direitos!",
+  "sub": "Selecione uma situação abaixo para entender seus direitos e os próximos passos.",
+  "urgencia_label": "Urgência:",
+  "passos_label": "O que fazer agora",
+  "cta_atendimento": "Quero ser atendido para este caso",
+  "trocar_assunto": "Trocar assunto",
+  "form": {
+    "nome_label": "Seu Nome *",
+    "nome_placeholder": "Como posso te chamar?",
+    "whats_label": "WhatsApp *",
+    "descricao_label": "Descreva brevemente sua situação",
+    "descricao_placeholder": "Quanto mais detalhes, melhor poderei te orientar...",
+    "enviar": "Enviar Mensagem →",
+    "enviando": "Enviando...",
+    "whatsapp_alt": "Ou enviar direto pelo WhatsApp",
+    "privacidade": "Suas informações são confidenciais e protegidas pelo sigilo profissional.",
+    "erro": "Não foi possível enviar o e-mail. Use o WhatsApp abaixo.",
+    "abrir_whatsapp": "Abrir WhatsApp"
+  },
+  "sucesso": {
+    "titulo1": "Mensagem",
+    "titulo2": "Enviada",
+    "texto": "Confirmamos o recebimento de sua demanda. Os dados fornecidos foram encaminhados à nossa Gestão Estratégica para análise de viabilidade e enquadramento técnico junto aos nossos Núcleos Especializados.",
+    "texto2": "Primamos pela celeridade e pelo rigor técnico intrínseco à nossa atuação. Aguarde o contato de nossa equipe para o agendamento da conferência inicial.",
+    "assinatura": "Atenciosamente,\nHaeffner Marinho Advogados",
+    "whatsapp": "Falar agora pelo WhatsApp",
+    "nova_consulta": "Nova Consulta"
+  },
+  "categorias": {
+    "criminal": "Urgências Criminais",
+    "civel": "Conflitos Cíveis e Cotidianos",
+    "imobiliario": "Mercado Imobiliário e Gestão",
+    "preventiva": "Consultoria Preventiva / Empresas",
+    "geral": "Geral"
+  },
+  "opcoes": {
+    "intimacao": "Recebi uma intimação",
+    "busca_apreensao": "Busca e apreensão / Medidas cautelares",
+    "vitima": "Fui vítima de crime/ameaça",
+    "inquerito": "Dúvidas sobre inquérito policial",
+    "acidente": "Acidente de trânsito / Danos materiais",
+    "contratos_cobr": "Problemas com contratos ou cobranças",
+    "danos_morais": "Danos morais / Problemas de consumo",
+    "vizinhanca": "Conflitos de vizinhança ou condomínio",
+    "compra_venda": "Problemas com compra/venda de imóvel",
+    "distrato": "Distrato ou atraso de obra",
+    "regularizacao": "Regularização de imóveis ou escrituras",
+    "locacao": "Dúvidas sobre locação ou despejo",
+    "analise_contrato": "Análise ou elaboração de contratos",
+    "blindagem": "Proteção patrimonial / Blindagem",
+    "gestao_risco": "Dúvidas sobre gestão e risco jurídico",
+    "parcerias": "Parcerias e Negócios (Socioambiental/Industrial)",
+    "outros": "Outros assuntos (Descreva abaixo)"
+  },
+  "detalhes": {
+    "intimacao": {
+      "urgencia": "Alta", "prazo": "Até 10 dias corridos para responder",
+      "intro": "Uma intimação é um ato oficial que exige atenção imediata. Ignorá-la pode gerar revelia, multas ou complicações sérias no processo criminal ou cível.",
+      "passos": ["Verifique a data de recebimento — o prazo começa a correr a partir daí.", "Identifique o tipo: criminal, cível, trabalhista ou administrativa.", "Não responda ou assine qualquer documento sem orientação jurídica.", "Guarde o documento original em local seguro."],
+      "alerta": "Prazos processuais são fatais. Não perca tempo."
+    },
+    "busca_apreensao": {
+      "urgencia": "Urgente", "prazo": "Ação imediata necessária",
+      "intro": "Mandados de busca e apreensão são cumpridos de surpresa. Conhecer seus direitos no momento da abordagem é fundamental para proteger seus interesses.",
+      "passos": ["Solicite a exibição do mandado judicial e fotografe-o se possível.", "Permaneça calmo — não obstrua a execução do mandado.", "Você tem direito de contatar um advogado imediatamente.", "Anote os nomes e matrículas dos agentes envolvidos."],
+      "alerta": "Não assine nada sem presença de advogado."
+    },
+    "vitima": {
+      "urgencia": "Alta", "prazo": "Registre B.O. nas primeiras 24h",
+      "intro": "Ser vítima de crime ou ameaça gera direitos imediatos: medidas protetivas, indenização por danos e acompanhamento especializado em todo o processo penal.",
+      "passos": ["Registre um Boletim de Ocorrência (B.O.) o quanto antes.", "Preserve todas as evidências: mensagens, fotos, gravações.", "Em caso de violência, busque atendimento médico e peça laudo.", "Solicite medida protetiva de urgência se sentir risco."],
+      "alerta": "Evidências se perdem com o tempo. Aja rápido."
+    },
+    "inquerito": {
+      "urgencia": "Moderada", "prazo": "Acompanhe o andamento regularmente",
+      "intro": "O inquérito policial é a fase investigativa. Mesmo sem ser réu ainda, estar assistido juridicamente desde esta fase pode definir o resultado do processo.",
+      "passos": ["Você tem direito a ter advogado mesmo na fase investigativa.", "Investigados podem se recusar a depor (direito ao silêncio).", "Solicite cópia dos autos do inquérito junto à delegacia.", "Acompanhe os prazos: inquéritos têm prazo legal para conclusão."],
+      "alerta": "O que você diz na fase investigativa pode ser usado contra você."
+    },
+    "acidente": {
+      "urgencia": "Moderada", "prazo": "Prazo para ação civil: até 3 anos",
+      "intro": "Acidentes de trânsito podem gerar direito a indenização por danos materiais, morais e estéticos. A documentação correta desde o início é determinante.",
+      "passos": ["Registre B.O. mesmo em acidentes sem vítimas.", "Fotografe o local, veículos e lesões imediatamente.", "Colete dados e testemunhos de todos os envolvidos.", "Não assine acordos com seguradoras sem avaliação jurídica."],
+      "alerta": "Acordos extrajudiciais mal feitos podem excluir direitos futuros."
+    },
+    "contratos_cobr": {
+      "urgencia": "Moderada", "prazo": "Prescrição varia por tipo de contrato",
+      "intro": "Cláusulas abusivas, cobranças indevidas e descumprimento contratual têm solução jurídica clara — inclusive com possibilidade de indenização por danos morais.",
+      "passos": ["Guarde todos os contratos, comprovantes e comunicações.", "Verifique se há cláusulas abusivas ou ilegais no contrato.", "Notifique extrajudicialmente antes de acionar a Justiça.", "Avalie se há dano moral associado à cobrança indevida."],
+      "alerta": "Cobranças indevidas no nome geram direito a indenização por dano moral."
+    },
+    "danos_morais": {
+      "urgencia": "Moderada", "prazo": "5 anos para relações de consumo",
+      "intro": "O Código de Defesa do Consumidor é robusto. Negativação indevida, produto defeituoso ou serviço não prestado geram direito real a indenização.",
+      "passos": ["Documente tudo: prints, e-mails, notas fiscais e protocolos.", "Tente solução administrativa antes (Procon, Reclame Aqui).", "Avalie o valor do dano sofrido com auxílio jurídico.", "Juizado Especial Cível resolve causas até 40 salários mínimos."],
+      "alerta": "Empresas conhecem seus direitos — você também precisa conhecer."
+    },
+    "vizinhanca": {
+      "urgencia": "Baixa", "prazo": "Prescrição: 3 anos para danos",
+      "intro": "Conflitos de vizinhança têm solução jurídica clara no Código Civil. A notificação extrajudicial muitas vezes resolve sem necessidade de processo judicial.",
+      "passos": ["Registre as ocorrências com datas, horários e testemunhas.", "Verifique a Convenção do Condomínio e o Regimento Interno.", "Tente mediação ou notificação formal antes do processo.", "Barulho, danos e invasão de privacidade são acionáveis judicialmente."],
+      "alerta": "Uma notificação extrajudicial bem elaborada resolve 70% dos casos."
+    },
+    "compra_venda": {
+      "urgencia": "Alta", "prazo": "Prazos variam por tipo de negócio",
+      "intro": "Negócios imobiliários envolvem valores altos e riscos ocultos. Due diligence jurídica antes da assinatura evita prejuízos que podem ser irreversíveis.",
+      "passos": ["Analise a matrícula do imóvel no Cartório de Registro de Imóveis.", "Verifique dívidas, ônus e ações judiciais vinculadas ao imóvel.", "Confira certidões negativas do vendedor.", "Nunca assine contrato ou promessa sem revisão jurídica."],
+      "alerta": "Imóvel com dívida oculta pode ser perdido mesmo após a compra."
+    },
+    "distrato": {
+      "urgencia": "Moderada", "prazo": "Lei do Distrato — Lei 13.786/2018",
+      "intro": "A Lei do Distrato regulamenta os direitos do comprador em caso de rescisão ou atraso na entrega. Construtoras frequentemente cobram além do permitido por lei.",
+      "passos": ["Verifique o prazo de tolerância contratual (geralmente 180 dias).", "Após o prazo, você tem direito a multa e indenização.", "Em caso de distrato, a construtora deve devolver parte dos valores pagos.", "Analise o contrato com advogado antes de assinar qualquer rescisão."],
+      "alerta": "Construtoras tentam pagar menos do que é devido na rescisão."
+    },
+    "regularizacao": {
+      "urgencia": "Baixa", "prazo": "Quanto antes, melhor",
+      "intro": "Imóvel sem escritura ou registro é um ativo vulnerável. A regularização protege seu patrimônio e viabiliza financiamentos, heranças e vendas futuras.",
+      "passos": ["Verifique se há usucapião cabível para a situação.", "Levante toda a documentação histórica do imóvel.", "Confira débitos de IPTU e taxas municipais pendentes.", "O processo pode ser feito extrajudicialmente em muitos casos."],
+      "alerta": "Imóvel irregular não pode ser vendido, financiado ou deixado em herança."
+    },
+    "locacao": {
+      "urgencia": "Moderada", "prazo": "Lei do Inquilinato — Lei 8.245/91",
+      "intro": "Tanto locador quanto locatário têm direitos claros. Contratos mal redigidos e ações de despejo exigem atenção jurídica especializada para evitar prejuízos.",
+      "passos": ["Analise o contrato: prazo, reajuste, garantias e cláusulas de rescisão.", "Inadimplência gera direito a ação de despejo com prazo de 15 dias.", "Locatário tem direito de preferência na venda do imóvel.", "Devolução do imóvel: verifique laudo de vistoria inicial e final."],
+      "alerta": "Ação de despejo pode ser evitada com acordo extrajudicial bem feito."
+    },
+    "analise_contrato": {
+      "urgencia": "Baixa", "prazo": "Antes de assinar qualquer documento",
+      "intro": "Um contrato bem redigido é seu melhor instrumento de proteção. Cláusulas ambíguas viram litígios caros. Revisão prévia custa muito menos que um processo.",
+      "passos": ["Nunca assine contrato sem revisão jurídica prévia.", "Cláusulas de rescisão, penalidades e foro devem ser negociadas.", "Contratos digitais têm a mesma validade jurídica dos físicos.", "Contratos de adesão frequentemente contêm cláusulas abusivas."],
+      "alerta": "O contrato é a lei entre as partes — garanta que ela trabalhe por você."
+    },
+    "blindagem": {
+      "urgencia": "Baixa", "prazo": "Planejamento preventivo",
+      "intro": "Blindagem patrimonial é planejamento jurídico preventivo. Holdings, doações com reserva de usufruto e separação de bens protegem seu patrimônio de riscos futuros.",
+      "passos": ["Avalie a criação de holding familiar para gestão e proteção de ativos.", "Separe patrimônio pessoal do empresarial juridicamente.", "Planejamento sucessório evita disputas e reduz custos com inventário.", "Análise de risco deve ser feita e revisada periodicamente."],
+      "alerta": "Blindagem feita após a dívida pode ser considerada fraude — planeje antes."
+    },
+    "gestao_risco": {
+      "urgencia": "Baixa", "prazo": "Revisão periódica recomendada",
+      "intro": "Empresas sem assessoria jurídica preventiva acumulam passivos invisíveis: trabalhistas, fiscais e contratuais. Identificar riscos antes que virem processos é sempre mais barato.",
+      "passos": ["Faça um diagnóstico jurídico periódico da empresa.", "Revise contratos com fornecedores, clientes e colaboradores.", "Verifique conformidade com LGPD, CLT e regulações setoriais.", "Crie políticas internas que reduzam exposição a litígios."],
+      "alerta": "Passivo trabalhista oculto é o principal risco jurídico de PMEs."
+    },
+    "parcerias": {
+      "urgencia": "Baixa", "prazo": "Antes de formalizar qualquer parceria",
+      "intro": "Parcerias sem estrutura jurídica adequada são o principal motivo de dissolução litigiosa de sociedades. Formalizar bem desde o início protege todos os envolvidos.",
+      "passos": ["Defina claramente papéis, quotas e responsabilidades no contrato social.", "Cláusulas de saída (drag-along, tag-along) devem ser acordadas antes.", "Parcerias socioambientais exigem conformidade com legislação específica.", "Due diligence no parceiro é tão importante quanto no negócio em si."],
+      "alerta": "Sociedade sem acordo de sócios é uma bomba-relógio."
+    },
+    "outros": {
+      "urgencia": "A verificar", "prazo": "Nos conte sua situação",
+      "intro": "Se sua situação não se encaixa nas categorias acima, não se preocupe. Analisamos qualquer questão jurídica e indicamos o melhor caminho para o seu caso.",
+      "passos": ["Descreva sua situação com o máximo de detalhes possível.", "Informe se há algum prazo ou urgência envolvida.", "Compartilhe documentos relevantes se possível.", "Retornaremos com uma análise preliminar sem compromisso."],
+      "alerta": "Toda situação jurídica tem solução — o primeiro passo é conversar."
+    }
+  }
+},
+"agende": {
+  "eyebrow": "ADVOCACIA E CONSULTORIA JURÍDICA",
+  "titulo1": "Vamos",
+  "titulo2": "Conversar?",
+  "campos": {
+    "nome_label": "NOME COMPLETO",
+    "nome_placeholder": "Seu nome completo",
+    "email_label": "E-MAIL",
+    "email_placeholder": "seu@email.com",
+    "telefone_label": "TELEFONE / WHATSAPP",
+    "area_label": "ÁREA DE INTERESSE",
+    "area_placeholder": "Selecione uma área...",
+    "mensagem_label": "MENSAGEM",
+    "mensagem_placeholder": "Descreva brevemente sua situação...",
+    "anexo_label": "ANEXAR DOCUMENTO",
+    "anexo_opcional": "(opcional)",
+    "anexo_placeholder": "Clique para anexar um arquivo (PDF, imagem, doc...)"
+  },
+  "enviar": "ENVIAR MENSAGEM",
+  "enviando": "Enviando...",
+  "privacidade": "Suas informações são confidenciais e protegidas pelo sigilo profissional.",
+  "erro": "Não foi possível enviar. Use o WhatsApp abaixo.",
+  "destaque": "Atuação nacional estruturada por meio de parcerias estratégicas.",
+  "cards": {
+    "whatsapp_plantao": "· Plantão 24h urgências criminais",
+    "whatsapp_horario": "Atendimento presencial: Seg–Sex: 9h–12h · 14h–17h",
+    "whatsapp_tagline": "Atendimento digital ágil e seguro.",
+     "endereco_label": "ENDEREÇO"
+  },
+  "wa_cta": "Falar pelo WhatsApp agora",
+  "sucesso": {
+    "titulo1": "Mensagem",
+    "titulo2": "Enviada",
+    "texto1": "Confirmamos o recebimento de sua demanda. Os dados fornecidos foram encaminhados à nossa Gestão Estratégica para análise de viabilidade e enquadramento técnico junto aos nossos Núcleos Especializados.",
+    "texto2": "Primamos pela celeridade e pelo rigor técnico intrínseco à nossa atuação. Aguarde o contato de nossa equipe para o agendamento da conferência inicial.",
+    "assinatura": "Atenciosamente,\nHaeffner Marinho Advogados",
+    "whatsapp": "Falar pelo WhatsApp",
+    "nova_mensagem": "Enviar nova mensagem"
+  },
+  "areas": [
+    "Análise de Contratos",
+    "Conflitos Cíveis e Cotidianos",
+    "Consultoria Preventiva / Empresas",
+    "Enviar Currículo",
+    "Mercado Imobiliário",
+    "Outros assuntos",
+    "Parceria Jurídica",
+    "Proteção Patrimonial",
+    "Trabalhe Conosco",
+    "Urgências Criminais"
+  ]
+},
+"footer": {
+  "tagline": "Advocacia com ética, excelência e visão multidisciplinar.",
+  "navegacao": "Navegação",
+  "contato": "Contato",
+  "endereco": "Av. Cândido Hartmann, 1326\nMercês · Curitiba — PR · Brasil",
+  "atuacao_linha1": "Atuação nacional estruturada por meio de parcerias estratégicas",
+  "atuacao_linha2": "Atendimento digital ágil e seguro.",
+  "aviso_legal": "As informações neste site são apenas informativas e não substituem uma consulta jurídica personalizada.",
+  "direitos": "Todos os direitos reservados.",
+  "sociedade": "Sociedade Individual de Advocacia",
+  "privacidade": "Política de Privacidade",
+  "privacidade_modal": {
+    "eyebrow": "Documento Legal",
+    "titulo": "Política de Privacidade",
+    "fechar": "Fechar",
+    "quem_somos_titulo": "Quem somos",
+    "quem_somos_texto": "HAEFFNER MARINHO ADVOGADOS",
+    "dados_titulo": "Dados coletados",
+    "dados_texto": "Coletamos apenas informações fornecidas por você em formulários (nome, contato) e dados de navegação (cookies).",
+    "uso_titulo": "Para que usamos",
+    "uso_texto": "Seus dados servem exclusivamente para responder suas dúvidas, enviar atualizações jurídicas (se autorizado) e prestar serviços advocatícios.",
+    "direitos_titulo": "Seus direitos",
+    "direitos_texto": "Você pode solicitar a qualquer momento o acesso, a correção ou a exclusão definitiva dos seus dados.",
+    "seguranca_titulo": "Segurança",
+    "seguranca_texto": "Utilizamos protocolos de segurança para garantir que suas informações não sejam compartilhadas com terceiros sem autorização legal.",
+    "contato_titulo": "Contato",
+    "contato_texto": "Para questões de privacidade, entre em contato através do e-mail:"
+  }
+},
+"cookie": {
+  "texto": "Utilizamos cookies para melhorar sua experiência. Ao continuar, você concorda com nossa",
+  "politica": "Política de Privacidade",
+  "negar": "Negar",
+  "aceitar": "Aceitar"
+}
+
 }

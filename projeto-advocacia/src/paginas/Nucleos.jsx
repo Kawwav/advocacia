@@ -10,60 +10,16 @@ const fadeUp = (delay = 0) => ({
   transition: { duration: 0.9, delay, ease: [0.22, 1, 0.36, 1] }
 })
 
-const NUCLEOS = [
-  {
-    numero: '01',
-    chave: 'corporativo',
-    icone: LuBriefcase,
-    titulo: 'Direito Corporativo',
-    subtitulo: 'Business Strategy',
-    tag: 'Estruturação & Governança',
-    descricao:
-      'A inteligência jurídica a serviço do crescimento. Unimos a visão do "chão de fábrica" à estratégia de alta gestão. Atuamos na estruturação de negócios, governança e contratos complexos, garantindo que o arcabouço legal da sua empresa seja um motor de expansão, não um obstáculo.',
-  },
-  {
-    numero: '02',
-    chave: 'imobiliario',
-    icone: LuBuilding2,
-    titulo: 'Direito Imobiliário',
-    subtitulo: 'e Patrimonial',
-    tag: 'Ativos & Transações',
-    descricao:
-      'Segurança máxima para ativos de alto valor. Especialidade na estruturação de transações imobiliárias, incorporações e regularização de ativos. Protegemos a propriedade e garantimos que cada investimento imobiliário esteja blindado contra inseguranças jurídicas e riscos de mercado.',
-  },
-  {
-    numero: '03',
-    chave: 'conflitos',
-    icone: LuSword,
-    titulo: 'Gestão Estratégica',
-    subtitulo: 'de Conflitos',
-    tag: 'Contencioso & Mediação',
-    descricao:
-      'A saída mais inteligente para crises complexas. Atuamos no contencioso cível com foco resolutivo. Gerenciamos conflitos de forma tática, priorizando métodos consensuais e agilidade processual para minimizar desgastes e maximizar resultados favoráveis aos nossos constituintes.',
-  },
-  {
-    numero: '04',
-    chave: 'penal',
-    icone: LuShield,
-    titulo: 'Direito Penal Econômico',
-    subtitulo: 'e Liberdade',
-    tag: 'Defesa & Proteção',
-    descricao:
-      'Defesa implacável em cenários de alta sensibilidade. Proteção rigorosa da liberdade e da imagem em questões que envolvem crimes econômicos e complexidades do Direito Penal moderno. Atuamos com discrição, combatividade e técnica superior na preservação dos direitos fundamentais.',
-  },
-  {
-    numero: '05',
-    chave: 'sucessorio',
-    icone: LuGem,
-    titulo: 'Planejamento Sucessório',
-    subtitulo: 'e Holding',
-    tag: 'Patrimônio & Legado',
-    descricao:
-      'A confiança que atravessa gerações. Estruturamos a preservação e a transição do patrimônio familiar com inteligência tributária e jurídica. Criamos soluções que evitam inventários morosos, protegem o legado e garantem a harmonia e a liquidez para os sucessores.',
-  },
+const NUCLEOS_BASE = [
+  { numero: '01', chave: 'corporativo', icone: LuBriefcase },
+  { numero: '02', chave: 'imobiliario', icone: LuBuilding2 },
+  { numero: '03', chave: 'conflitos',   icone: LuSword     },
+  { numero: '04', chave: 'penal',       icone: LuShield    },
+  { numero: '05', chave: 'sucessorio',  icone: LuGem       },
 ]
 
 function NucleoCard({ nucleo, index }) {
+  const { t } = useTranslation()
   const par = index % 2 === 0
   const Icone = nucleo.icone
 
@@ -81,10 +37,10 @@ function NucleoCard({ nucleo, index }) {
         <div className="nuc-card-icone-wrapper">
           <Icone className="nuc-card-icone" />
         </div>
-        <span className="nuc-card-tag">{nucleo.tag}</span>
+        <span className="nuc-card-tag">{t(`nuc.${nucleo.chave}.tag`)}</span>
         <h2 className="nuc-card-titulo">
-          {nucleo.titulo}{' '}
-          <span>{nucleo.subtitulo}</span>
+          {t(`nuc.${nucleo.chave}.titulo`)}{' '}
+          <span>{t(`nuc.${nucleo.chave}.subtitulo`)}</span>
         </h2>
         <motion.div
           className="nuc-card-divisor"
@@ -93,7 +49,7 @@ function NucleoCard({ nucleo, index }) {
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.3, ease: 'easeOut' }}
         />
-        <p className="nuc-card-descricao">{nucleo.descricao}</p>
+        <p className="nuc-card-descricao">{t(`nuc.${nucleo.chave}.descricao`)}</p>
         <div className="nuc-canto nuc-canto--tl" />
         <div className="nuc-canto nuc-canto--br" />
       </div>
@@ -118,7 +74,7 @@ function Nucleos() {
             initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.0 }}
           >
-            ADVOCACIA E CONSULTORIA JURÍDICA
+            {t('hae.subtitulo_topo')}
           </motion.p>
 
           <motion.p className="nuc-eyebrow" {...fadeUp(0.05)} />
@@ -137,10 +93,7 @@ function Nucleos() {
 
           <motion.div className="nuc-intro" {...fadeUp(0.35)}>
             <p className="nuc-intro-destaque">
-              {t(
-                'nuc.intro',
-                'Operamos através de um ecossistema de núcleos jurídicos integrados. Essa estrutura nos permite oferecer uma resposta interdisciplinar ágil, garantindo segurança máxima em cada vertente do Direito.'
-              )}
+              {t('nuc.intro')}
             </p>
           </motion.div>
 
@@ -167,12 +120,12 @@ function Nucleos() {
 
           <div className="nuc-lista">
             <div className="nuc-linha nuc-linha--3">
-              {NUCLEOS.slice(0, 3).map((nucleo, i) => (
+              {NUCLEOS_BASE.slice(0, 3).map((nucleo, i) => (
                 <NucleoCard key={nucleo.chave} nucleo={nucleo} index={i} />
               ))}
             </div>
             <div className="nuc-linha nuc-linha--2">
-              {NUCLEOS.slice(3).map((nucleo, i) => (
+              {NUCLEOS_BASE.slice(3).map((nucleo, i) => (
                 <NucleoCard key={nucleo.chave} nucleo={nucleo} index={i + 3} />
               ))}
             </div>
@@ -188,7 +141,7 @@ function Nucleos() {
 
           <motion.div className="nuc-contato" {...fadeUp(0.2)}>
             <p className="nuc-contato-chamada">
-              {t('Fale diretamente comigo:')}
+              {t('nuc.contato.chamada')}
             </p>
             <a href="mailto:armando@haeffnermarinho.adv.br" className="nuc-contato-email">
               armando@haeffnermarinho.adv.br

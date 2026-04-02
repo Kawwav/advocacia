@@ -655,6 +655,7 @@
   .logo-oab { margin-top: 0; font-size: 9px; letter-spacing: 0.4px; }
   .logo-advogados { font-size: 9px; letter-spacing: 0.8px; }
   .contact-text { display: none; }
+  .contact-info a:nth-child(1) .contact-text { display: inline; font-size: 11px !important; }
   .contact-info a:nth-child(2) { display: none; }
   .contact-info { gap: 6px; }
   .social-icons { gap: 6px; }
@@ -672,3 +673,19 @@
   .top-bar a { font-size: 13px !important; }
 }
 
+/* ── Inglês: nav com textos mais longos ── */
+@media (min-width: 1461px) {
+  .header-nav a {
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding: 10px 10px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1460px) {
+  .header-nav a {
+    font-size: 20px;
+    letter-spacing: 0.8px;
+    padding: 10px 8px;
+  }
+}

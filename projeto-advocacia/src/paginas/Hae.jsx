@@ -1,4 +1,6 @@
-import { motion } from 'framer-motion'
+import { useState } from 'react'
+import { createPortal } from 'react-dom'
+import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import './Hae.css'
 
@@ -11,13 +13,15 @@ const fadeUp = (delay = 0) => ({
 
 function HaeImage({ src, alt, index }) {
   return (
-    <motion.div className="hae-img-bloco"
+    <motion.div className={`hae-img-bloco hae-img-bloco--${index}`}
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
     >
       <div className="hae-img-numero">0{index}</div>
+
+      {/* wrapper contém apenas a imagem + overlay + cantos */}
       <div className="hae-img-wrapper">
         <div className="hae-img-canto hae-img-canto--tl" />
         <div className="hae-img-canto hae-img-canto--tr" />
@@ -26,10 +30,162 @@ function HaeImage({ src, alt, index }) {
         <div className="hae-img-overlay" />
         <img src={src} alt={alt} className="hae-img" />
       </div>
+
+      {/* barra FORA do wrapper — cantos não precisam mais compensar a altura dela */}
       <div className="hae-img-barra">
         <span className="hae-img-barra-linha" />
         <span className="hae-img-barra-linha" />
       </div>
+    </motion.div>
+  )
+}
+
+function HaeLightbox({ src, alt, onClose }) {
+  return createPortal(
+    <AnimatePresence>
+      <motion.div
+        className="hae-lightbox-overlay"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.3 }}
+        onClick={onClose}
+      >
+        <motion.div
+          className="hae-lightbox-conteudo"
+          initial={{ scale: 0.88, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          exit={{ scale: 0.88, opacity: 0 }}
+          transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+          onClick={e => e.stopPropagation()}
+        >
+          <div className="hae-img-canto hae-img-canto--tl" />
+          <div className="hae-img-canto hae-img-canto--tr" />
+          <div className="hae-img-canto hae-img-canto--bl" />
+          <div className="hae-img-canto hae-img-canto--br" />
+
+          <img src={src} alt={alt} className="hae-lightbox-img" />
+
+          <button className="hae-lightbox-fechar" onClick={onClose} aria-label="Fechar">
+            ✕
+          </button>
+        </motion.div>
+      </motion.div>
+    </AnimatePresence>,
+    document.body
+  )
+}
+
+function HaeGallery() {
+  const images = [
+    { src: '/advocacia/interior1.jpg', alt: 'Interior do escritório' },
+    { src: '/advocacia/interior2.jpg', alt: 'Ambiente interno' },
+    { src: '/advocacia/interior3.jpg', alt: 'Detalhes do escritório' },
+  ]
+
+  const [ativo, setAtivo] = useState(0)
+  const [lightbox, setLightbox] = useState(null) // src da imagem aberta
+
+  return (
+    <motion.div className="hae-gallery-bloco"
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-60px' }}
+      transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+    >
+      <div className="hae-img-numero">02</div>
+
+      <div className="hae-carrossel-wrapper">
+        {/* cantos dourados */}
+        <div className="hae-img-canto hae-img-canto--tl" />
+        <div className="hae-img-canto hae-img-canto--tr" />
+        <div className="hae-img-canto hae-img-canto--bl" />
+        <div className="hae-img-canto hae-img-canto--br" />
+
+        {/* todas as imagens empilhadas */}
+        <div className="hae-carrossel-trilho">
+          {images.map((img, i) => {
+            const distancia = i - ativo
+            const ehAtiva = distancia === 0
+            const ehDistante = Math.abs(distancia) >= 2
+
+            let translateX = '0%'
+            let scale = 1
+            let opacity = 1
+            let zIndex = 10
+            let blur = 0
+
+            if (distancia === -1) { translateX = '-18%'; scale = 0.88; opacity = 0.35; zIndex = 5; blur = 2 }
+            else if (distancia === 1)  { translateX = '18%';  scale = 0.88; opacity = 0.35; zIndex = 5; blur = 2 }
+            else if (ehDistante)       { translateX = distancia < 0 ? '-30%' : '30%'; scale = 0.8; opacity = 0; zIndex = 1 }
+
+            return (
+              <motion.div
+                key={i}
+                className={`hae-carrossel-item${ehAtiva ? ' hae-carrossel-item--ativo' : ''}`}
+                animate={{ x: translateX, scale, opacity, filter: `blur(${blur}px)` }}
+                transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+                style={{ zIndex }}
+                onClick={() => {
+                  if (ehAtiva) {
+                    setLightbox({ src: img.src, alt: img.alt })
+                  } else {
+                    setAtivo(i)
+                  }
+                }}
+              >
+                <div className="hae-gallery-overlay" />
+                <img src={img.src} alt={img.alt} className="hae-gallery-img" />
+                {ehAtiva && (
+                  <div className="hae-carrossel-expandir" aria-hidden="true">⤢</div>
+                )}
+              </motion.div>
+            )
+          })}
+        </div>
+
+        {/* setas laterais */}
+        <button
+          className="hae-carrossel-seta hae-carrossel-seta--esq"
+          onClick={() => setAtivo(a => (a - 1 + images.length) % images.length)}
+          aria-label="Anterior"
+        >
+          ‹
+        </button>
+        <button
+          className="hae-carrossel-seta hae-carrossel-seta--dir"
+          onClick={() => setAtivo(a => (a + 1) % images.length)}
+          aria-label="Próxima"
+        >
+          ›
+        </button>
+      </div>
+
+      {/* bolinhas de navegação */}
+      <div className="hae-carrossel-dots">
+        {images.map((_, i) => (
+          <button
+            key={i}
+            className={`hae-carrossel-dot${i === ativo ? ' hae-carrossel-dot--ativo' : ''}`}
+            onClick={() => setAtivo(i)}
+            aria-label={`Imagem ${i + 1}`}
+          />
+        ))}
+      </div>
+
+      <div className="hae-img-barra">
+        <span className="hae-img-barra-linha" />
+        <span className="hae-img-barra-linha" />
+      </div>
+
+      {/* Lightbox */}
+      {lightbox && (
+        <HaeLightbox
+          src={lightbox.src}
+          alt={lightbox.alt}
+          onClose={() => setLightbox(null)}
+        />
+      )}
     </motion.div>
   )
 }
@@ -59,18 +215,18 @@ function Hae() {
 
       <div className="heroi-conteudo">
 
-        <motion.p className="heroi-topo-label"
+        <motion.p
+          className="pagina-topo-label"
           initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.0 }}
         >
-          ADVOCACIA E CONSULTORIA JURÍDICA
+          {t('hae.subtitulo_topo')}
         </motion.p>
 
         <motion.p className="heroi-eyebrow"
           initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
         >
-         
         </motion.p>
 
         <motion.h1 className="heroi-titulo"
@@ -89,7 +245,7 @@ function Hae() {
         <motion.div className="heroi-intro-bloco" {...fadeUp(0.5)}>
           <p className="heroi-paragrafo--destaque">
             {t('hae.intro_destaque',
-              'Fundado sob os pilares da ética e do rigor técnico, o escritório Haeffner Marinho Advogados oferece assessoria jurídica estratégica e personalizada.'
+              'Fundado sob os pilares da ética e do rigor técnico, o escritório de advocacia HAEFFNER MARINHO ADVOGADOS oferece assessoria jurídica estratégica e personalizada.'
             )}
           </p>
           <p className="heroi-paragrafo">
@@ -99,7 +255,7 @@ function Hae() {
           </p>
         </motion.div>
 
-        <HaeImage src="/advocacia/predio.jpeg" alt="Haeffner Marinho Advogados" index={1} />
+        <HaeImage src="/advocacia/predio.jpg" alt="predio" index={1} />
 
         <motion.p className="heroi-texto" {...fadeUp(0)}>
           {t('hae.complemento',
@@ -107,7 +263,7 @@ function Hae() {
           )}
         </motion.p>
 
-        <HaeImage src="/advocacia/predio2.jpeg" alt="Escritório Haeffner Marinho" index={2} />
+        <HaeGallery />
 
         <motion.div className="heroi-citacao" {...fadeUp(0)}>
           <div className="heroi-citacao-barra" />
@@ -125,15 +281,7 @@ function Hae() {
           </div>
         </motion.div>
 
-        <motion.a href="#areas" className="heroi-botao" {...fadeUp(0)}
-          whileHover={{ scale: 1.03 }}
-          whileTap={{ scale: 0.97 }}
-        >
-          <span className="heroi-botao-texto">
-            {t('hae.botao', 'Conheça Nossa Atuação')}
-          </span>
-          <span className="heroi-botao-seta">→</span>
-        </motion.a>
+
 
       </div>
     </section>

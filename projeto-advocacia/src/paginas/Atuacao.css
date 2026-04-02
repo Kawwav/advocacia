@@ -89,7 +89,7 @@
   max-width: 640px;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
+  text-align: left;
 }
 
 .atu-intro-texto {
@@ -100,7 +100,7 @@
   line-height: 1.8;
   border-top: 2px solid rgba(201,168,76,0.35);
   padding-top: 24px;
-  text-align: center;
+  text-align: left;
 }
 
 /* grade */
@@ -438,7 +438,7 @@
   font-family: var(--font-serif);
   font-size: var(--fs-chamada);
   font-weight: 300;
-  color: #F8F5EF;
+  color: #C9A84C;
   letter-spacing: 0.5px;
   margin-bottom: 8px;
   text-align: center;
@@ -457,7 +457,7 @@
 .atu-contato-email {
   font-family: var(--font-sans);
   font-size: var(--fs-card-email-lg);
-  color: #C9A84C;
+  color: #ffffff;
   text-decoration: none;
   letter-spacing: 0.5px;
   display: flex;
@@ -481,10 +481,10 @@
 .atu-contato-email:hover::before { color: #E8C97A; transform: translateX(3px); }
 
 .atu-contato-nome {
-  font-family: var(--font-sans);
-  font-size: var(--fs-label);
+  font-family: 'Palatino Linotype', serif;
+  font-size: 25px;
   letter-spacing: 2px;
-  color: #F8F5EF;
+  color: #C9A84C;
   text-transform: uppercase;
   margin-top: 16px;
   font-weight: 500;
@@ -492,12 +492,12 @@
 }
 
 .atu-contato-oab {
-  font-family: var(--font-sans);
-  font-size: var(--fs-micro);
+  font-family: 'Palatino Linotype', serif;
+  font-size: 24px;
   letter-spacing: 2px;
   color: #C9A84C;
   text-transform: uppercase;
-  opacity: 0.7;
+  font-weight: 600;
   text-align: center;
 }
 
@@ -579,4 +579,15 @@
 
 @media (max-width: 420px) {
   .pagina-topo-label { font-size: var(--fs-topo-label-xs); letter-spacing: 2.5px; margin-bottom: 12px; }
+}
+
+@media (min-width: 200px) and (max-width: 600px) {
+  .atu-titulo{
+    /* Chamando a variável que você criou no typography.css */
+    font-size: var(--fs-titulo-principal-res) !important;
+    
+    /* Ajustes complementares para garantir que o texto caiba bem */
+    line-height: 1.2; 
+    text-align: center;
+  }
 }

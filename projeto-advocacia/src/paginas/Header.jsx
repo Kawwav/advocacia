@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 import { FaFacebook, FaInstagram, FaWhatsapp, FaYoutube, FaLinkedin, FaPhone, FaEnvelope } from 'react-icons/fa'
 import './Header.css'
 
-const NAV_ROTAS  = { inicio: '/', sobre: '/sobre', nucleos: '/nucleos', atuacao: '/atuacao', duvidas: '/duvidas', contato: '/contato' }
-const NAV_KEYS   = ['inicio', 'sobre', 'nucleos', 'atuacao', 'duvidas', 'contato']
-const NAV_ANCHORS= ['inicio', 'sobre', 'nucleos', 'atuacao', 'duvidas', 'contato']
+const NAV_ROTAS  = { inicio: '/', sobre: '/sobre', nucleos: '/nucleos', atuacao: '/atuacao', duvidas: '/duvidas', agende: '/agende' }
+const NAV_KEYS   = ['inicio', 'sobre', 'nucleos', 'atuacao', 'duvidas', 'agende']
+const NAV_ANCHORS= ['inicio', 'sobre', 'nucleos', 'atuacao', 'duvidas', 'agende']
 
 const WA_MSG = encodeURIComponent('Olá, seja bem-vindo(a) a HAEFFNER MARINHO ADVOGADOS, é uma satisfação poder ajudar. Deixe sua mensagem que logo entraremos em contato. Obrigado')
 const WA_URL = `https://wa.me/5541998387397?text=${WA_MSG}`
@@ -100,5 +100,6 @@ function Header() {
     </header>
   )
 }
+
 
 export default Header

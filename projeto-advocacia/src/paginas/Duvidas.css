@@ -33,7 +33,7 @@
 
 .dv-titulo {
   font-family: 'Palatino Linotype', serif;
-  font-size: clamp(30px, 5vw, 48px); font-weight: 300;
+  font-size: var(--fs-titulo); font-weight: 300;
   color: #F8F5EF; line-height: 1.15; margin: 0;
 }
 
@@ -319,4 +319,15 @@
 
 @media (max-width: 420px) {
   .pagina-topo-label { font-size: var(--fs-topo-label-xs); letter-spacing: 2.5px; margin-bottom: 12px; }
+}
+
+@media (min-width: 200px) and (max-width: 600px) {
+  .dv-titulo {
+    /* Chamando a variável que você criou no typography.css */
+    font-size: var(--fs-titulo-principal-res) !important;
+    
+    /* Ajustes complementares para garantir que o texto caiba bem */
+    line-height: 1.2; 
+    text-align: center;
+  }
 }

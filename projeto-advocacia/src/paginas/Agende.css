@@ -38,8 +38,10 @@
 
 .ct-titulo {
   font-family: 'Palatino Linotype', serif;
-  font-size: clamp(32px, 5vw, 54px); font-weight: 300;
+  font-size: var(--fs-titulo); 
+  font-weight: 300;
   color: #F8F5EF; line-height: 1.15; margin: 0;
+  text-align: center;
 }
 .ct-titulo span { color: #C9A84C; font-style: 'Palatino Linotyp'; }
 
@@ -47,6 +49,8 @@
   height: 1px; width: 60px;
   background: linear-gradient(90deg, #C9A84C, transparent);
   margin-top: 24px;
+  margin-left: 26%;
+  margin-right: auto;
 }
 
 /* 2 lados */
@@ -227,7 +231,7 @@
 
 .ct-info__destaque-item {
   font-family: 'Palatino Linotype', serif;
-  font-size: 29px; font-weight: 300; color: #D4C5A9;
+  font-size: 26px; font-weight: 300; color: #D4C5A9;
   line-height: 1.85; margin: 0;
 }
 
@@ -235,20 +239,24 @@
 .ct-cards { display: flex; flex-direction: column; gap: 16px; margin-bottom: 36px; }
 
 .ct-card--with-tagline {
-  align-items: center;
+  align-items: flex-start;
+}
+
+.ct-card--with-tagline .ct-card__icon {
+  margin-top: 2px;
 }
 
 .ct-card__tagline {
-  margin: 0 0 0 auto;
+  margin: 0 0 0 60px;
   font-family: 'Palatino Linotype', serif;
   font-size: 12px;
   font-weight: 300;
-  font-style: italic;
-  color: rgba(212,197,169,0.45);
+  color:#F8F5EF;
   line-height: 1.5;
   text-align: right;
-  padding-left: 16px;
-  border-left: 1px solid rgba(201,168,76,0.15);
+  padding-left: 50px;
+  align-self: center;
+  flex-shrink: 0;
 }
 
 .ct-card {
@@ -261,7 +269,7 @@
   font-size: 16px;
 }
 
-.ct-card__body { display: flex; flex-direction: column; gap: 3px; }
+.ct-card__body { display: flex; flex-direction: column; gap: 3px; min-width: 0; flex: 1; }
 
 .ct-card__label {
   font-family: 'Palatino Linotype', sans-serif;
@@ -274,6 +282,7 @@
   font-size: 13px; font-weight: 300; color: #D4C5A9;
   margin: 0; text-decoration: none;
   transition: color 0.2s;
+  white-space: nowrap;
 }
 a.ct-card__value:hover { color: #F8F5EF; }
 
@@ -294,16 +303,17 @@ a.ct-card__value:hover { color: #F8F5EF; }
 .ct-card__horario {
   font-family: 'Palatino Linotype', sans-serif;
   font-size: 11px; font-weight: 300;
-  color: rgba(212,197,169,0.4);
+  color:#F8F5EF;
   margin: 0; letter-spacing: 0.3px;
+  white-space: nowrap;
 }
 
 .ct-card__plantao {
   font-family: 'Palatino Linotype', serif;
-  font-size: 11px; font-weight: 300; font-style: italic;
+  font-size: 11px; font-weight: 300;
   color: rgba(37,211,102,0.5);
   margin: 0; letter-spacing: 0.2px;
-  padding-left: 4px;
+  white-space: nowrap;
 }
 
 /* whatsApp row */
@@ -317,7 +327,6 @@ a.ct-card__value:hover { color: #F8F5EF; }
   font-family: 'Palatino Linotype', serif;
   font-size: 13px;
   font-weight: 300;
-  font-style: italic;
   color: rgba(212,197,169,0.55);
   margin: 0;
   line-height: 1.5;
@@ -402,4 +411,66 @@ a.ct-card__value:hover { color: #F8F5EF; }
 
 @media (max-width: 420px) {
   .pagina-topo-label { font-size: var(--fs-topo-label-xs); letter-spacing: 2.5px; margin-bottom: 12px; }
+}
+
+@media (max-width: 900px) {
+  .ct-card--with-tagline {
+    flex-wrap: wrap;
+  }
+
+  .ct-card__tagline {
+    margin: 4px 0 0 60px; 
+    padding-left: 0;
+    border-left: none;
+    text-align: left;
+    font-style: italic;
+    width: 100%;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 600px) {
+  
+  /* titulo Principal */
+  .ct-titulo {
+    font-size: 40px !important; 
+    letter-spacing: 1px;
+    line-height: 1.2;
+  }
+
+  /* Ajuste do Bloco de Destaques (Atuação Nacional) */
+  .ct-destaques-bloco {
+    padding: 20px 16px; 
+    margin-bottom: 24px; 
+  }
+
+  .ct-info__destaque-item {
+    font-size: 18px; 
+    line-height: 1.4;
+    text-align: center; 
+  }
+
+  .ct-inner {
+    padding: 0 16px;
+  }
+
+  .pagina-topo-label {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .ct-divisor {
+    margin: 16px auto 0; 
+    width: 40px;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 600px) {
+  .ct-titulo{
+    /* Chamando a variável que você criou no typography.css */
+    font-size: var(--fs-titulo-principal-res) !important;
+    
+    /* Ajustes complementares para garantir que o texto caiba bem */
+    line-height: 1.2; 
+    text-align: center;
+  }
 }

@@ -1,20 +1,350 @@
 {
   "nav": {
     "inicio": "HOME",
-    "sobre": "SOBRE",
+    "sobre": "ABOUT",
     "nucleos": "PRACTICE AREAS",
     "atuacao": "EXPERTISE",
     "duvidas": "FAQ",
-    "contato": "CONTACT"
+    "agende": "SCHEDULE"
   },
   "header": {
-    "oab": "OAB/PR 94.793 · Attorneys at Law",
+    "oab": "OAB/PR 94.793\u00A0  Attorneys at Law",
     "descricao": "Legal Practice e Consulting"
   },
   "hae": {
     "subtitulo": "Legal Practice and Consulting",
     "titulo": "Attorneys at Law",
     "descricao": "Legal certainty with excellence and commitment",
-    "botao": "Our Practice Areas"
+    "botao": "Our Practice Areas",
+    "titulo_novo": "Simplify the Law:",
+    "titulo_sub": "Legal solutions for you",
+    "subtitulo_topo": "LEGAL PRACTICE AND CONSULTING",
+    "intro_destaque": "Founded on the pillars of ethics and technical rigor, the law firm HAEFFNER MARINHO ADVOGADOS offers strategic and personalized legal counsel.",
+    "intro": "Our practice is guided by an unrelenting pursuit of effective solutions, mitigating risks and providing legal robustness to our clients' operations.",
+    "complemento": "We believe legal certainty must be grounded in strategy and precision. That is why we invite you to learn about our structure and ecosystem methodology: a modern approach designed to protect what matters most — your freedom and your assets.",
+    "final": {
+      "p1": "Law, as a science devoted to social harmony, evolves alongside the transformations of society, providing contemporary legal solutions to the new complexities of the modern world.",
+      "p2": "Modern Law — and contemporary law more specifically — has become a complex and interdisciplinary ecosystem, characterized by a multiplicity of norms, the interaction of different legal systems (national, international, private), and the need to navigate increasingly intricate social, technological, and economic relationships."
+    }
+  },
+
+  "hma": {
+  "subtitulo_topo": "LEGAL PRACTICE AND CONSULTING",
+  "titulo": "Innovation and",
+  "titulo2": "Commitment",
+  "p1_inicio": "The law firm",
+  "p1_resto": "was born from the convergence of resilient tradition and strategic innovation. Inspired by a legacy of integrity, our essence was shaped by the hands-on experience of those who understand Law not only through codes, but through the dynamics of industry and complex corporate relationships.",
+  "p2": "At the helm of the firm, I seek to translate legal complexity into real security. With a background grounded in resilience and business experience — from industrial management to real estate —, I bring to legal practice the strategic vision of someone who understands, in practice, the value of a safe outcome.",
+  "p3": "My commitment is to ensure that every client finds not just legal representation, but an unflinching and transparent defense strategy. Before litigating, we will exhaust every consensual resolution tool, prioritizing agile solutions.",
+  "p4": "We understand that Modern Law demands more than technique: it requires interdisciplinary vision and agility. Here, every case is handled with the rigor of a specialist and the combativeness of those who understand that championing freedom and assets is a commitment intrinsic to our essence.",
+  "combate": "We are ready for the fight.",
+  "contato": {
+    "chamada": "Speak directly with me:"
   }
+},
+"nuc": {
+  "subtitulo_topo": "LEGAL PRACTICE AND CONSULTING",
+  "titulo": "Practice",
+  "titulo2": "Areas",
+  "intro": "We operate through an ecosystem of integrated legal practice groups. This structure allows us to deliver agile interdisciplinary responses, ensuring maximum legal certainty across every area of Law.",
+  "contato": {
+    "chamada": "Speak directly with me:"
+  },
+  "corporativo": {
+    "titulo": "Corporate Law",
+    "subtitulo": "Business Strategy",
+    "tag": "Structuring & Governance",
+    "descricao": "Legal intelligence at the service of growth. We combine hands-on business experience with high-level management strategy. We advise on business structuring, governance, and complex contracts, ensuring your company's legal framework drives expansion rather than creating obstacles."
+  },
+  "imobiliario": {
+    "titulo": "Real Estate Law",
+    "subtitulo": "& Asset Protection",
+    "tag": "Assets & Transactions",
+    "descricao": "Maximum security for high-value assets. We specialize in structuring real estate transactions, developments, and asset regularization. We protect property rights and ensure every real estate investment is shielded against legal uncertainties and market risks."
+  },
+  "conflitos": {
+    "titulo": "Strategic Conflict",
+    "subtitulo": "Management",
+    "tag": "Litigation & Mediation",
+    "descricao": "The smartest way out of complex disputes. We handle civil litigation with a resolution-focused approach. We manage conflicts tactically, prioritizing consensual methods and procedural agility to minimize friction and maximize favorable outcomes for our clients."
+  },
+  "penal": {
+    "titulo": "Economic Criminal Law",
+    "subtitulo": "& Liberty",
+    "tag": "Defense & Protection",
+    "descricao": "Relentless defense in high-sensitivity scenarios. Rigorous protection of freedom and reputation in matters involving economic crimes and the complexities of modern Criminal Law. We act with discretion, combativeness, and superior technique in preserving fundamental rights."
+  },
+  "sucessorio": {
+    "titulo": "Succession Planning",
+    "subtitulo": "& Holding",
+    "tag": "Wealth & Legacy",
+    "descricao": "Trust that spans generations. We structure the preservation and transition of family wealth with tax and legal intelligence. We create solutions that avoid lengthy probate proceedings, protect the legacy, and ensure harmony and liquidity for successors."
+  }
+},
+"atu": {
+  "titulo": "Practice",
+  "titulo2": "Areas",
+  "intro_pre": "Multidisciplinary legal practice focused on results. At the law firm ",
+  "intro_pos": ", we combine technical expertise and strategic vision to deliver comprehensive solutions, protecting your interests from family and asset matters to the challenges of the corporate and digital environment.",
+  "contato": { "chamada": "Speak directly with me:" },
+  "imobiliario":    { "titulo": "Real Estate Law",                    "descricao": "Purchase and sale of properties, leasing, adverse possession, and deed regularization. Assistance with purchase, sale, and lease agreements, as well as property regularization.",                                                                                             "tags": ["Purchase & Sale", "Leasing", "Adverse Possession"] },
+  "familia":        { "titulo": "Family and Succession Law",          "descricao": "Divorces, alimony, child custody, and probate. Compassionate representation in sensitive moments, focused on consensual solutions and the protection of family interests.",                                                                                                     "tags": ["Divorce", "Custody", "Probate"] },
+  "contratual":     { "titulo": "Contract Law",                       "descricao": "Drafting and technical analysis of commercial contracts, terms of use, and partnerships. Legal certainty in every clause to protect your business interests.",                                                                                                                  "tags": ["Contracts", "Terms of Use", "Partnerships"] },
+  "empresarial":    { "titulo": "Corporate and Business Law",         "descricao": "Company formation, shareholder agreements, and judicial recovery. A solid legal structure for the safe and sustainable growth of your business.",                                                                                                                               "tags": ["Formation", "Agreements", "Judicial Recovery"] },
+  "tributario":     { "titulo": "Tax Law",                            "descricao": "Tax planning for legal tax reduction and defense against assessments. Tax intelligence to preserve assets and optimize the tax burden.",                                                                                                                                        "tags": ["Tax Planning", "Tax Defense", "Taxes"] },
+  "compliance":     { "titulo": "Compliance & Data Privacy",          "descricao": "Compliance with data protection regulations, essential for companies that handle customer data. Risk management and implementation of conformity policies.",                                                                                                                    "tags": ["LGPD", "Compliance", "Data Protection"] },
+  "digital":        { "titulo": "Digital Law",                        "descricao": "Data protection compliance — highly sought after by companies of all sizes today. Legal counsel in the digital environment and protection of digital assets.",                                                                                                                  "tags": ["Digital Law", "LGPD", "Technology"] },
+  "consumidor":     { "titulo": "Consumer Law",                       "descricao": "Actions against banks, telecom companies, airlines, and online purchase issues. Effective defense of your rights as a consumer against large corporations.",                                                                                                                    "tags": ["Banks", "Telecom", "Online Shopping"] },
+  "trabalho":       { "titulo": "Labor Law",                          "descricao": "Labor claims, reversal of termination for cause, and severance pay. Defense of labor rights, terminations, and indemnities with strategy and combativeness.",                                                                                                                  "tags": ["Claims", "Termination", "Indemnities"] },
+  "previdenciario": { "titulo": "Social Security Law",                "descricao": "Retirement, disability benefits, and benefit reviews. Specialized counsel to ensure you receive all the social security benefits you are entitled to.",                                                                                                                        "tags": ["Retirement", "Disability Benefits", "Benefit Review"] }
+},
+"duvidas": {
+  "subtitulo_topo": "LEGAL PRACTICE AND CONSULTING",
+  "titulo1": "Questions? Let's work through it. How to proceed?",
+  "titulo2": "Know your rights!",
+  "sub": "Select a situation below to understand your rights and the next steps.",
+  "urgencia_label": "Urgency:",
+  "passos_label": "What to do now",
+  "cta_atendimento": "I want to be assisted for this case",
+  "trocar_assunto": "Change subject",
+  "form": {
+    "nome_label": "Your Name *",
+    "nome_placeholder": "What should I call you?",
+    "whats_label": "WhatsApp *",
+    "descricao_label": "Briefly describe your situation",
+    "descricao_placeholder": "The more details, the better I can guide you...",
+    "enviar": "Send Message →",
+    "enviando": "Sending...",
+    "whatsapp_alt": "Or send directly via WhatsApp",
+    "privacidade": "Your information is confidential and protected by professional secrecy.",
+    "erro": "Unable to send the email. Please use the WhatsApp link below.",
+    "abrir_whatsapp": "Open WhatsApp"
+  },
+  "sucesso": {
+    "titulo1": "Message",
+    "titulo2": "Sent",
+    "texto": "We confirm receipt of your inquiry. The information provided has been forwarded to our Strategic Management team for viability analysis and technical assessment by our Specialized Practice Groups.",
+    "texto2": "We are committed to speed and the technical rigor inherent to our practice. Please await contact from our team to schedule the initial consultation.",
+    "assinatura": "Sincerely,\nHaeffner Marinho Attorneys at Law",
+    "whatsapp": "Talk now via WhatsApp",
+    "nova_consulta": "New Inquiry"
+  },
+  "categorias": {
+    "criminal": "Criminal Emergencies",
+    "civel": "Civil & Everyday Disputes",
+    "imobiliario": "Real Estate & Asset Management",
+    "preventiva": "Preventive Consulting / Business",
+    "geral": "General"
+  },
+  "opcoes": {
+    "intimacao": "I received a summons",
+    "busca_apreensao": "Search and seizure / Injunctions",
+    "vitima": "I was a victim of a crime/threat",
+    "inquerito": "Questions about a police investigation",
+    "acidente": "Traffic accident / Property damage",
+    "contratos_cobr": "Contract or billing issues",
+    "danos_morais": "Moral damages / Consumer issues",
+    "vizinhanca": "Neighborhood or condo disputes",
+    "compra_venda": "Issues with property purchase/sale",
+    "distrato": "Contract cancellation or construction delays",
+    "regularizacao": "Property regularization or deeds",
+    "locacao": "Questions about rental or eviction",
+    "analise_contrato": "Contract review or drafting",
+    "blindagem": "Asset protection / Shielding",
+    "gestao_risco": "Legal risk management questions",
+    "parcerias": "Partnerships & Business (Socioenvironmental/Industrial)",
+    "outros": "Other matters (Describe below)"
+  },
+  "detalhes": {
+    "intimacao": {
+      "urgencia": "High", "prazo": "Up to 10 calendar days to respond",
+      "intro": "A summons is an official act that requires immediate attention. Ignoring it can result in default judgment, fines, or serious complications in criminal or civil proceedings.",
+      "passos": ["Check the date of receipt — the deadline starts from there.", "Identify the type: criminal, civil, labor, or administrative.", "Do not respond or sign any document without legal guidance.", "Keep the original document in a safe place."],
+      "alerta": "Procedural deadlines are fatal. Do not waste time."
+    },
+    "busca_apreensao": {
+      "urgencia": "Urgent", "prazo": "Immediate action required",
+      "intro": "Search and seizure warrants are executed by surprise. Knowing your rights at the moment of the approach is essential to protect your interests.",
+      "passos": ["Ask to see the judicial warrant and photograph it if possible.", "Stay calm — do not obstruct the execution of the warrant.", "You have the right to contact a lawyer immediately.", "Note the names and badge numbers of the agents involved."],
+      "alerta": "Do not sign anything without a lawyer present."
+    },
+    "vitima": {
+      "urgencia": "High", "prazo": "File a police report within 24h",
+      "intro": "Being a victim of a crime or threat creates immediate rights: protective orders, damages compensation, and specialized support throughout the criminal process.",
+      "passos": ["File a police report as soon as possible.", "Preserve all evidence: messages, photos, recordings.", "In case of violence, seek medical care and request a medical report.", "Request an emergency protective order if you feel at risk."],
+      "alerta": "Evidence disappears over time. Act fast."
+    },
+    "inquerito": {
+      "urgencia": "Moderate", "prazo": "Monitor progress regularly",
+      "intro": "A police investigation is the investigative phase. Even without being a defendant yet, having legal representation from this stage can define the outcome of the case.",
+      "passos": ["You have the right to a lawyer even in the investigative phase.", "Suspects may refuse to testify (right to remain silent).", "Request a copy of the investigation records from the police station.", "Monitor deadlines: investigations have a legal timeframe for completion."],
+      "alerta": "What you say during the investigative phase can be used against you."
+    },
+    "acidente": {
+      "urgencia": "Moderate", "prazo": "Civil action deadline: up to 3 years",
+      "intro": "Traffic accidents may entitle you to compensation for material, moral, and aesthetic damages. Proper documentation from the start is decisive.",
+      "passos": ["File a police report even in accidents without injuries.", "Photograph the scene, vehicles, and injuries immediately.", "Collect information and testimony from all parties involved.", "Do not sign agreements with insurers without legal review."],
+      "alerta": "Poorly executed out-of-court agreements can waive future rights."
+    },
+    "contratos_cobr": {
+      "urgencia": "Moderate", "prazo": "Statute of limitations varies by contract type",
+      "intro": "Abusive clauses, undue charges, and breach of contract have clear legal solutions — including the possibility of moral damages compensation.",
+      "passos": ["Keep all contracts, receipts, and communications.", "Check for abusive or illegal clauses in the contract.", "Send an extrajudicial notice before going to court.", "Assess whether there is associated moral damage from the undue charge."],
+      "alerta": "Undue charges on your record entitle you to moral damages compensation."
+    },
+    "danos_morais": {
+      "urgencia": "Moderate", "prazo": "5 years for consumer relations",
+      "intro": "The Consumer Protection Code is robust. Improper negative credit reporting, defective products, or unrendered services create real entitlement to compensation.",
+      "passos": ["Document everything: screenshots, emails, invoices, and complaint numbers.", "Try administrative resolution first (consumer protection agencies).", "Assess the value of the damage suffered with legal assistance.", "Small Claims Court handles cases up to 40 minimum wages."],
+      "alerta": "Companies know their rights — you need to know yours too."
+    },
+    "vizinhanca": {
+      "urgencia": "Low", "prazo": "Statute of limitations: 3 years for damages",
+      "intro": "Neighborhood disputes have clear legal solutions under the Civil Code. An extrajudicial notice often resolves the issue without the need for litigation.",
+      "passos": ["Record incidents with dates, times, and witnesses.", "Review the Condo Agreement and Internal Regulations.", "Try mediation or a formal notice before filing a lawsuit.", "Noise, damage, and invasion of privacy are legally actionable."],
+      "alerta": "A well-drafted extrajudicial notice resolves 70% of cases."
+    },
+    "compra_venda": {
+      "urgencia": "High", "prazo": "Deadlines vary by type of transaction",
+      "intro": "Real estate transactions involve high values and hidden risks. Legal due diligence before signing prevents losses that may be irreversible.",
+      "passos": ["Review the property's registration record at the Registry Office.", "Check for debts, encumbrances, and lawsuits tied to the property.", "Verify negative certificates from the seller.", "Never sign a contract or purchase agreement without legal review."],
+      "alerta": "A property with hidden debt can be lost even after purchase."
+    },
+    "distrato": {
+      "urgencia": "Moderate", "prazo": "Cancellation Law — Law 13.786/2018",
+      "intro": "The Cancellation Law regulates buyer rights in cases of rescission or delayed delivery. Developers frequently charge more than the law allows.",
+      "passos": ["Check the contractual tolerance period (usually 180 days).", "After the deadline, you are entitled to a fine and compensation.", "In case of cancellation, the developer must refund part of the amounts paid.", "Review the contract with a lawyer before signing any rescission."],
+      "alerta": "Developers try to pay less than what is owed upon rescission."
+    },
+    "regularizacao": {
+      "urgencia": "Low", "prazo": "The sooner, the better",
+      "intro": "A property without a deed or registration is a vulnerable asset. Regularization protects your assets and enables financing, inheritance, and future sales.",
+      "passos": ["Check whether adverse possession (usucapião) applies to your situation.", "Gather all historical documentation of the property.", "Check for outstanding property tax and municipal fee debts.", "The process can be handled extrajudicially in many cases."],
+      "alerta": "An unregistered property cannot be sold, financed, or left as inheritance."
+    },
+    "locacao": {
+      "urgencia": "Moderate", "prazo": "Tenancy Law — Law 8.245/91",
+      "intro": "Both landlords and tenants have clear rights. Poorly drafted contracts and eviction proceedings require specialized legal attention to avoid losses.",
+      "passos": ["Review the contract: term, adjustments, guarantees, and termination clauses.", "Default entitles the landlord to eviction proceedings within 15 days.", "Tenants have the right of first refusal when the property is sold.", "When returning the property, compare the initial and final inspection reports."],
+      "alerta": "Eviction proceedings can be avoided with a well-drafted out-of-court agreement."
+    },
+    "analise_contrato": {
+      "urgencia": "Low", "prazo": "Before signing any document",
+      "intro": "A well-drafted contract is your best protection tool. Ambiguous clauses turn into costly litigation. Prior review costs far less than a lawsuit.",
+      "passos": ["Never sign a contract without prior legal review.", "Termination clauses, penalties, and jurisdiction must be negotiated.", "Digital contracts have the same legal validity as physical ones.", "Adhesion contracts frequently contain abusive clauses."],
+      "alerta": "The contract is the law between the parties — make sure it works for you."
+    },
+    "blindagem": {
+      "urgencia": "Low", "prazo": "Preventive planning",
+      "intro": "Asset shielding is preventive legal planning. Holdings, donations with usufruct reservations, and separation of assets protect your wealth from future risks.",
+      "passos": ["Evaluate creating a family holding for asset management and protection.", "Legally separate personal assets from business assets.", "Succession planning avoids disputes and reduces estate costs.", "Risk analysis should be performed and reviewed periodically."],
+      "alerta": "Shielding done after a debt is incurred may be considered fraud — plan ahead."
+    },
+    "gestao_risco": {
+      "urgencia": "Low", "prazo": "Periodic review recommended",
+      "intro": "Companies without preventive legal counsel accumulate invisible liabilities: labor, tax, and contractual. Identifying risks before they become lawsuits is always cheaper.",
+      "passos": ["Conduct periodic legal audits of the company.", "Review contracts with suppliers, clients, and employees.", "Verify compliance with data protection, labor, and sector-specific regulations.", "Create internal policies that reduce exposure to litigation."],
+      "alerta": "Hidden labor liability is the main legal risk for SMEs."
+    },
+    "parcerias": {
+      "urgencia": "Low", "prazo": "Before formalizing any partnership",
+      "intro": "Partnerships without proper legal structure are the main reason for litigious dissolution of companies. Getting it right from the start protects everyone involved.",
+      "passos": ["Clearly define roles, quotas, and responsibilities in the articles of incorporation.", "Exit clauses (drag-along, tag-along) must be agreed upon in advance.", "Socioenvironmental partnerships require compliance with specific legislation.", "Due diligence on the partner is just as important as on the business itself."],
+      "alerta": "A company without a shareholders' agreement is a ticking time bomb."
+    },
+    "outros": {
+      "urgencia": "To be assessed", "prazo": "Tell us your situation",
+      "intro": "If your situation does not fit the categories above, do not worry. We analyze any legal matter and indicate the best path for your case.",
+      "passos": ["Describe your situation with as much detail as possible.", "Let us know if there is any deadline or urgency involved.", "Share relevant documents if possible.", "We will return with a preliminary assessment at no commitment."],
+      "alerta": "Every legal situation has a solution — the first step is to talk."
+    }
+  }
+},
+"agende": {
+  "eyebrow": "LEGAL PRACTICE AND CONSULTING",
+  "titulo1": "Let's",
+  "titulo2": "Talk?",
+  "campos": {
+    "nome_label": "FULL NAME",
+    "nome_placeholder": "Your full name",
+    "email_label": "E-MAIL",
+    "email_placeholder": "your@email.com",
+    "telefone_label": "PHONE / WHATSAPP",
+    "area_label": "AREA OF INTEREST",
+    "area_placeholder": "Select an area...",
+    "mensagem_label": "MESSAGE",
+    "mensagem_placeholder": "Briefly describe your situation...",
+    "anexo_label": "ATTACH DOCUMENT",
+    "anexo_opcional": "(optional)",
+    "anexo_placeholder": "Click to attach a file (PDF, image, doc...)"
+  },
+  "enviar": "SEND MESSAGE",
+  "enviando": "Sending...",
+  "privacidade": "Your information is confidential and protected by professional secrecy.",
+  "erro": "Unable to send. Please use the WhatsApp link below.",
+  "destaque": "Nationwide practice structured through strategic partnerships.",
+  "cards": {
+    "whatsapp_plantao": "· 24h on-call for criminal emergencies",
+    "whatsapp_horario": "In-person: Mon–Fri: 9am–12pm · 2pm–5pm",
+    "whatsapp_tagline": "Agile and secure digital service.",
+     "endereco_label": "ADDRESS"
+  },
+  "wa_cta": "Talk on WhatsApp now",
+  "sucesso": {
+    "titulo1": "Message",
+    "titulo2": "Sent",
+    "texto1": "We confirm receipt of your inquiry. The information provided has been forwarded to our Strategic Management team for viability analysis and technical assessment by our Specialized Practice Groups.",
+    "texto2": "We are committed to speed and the technical rigor inherent to our practice. Please await contact from our team to schedule the initial consultation.",
+    "assinatura": "Sincerely,\nHaeffner Marinho Attorneys at Law",
+    "whatsapp": "Talk on WhatsApp",
+    "nova_mensagem": "Send a new message"
+  },
+  "areas": [
+    "Contract Review",
+    "Civil & Everyday Disputes",
+    "Preventive Consulting / Business",
+    "Submit CV",
+    "Real Estate Market",
+    "Other matters",
+    "Legal Partnership",
+    "Asset Protection",
+    "Work With Us",
+    "Criminal Emergencies"
+  ]
+},
+"footer": {
+  "tagline": "Legal practice with ethics, excellence, and multidisciplinary vision.",
+  "navegacao": "Navigation",
+  "contato": "Contact",
+  "endereco": "Av. Cândido Hartmann, 1326\nMercês · Curitiba — PR · Brazil",
+  "atuacao_linha1": "Nationwide practice structured through strategic partnerships",
+  "atuacao_linha2": "Agile and secure digital service.",
+  "aviso_legal": "The information on this site is for informational purposes only and does not replace personalized legal counsel.",
+  "direitos": "All rights reserved.",
+  "sociedade": "Individual Law Practice",
+  "privacidade": "Privacy Policy",
+  "privacidade_modal": {
+    "eyebrow": "Legal Document",
+    "titulo": "Privacy Policy",
+    "fechar": "Close",
+    "quem_somos_titulo": "Who we are",
+    "quem_somos_texto": "HAEFFNER MARINHO ADVOGADOS",
+    "dados_titulo": "Data collected",
+    "dados_texto": "We only collect information provided by you in forms (name, contact) and browsing data (cookies).",
+    "uso_titulo": "How we use it",
+    "uso_texto": "Your data is used exclusively to answer your inquiries, send legal updates (if authorized), and provide legal services.",
+    "direitos_titulo": "Your rights",
+    "direitos_texto": "You may at any time request access to, correction of, or permanent deletion of your data.",
+    "seguranca_titulo": "Security",
+    "seguranca_texto": "We use security protocols to ensure your information is not shared with third parties without legal authorization.",
+    "contato_titulo": "Contact",
+    "contato_texto": "For privacy matters, please contact us at:"
+  }
+},
+"cookie": {
+  "texto": "We use cookies to improve your experience. By continuing, you agree to our",
+  "politica": "Privacy Policy",
+  "negar": "Decline",
+  "aceitar": "Accept"
+}
 }

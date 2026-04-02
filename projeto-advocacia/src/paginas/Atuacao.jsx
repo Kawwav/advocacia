@@ -14,71 +14,24 @@ const fadeUp = (delay = 0) => ({
   transition: { duration: 0.9, delay, ease: [0.22, 1, 0.36, 1] }
 })
 
-const AREAS = [
-  {
-    chave: 'imobiliario', icone: LuHouse, numero: '01',
-    titulo: 'Direito Imobiliário',
-    descricao: 'Compra e venda de imóveis, locação, usucapião e regularização de escrituras. Auxílio em contratos de compra, venda e locação, além de regularização de imóveis.',
-    tags: ['Compra & Venda', 'Locação', 'Usucapião'],
-  },
-  {
-    chave: 'familia', icone: LuHeart, numero: '02',
-    titulo: 'Direito de Família e Sucessões',
-    descricao: 'Divórcios, pensão alimentícia, guarda de filhos e inventários. Atuação humanizada em momentos delicados, com foco em soluções consensuais e proteção dos interesses familiares.',
-    tags: ['Divórcio', 'Guarda', 'Inventário'],
-  },
-  {
-    chave: 'contratual', icone: LuFileText, numero: '03',
-    titulo: 'Direito Contratual',
-    descricao: 'Elaboração e análise técnica de contratos comerciais, termos de uso e parcerias. Segurança jurídica em cada cláusula para proteger seus interesses nos negócios.',
-    tags: ['Contratos', 'Termos de Uso', 'Parcerias'],
-  },
-  {
-    chave: 'empresarial', icone: LuBuilding2, numero: '04',
-    titulo: 'Direito Empresarial e Societário',
-    descricao: 'Constituição de empresas, acordos entre sócios e recuperação judicial. Estrutura jurídica sólida para o crescimento seguro e sustentável do seu negócio.',
-    tags: ['Constituição', 'Acordos', 'Recuperação Judicial'],
-  },
-  {
-    chave: 'tributario', icone: LuCalculator, numero: '05',
-    titulo: 'Direito Tributário',
-    descricao: 'Planejamento fiscal para redução legal de impostos e defesas contra autuações. Inteligência tributária para preservar o patrimônio e otimizar a carga fiscal.',
-    tags: ['Planejamento Fiscal', 'Defesa Tributária', 'Impostos'],
-  },
-  {
-    chave: 'compliance', icone: LuLock, numero: '06',
-    titulo: 'Compliance e LGPD',
-    descricao: 'Adequação à Lei Geral de Proteção de Dados, fundamental para empresas que lidam com dados de clientes. Gestão de riscos e implementação de políticas de conformidade.',
-    tags: ['LGPD', 'Compliance', 'Proteção de Dados'],
-  },
-  {
-    chave: 'digital', icone: LuWifi, numero: '07',
-    titulo: 'Direito Digital',
-    descricao: 'Adequação à Lei Geral de Proteção de Dados — muito procurado hoje por empresas de todos os tamanhos. Assessoria jurídica no ambiente digital e proteção de ativos digitais.',
-    tags: ['Direito Digital', 'LGPD', 'Tecnologia'],
-  },
-  {
-    chave: 'consumidor', icone: LuShoppingCart, numero: '08',
-    titulo: 'Direito do Consumidor',
-    descricao: 'Ações contra bancos, empresas de telefonia, aéreas e problemas com compras online. Defesa eficaz dos seus direitos como consumidor perante grandes corporações.',
-    tags: ['Bancos', 'Telefonia', 'Compras Online'],
-  },
-  {
-    chave: 'trabalho', icone: LuHardHat, numero: '09',
-    titulo: 'Direito do Trabalho',
-    descricao: 'Reclamações trabalhistas, reversão de justa causa e verbas rescisórias. Defesa de direitos trabalhistas, rescisões e indenizações com estratégia e combatividade.',
-    tags: ['Reclamações', 'Rescisão', 'Indenizações'],
-  },
-  {
-    chave: 'previdenciario', icone: LuAward, numero: '10',
-    titulo: 'Direito Previdenciário',
-    descricao: 'Aposentadorias, auxílio-doença e revisões de benefício. Assessoria especializada para garantir que você receba todos os benefícios previdenciários a que tem direito.',
-    tags: ['Aposentadoria', 'Auxílio-Doença', 'Revisão de Benefício'],
-  },
+const AREAS_BASE = [
+  { chave: 'imobiliario',    icone: LuHouse,        numero: '01' },
+  { chave: 'familia',        icone: LuHeart,        numero: '02' },
+  { chave: 'contratual',     icone: LuFileText,     numero: '03' },
+  { chave: 'empresarial',    icone: LuBuilding2,    numero: '04' },
+  { chave: 'tributario',     icone: LuCalculator,   numero: '05' },
+  { chave: 'compliance',     icone: LuLock,         numero: '06' },
+  { chave: 'digital',        icone: LuWifi,         numero: '07' },
+  { chave: 'consumidor',     icone: LuShoppingCart, numero: '08' },
+  { chave: 'trabalho',       icone: LuHardHat,      numero: '09' },
+  { chave: 'previdenciario', icone: LuAward,        numero: '10' },
 ]
 
 function AreaCard({ area, index }) {
+  const { t } = useTranslation()
   const Icone = area.icone
+  const tags = t(`atu.${area.chave}.tags`, { returnObjects: true })
+
   return (
     <motion.article
       className="atu-card"
@@ -94,10 +47,10 @@ function AreaCard({ area, index }) {
         </div>
       </div>
       <div className="atu-card-linha" />
-      <h2 className="atu-card-titulo">{area.titulo}</h2>
-      <p className="atu-card-descricao">{area.descricao}</p>
+      <h2 className="atu-card-titulo">{t(`atu.${area.chave}.titulo`)}</h2>
+      <p className="atu-card-descricao">{t(`atu.${area.chave}.descricao`)}</p>
       <div className="atu-card-tags">
-        {area.tags.map(tag => (
+        {Array.isArray(tags) && tags.map(tag => (
           <span key={tag} className="atu-tag">{tag}</span>
         ))}
       </div>
@@ -110,10 +63,10 @@ function AreaCard({ area, index }) {
 function Atuacao() {
   const { t } = useTranslation()
 
-  const linha1 = AREAS.slice(0, 3)
-  const linha2 = AREAS.slice(3, 6)
-  const linha3 = AREAS.slice(6, 9)
-  const linha4 = AREAS.slice(9)
+  const linha1 = AREAS_BASE.slice(0, 3)
+  const linha2 = AREAS_BASE.slice(3, 6)
+  const linha3 = AREAS_BASE.slice(6, 9)
+  const linha4 = AREAS_BASE.slice(9)
 
   return (
     <main className="atu-pagina">
@@ -127,13 +80,13 @@ function Atuacao() {
             initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.0 }}
           >
-            ADVOCACIA E CONSULTORIA JURÍDICA
+            {t('hae.subtitulo_topo')}
           </motion.p>
 
           <motion.p className="atu-eyebrow" {...fadeUp(0.05)} />
 
           <motion.h1 className="atu-titulo" {...fadeUp(0.15)}>
-            {t('atu.titulo', 'Áreas de')} <span>{t('atu.titulo2', 'Atuação')}</span>
+            {t('atu.titulo')} <span>{t('atu.titulo2')}</span>
           </motion.h1>
 
           <motion.div
@@ -146,7 +99,7 @@ function Atuacao() {
 
           <motion.div className="atu-intro" {...fadeUp(0.35)}>
             <p className="atu-intro-texto">
-              {t('atu.intro', 'Atuação jurídica multidisciplinar com foco em resultados. Na Haeffner Marinho Advogados, unimos expertise técnica e visão estratégica para oferecer soluções completas, protegendo seus interesses desde as relações familiares e patrimoniais até os desafios do ambiente corporativo e digital.')}
+              {t('atu.intro_pre')}<span style={{ color: '#C9A84C', fontWeight: 600 }}>HAEFFNER MARINHO ADVOGADOS</span>{t('atu.intro_pos')}
             </p>
           </motion.div>
 
@@ -196,7 +149,7 @@ function Atuacao() {
 
           <motion.div className="atu-contato" {...fadeUp(0.2)}>
             <p className="atu-contato-chamada">
-              {t('atu.contato.chamada', 'Fale diretamente comigo:')}
+              {t('atu.contato.chamada')}
             </p>
             <a href="mailto:armando@haeffnermarinho.adv.br" className="atu-contato-email">
               armando@haeffnermarinho.adv.br

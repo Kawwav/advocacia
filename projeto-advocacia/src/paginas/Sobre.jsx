@@ -25,7 +25,7 @@ function Hma() {
           initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.0 }}
         >
-          ADVOCACIA E CONSULTORIA JURÍDICA
+          {t('hae.subtitulo_topo')}
         </motion.p>
 
         <motion.p className="hma-eyebrow" {...fadeUp(0.05)}>
@@ -46,11 +46,9 @@ function Hma() {
         {/*bloco intro  */}
         <motion.div className="hma-coluna-texto" {...fadeUp(0.35)}>
           <p className="hma-paragrafo--destaque">
-            A <span style={{ color: '#C9A84C', fontWeight: 600 }}>HAEFFNER MARINHO ADVOGADOS</span>{' '}
-            {t(
-              'hma.p1_resto',
-              'nasce da convergência entre a tradição resiliente e a inovação estratégica. Inspirada em um legado de integridade, nossa essência foi moldada pela experiência prática de quem compreende o Direito não apenas nos códigos, mas no dinamismo do "chão de fábrica" e das complexas relações corporativas.'
-            )}
+            {t('hma.p1_inicio', 'O escritório de advocacia')}{' '}
+            <span style={{ color: '#C9A84C', fontWeight: 600 }}>HAEFFNER MARINHO ADVOGADOS</span>{' '}
+            {t('hma.p1_resto', 'nasce da convergência entre a tradição resiliente e a inovação estratégica.')}
           </p>
           <p className="hma-paragrafo">
             {t(
@@ -75,7 +73,7 @@ function Hma() {
             <div className="hma-foto-canto hma-foto-canto--br" />
             <div className="hma-foto-overlay" />
             <img
-              src="/advocacia/foto1.jpeg"
+              src="/advocacia/armando.jpg"
               alt="Armando Haeffner Marinho Neto"
               className="hma-foto hma-foto--wide"
             />
