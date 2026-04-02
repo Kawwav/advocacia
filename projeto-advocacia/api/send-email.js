@@ -26,6 +26,7 @@ export default async function handler(req, res) {
   })
 
   const mailOptions = {
+    
     from: `"Site Haeffner" <${process.env.EMAIL_USER}>`,
     to: 'haeffnermarinho@gmail.com',
     subject: `[Site] Nova mensagem: ${assunto}`,
