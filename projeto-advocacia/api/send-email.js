@@ -1,4 +1,22 @@
 import nodemailer from 'nodemailer'
+import formidable from 'formidable'
+import fs from 'fs'
+
+export const config = {
+  api: {
+    bodyParser: false,
+  },
+}
+
+function parseForm(req) {
+  return new Promise((resolve, reject) => {
+    const form = formidable({ multiples: false, maxFileSize: 10 * 1024 * 1024 })
+    form.parse(req, (err, fields, files) => {
+      if (err) reject(err)
+      else resolve({ fields, files })
+    })
+  })
+}
 
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*')
@@ -11,7 +29,33 @@ export default async function handler(req, res) {
   console.log('EMAIL_USER:', process.env.EMAIL_USER)
   console.log('EMAIL_PASS existe:', !!process.env.EMAIL_PASS)
 
-  const { nome, telefone, assunto, categoria, mensagem } = req.body
+  let nome, telefone, assunto, categoria, mensagem, arquivoAnexo
+
+  const contentType = req.headers['content-type'] || ''
+
+  if (contentType.includes('multipart/form-data')) {
+    // Formulário com anexo (Agende)
+    try {
+      const { fields, files } = await parseForm(req)
+      nome      = Array.isArray(fields.nome)      ? fields.nome[0]      : fields.nome
+      telefone  = Array.isArray(fields.telefone)  ? fields.telefone[0]  : fields.telefone
+      assunto   = Array.isArray(fields.assunto)   ? fields.assunto[0]   : fields.assunto
+      categoria = Array.isArray(fields.categoria) ? fields.categoria[0] : fields.categoria
+      mensagem  = Array.isArray(fields.mensagem)  ? fields.mensagem[0]  : fields.mensagem
+      arquivoAnexo = files.attachment?.[0] || files.attachment || null
+    } catch (err) {
+      return res.status(400).json({ error: 'Erro ao processar formulário', detalhe: err.message })
+    }
+  } else {
+    // Formulário JSON (Duvidas)
+    const body = req.body
+    nome      = body.nome
+    telefone  = body.telefone
+    assunto   = body.assunto
+    categoria = body.categoria
+    mensagem  = body.mensagem
+    arquivoAnexo = null
+  }
 
   if (!nome || !telefone || !assunto) {
     return res.status(400).json({ error: 'Campos obrigatórios ausentes' })
@@ -26,7 +70,6 @@ export default async function handler(req, res) {
   })
 
   const mailOptions = {
-    
     from: `"Site Haeffner" <${process.env.EMAIL_USER}>`,
     to: 'haeffnermarinho@gmail.com',
     subject: `[Site] Nova mensagem: ${assunto}`,
@@ -58,6 +101,17 @@ export default async function handler(req, res) {
         <p style="margin-top: 24px; font-size: 12px; color: #999;">Enviado pelo formulário do site.</p>
       </div>
     `,
+    attachments: [],
+  }
+
+  // Adiciona anexo se existir
+  if (arquivoAnexo) {
+    const filepath = arquivoAnexo.filepath || arquivoAnexo.path
+    const filename = arquivoAnexo.originalFilename || arquivoAnexo.name || 'anexo'
+    mailOptions.attachments.push({
+      filename,
+      content: fs.readFileSync(filepath),
+    })
   }
 
   try {

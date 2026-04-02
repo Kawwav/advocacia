@@ -8,7 +8,7 @@ import {
 import './Agende.css'
 
 const API_URL         = '/api/send-email'
-const WHATSAPP_NUMBER = '554198387397'
+const WHATSAPP_NUMBER = '5541988184388'
 
 export default function Contato() {
   const { t } = useTranslation()
@@ -16,7 +16,7 @@ export default function Contato() {
   const AREAS = t('agende.areas', { returnObjects: true })
 
   const INFO_CARDS = [
-    { Icon: FaWhatsapp,     label: 'WHATSAPP', value: ' (41) 9838-7397',                color: '#25D366', href: `https://wa.me/${WHATSAPP_NUMBER}` },
+    { Icon: FaWhatsapp,     label: 'WHATSAPP', value: '(41) 98818-4388',                color: '#25D366', href: `https://wa.me/${WHATSAPP_NUMBER}` },
     { Icon: FaEnvelope,     label: 'E-MAIL',   value: 'haeffnermarinho@gmail.com',       color: '#C9A84C', href: 'mailto:haeffnermarinho@gmail.com' },
     { Icon: FaMapMarkerAlt, label: t('agende.cards.endereco_label'), value: 'Curitiba – Paraná, Brasil', color: '#C9A84C', href: null },
   ]
@@ -50,17 +50,15 @@ export default function Contato() {
     setSendError(false)
 
     try {
-      const response = await fetch(API_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          nome,
-          telefone,
-          assunto: area || 'Não informada',
-          categoria: email,
-          mensagem: mensagem || '(sem descrição)',
-        }),
-      })
+      const formData = new FormData()
+      formData.append('nome',      nome)
+      formData.append('telefone',  telefone)
+      formData.append('assunto',   area || 'Não informada')
+      formData.append('categoria', email)
+      formData.append('mensagem',  mensagem || '(sem descrição)')
+      if (arquivo) formData.append('attachment', arquivo)
+
+      const response = await fetch(API_URL, { method: 'POST', body: formData })
 
       const result = await response.json()
       if (response.ok && result.success) {
