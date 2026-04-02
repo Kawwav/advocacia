@@ -1,6 +1,6 @@
-const nodemailer = require('nodemailer')
+import nodemailer from 'nodemailer'
 
-module.exports = async (req, res) => {
+export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*')
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS')
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type')
@@ -10,7 +10,6 @@ module.exports = async (req, res) => {
 
   console.log('EMAIL_USER:', process.env.EMAIL_USER)
   console.log('EMAIL_PASS existe:', !!process.env.EMAIL_PASS)
-  console.log('Body recebido:', req.body)
 
   const { nome, telefone, assunto, categoria, mensagem } = req.body
 
@@ -65,7 +64,7 @@ module.exports = async (req, res) => {
     console.log('Email enviado com sucesso!')
     return res.status(200).json({ success: true })
   } catch (err) {
-    console.error('Erro detalhado ao enviar email:', err.message, err.code, err.response)
+    console.error('Erro ao enviar email:', err.message)
     return res.status(500).json({ error: 'Falha ao enviar email', detalhe: err.message })
   }
 }
